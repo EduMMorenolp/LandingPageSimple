@@ -1,0 +1,83 @@
+* {
+  text-align: center;
+}
+
+header {
+  display: flex;
+  background-color: bisque;
+  justify-content: space-between;
+  align-items: center;
+  border: 3px solid;
+  border-radius: 10px;
+  overflow-x: auto;
+}
+
+header h2 {
+  margin: 2px;
+}
+
+header nav ul {
+  display: flex;
+  margin: 2px;
+  list-style-type: none;
+}
+
+header nav ul li {
+  padding: 5px;
+}
+
+main {
+  border: 1px solid;
+  border-radius: 10px;
+  margin: 3px;
+  padding: 7px;
+  background-color: aquamarine;
+  display: grid;
+  grid-template-areas:
+    "image inicio"
+    "habilidades contacto"
+    "habilidades contacto";
+  grid-gap: 10px; /* Espacio entre los elementos */
+  overflow: hidden;
+}
+
+section {
+  padding: 5px;
+  overflow-y: auto;
+  border-radius: 10px;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Asignar áreas */
+section:nth-child(1) {
+  grid-area: image;
+  background-color: rgb(216, 175, 113);
+}
+
+section:nth-child(2) {
+  grid-area: inicio;
+  background-color: rgb(224, 163, 71);
+}
+
+section:nth-child(3) {
+  height: 300px;
+  grid-area: habilidades;
+  background-color: rgb(190, 125, 26);
+}
+
+section:nth-child(4) {
+  grid-area: contacto;
+  background-color: rgb(95, 83, 65);
+}
+
+footer {
+  background-color: rgb(26, 104, 104);
+  padding: 7px;
+  border: 3px solid;
+  border-radius: 30px;
+  margin: 3px;
+}
