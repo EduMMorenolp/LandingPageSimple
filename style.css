@@ -1,5 +1,6 @@
 * {
   text-align: center;
+  font-size: 14px;
 }
 
 header {
@@ -47,23 +48,61 @@ section {
   border-radius: 10px;
 }
 
-img {
-  max-width: 100%;
+/** IMAGENES */
+
+.contenedor {
+  position: relative;
+  width: 200px;
+  height: 200px;
+}
+
+#imagen img {
+  position: absolute;
+  max-width: 80%;
   height: auto;
+  border-radius: 50%;
+  top: 13px;
+  left: 13px;
+  transform-style: preserve-3d;
+  transition: transform 0.4s ease;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); 
+}
+
+.trasera {
+  visibility: hidden;
+  transform: rotateY(160deg); 
+}
+
+.contenedor:hover .delantera {
+  transform: rotateY(180deg);
+  visibility: hidden;
+}
+
+.contenedor:hover .trasera {
+  transform: rotateY(0deg); 
+  visibility: visible;
+}
+
+/** HABILIDADES */
+
+#iconos img{
+  width: 100%;
+  align-items: center;
 }
 
 /* Asignar áreas */
 section:nth-child(1) {
   grid-area: image;
-  background-color: rgb(216, 175, 113);
 }
 
 section:nth-child(2) {
   grid-area: inicio;
   background-color: rgb(224, 163, 71);
+  align-content: center;
 }
 
 section:nth-child(3) {
+  width: 190px;
   height: 300px;
   grid-area: habilidades;
   background-color: rgb(190, 125, 26);
