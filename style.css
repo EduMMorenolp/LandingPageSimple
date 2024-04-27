@@ -25,18 +25,16 @@ header {
 
 header h1 {
   width: 100%;
-  margin: 2px;
 }
 
 header nav ul {
   display: flex;
   margin: 2px;
   list-style-type: none;
-  
 }
 
-header nav ul li a{
-  padding: 5px;
+header nav ul li a {
+  padding: 3px;
   text-decoration: none;
   color: #eeeafd;
 }
@@ -66,7 +64,7 @@ section {
   justify-content: center;
 }
 
-#inicio img {
+.contenedor img {
   position: absolute;
   max-width: 80%;
   border-radius: 50%;
@@ -74,12 +72,12 @@ section {
   left: 13px;
   transform-style: preserve-3d;
   transition: transform 0.4s ease;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); 
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
 }
 
 .trasera {
   visibility: hidden;
-  transform: rotateY(160deg); 
+  transform: rotateY(160deg);
 }
 
 .contenedor:hover .delantera {
@@ -88,31 +86,24 @@ section {
 }
 
 .contenedor:hover .trasera {
-  transform: rotateY(0deg); 
+  transform: rotateY(0deg);
   visibility: visible;
+}
+
+#inicioRedes img {
+  display: flex;
+  width: 45px;
+  height: 45px;
 }
 
 /** HABILIDADES */
 
-#iconos img{
+#iconos img {
   width: 100%;
   align-items: center;
 }
 
-/* Asignar áreas */
-
-section {
-  padding: 5px;
-  border-radius: 10px;
-  opacity: 0; /* Inicialmente oculto */
-  transition: opacity 0.5s ease; /* Transición suave */
-}
-
-section.visible {
-  opacity: 1; /* Mostrar cuando la sección sea visible */
-}
-
- /* FOOTER */
+/* FOOTER */
 
 footer {
   background-color: #8053ea;
