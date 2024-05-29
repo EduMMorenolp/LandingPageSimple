@@ -33,6 +33,7 @@ header {
   display: flex;
   padding: 10px;
   align-items: center;
+  justify-content: center;
 }
 
 header h1 {
@@ -55,6 +56,8 @@ header nav ul li a {
 header nav ul li a:hover {
   color: #333;
 }
+
+
 
 main {
   padding: 20px;
@@ -120,6 +123,20 @@ section {
 
 #inicioRedes img:hover {
   transform: scale(1.2);
+}
+
+
+/* GitHub Icon */
+#inicioRedes .igit {
+  width: 50px;
+  height: 50px;
+}
+
+/* LinkedIn Icon */
+#inicioRedes .ilin {
+  width: 50px;
+  height: 50px;
+  filter: invert(30%) sepia(61%) saturate(2889%) hue-rotate(196deg) brightness(92%) contrast(85%);
 }
 
 #iconos img {
