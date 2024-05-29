@@ -57,8 +57,6 @@ header nav ul li a:hover {
   color: #333;
 }
 
-
-
 main {
   padding: 20px;
   background-color: #eeeafd;
@@ -125,7 +123,6 @@ section {
   transform: scale(1.2);
 }
 
-
 /* GitHub Icon */
 #inicioRedes .igit {
   width: 50px;
@@ -136,7 +133,8 @@ section {
 #inicioRedes .ilin {
   width: 50px;
   height: 50px;
-  filter: invert(30%) sepia(61%) saturate(2889%) hue-rotate(196deg) brightness(92%) contrast(85%);
+  filter: invert(30%) sepia(61%) saturate(2889%) hue-rotate(196deg)
+    brightness(92%) contrast(85%);
 }
 
 #iconos img {
@@ -177,6 +175,8 @@ footer {
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   overflow: hidden;
+  justify-content: center;
+  align-items: center;
 }
 
 .proyecto img {
@@ -256,7 +256,8 @@ label {
   color: #333;
 }
 
-input, textarea {
+input,
+textarea {
   width: 100%;
   padding: 10px;
   border: 1px solid #ccc;
@@ -302,4 +303,105 @@ button:hover {
 
 .footer-socials img:hover {
   transform: scale(1.2);
+}
+
+/* Estilo para el enlace a GitHub */
+#proyectos h3 a {
+  color: #8053ea;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+#proyectos h3 a:hover {
+  color: #4b0082;
+  text-decoration: underline;
+}
+
+/* Media Query para tablet */
+@media (min-width: 768px) {
+  header nav ul li a {
+    padding: 15px;
+  }
+
+  main {
+    padding: 30px;
+  }
+
+  #inicio {
+    justify-content: center;
+  }
+
+  .contenedor {
+    width: 200px;
+    height: 200px;
+  }
+
+  .proyecto img {
+    max-width: 100%;
+  }
+
+  .proyecto-detalles {
+    padding: 30px;
+  }
+}
+
+/* Media Query para escritorio */
+@media (min-width: 1024px) {
+
+
+  header {
+    padding: 20px 50px;
+  }
+
+  header h1 {
+    font-size: 2em;
+  }
+
+  #inicioRedes img {
+    margin: 0 20px;
+  }
+
+  main {
+    padding: 50px;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+  }
+
+  #presentacion {
+    width: 600px;
+  }
+
+  #habilidades {
+    display: grid;
+    gap: 10px;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  #contacto {
+    width: 500px;
+  }
+  section {
+    justify-content: center;
+    align-items: center;
+  }
+
+  #proyectos {
+    width: 90%;
+  }
+
+  #proyecto {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 0 auto;
+    padding: 0;
+  }
+
+  .proyecto {
+    width: 500px;
+    margin: 0 20px 20px 0;
+  }
 }
