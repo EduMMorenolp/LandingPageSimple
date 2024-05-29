@@ -68,22 +68,58 @@
         </section>
         <section id="proyectos">
             <h3> Proyectos </h3>
-            <p> Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nisi blanditiis necessitatibus adipisci,
-                voluptatum laborum omnis nulla sint? Consequatur ea vel eum earum, suscipit nisi officiis ipsam, ex
-                tenetur doloribus enim?</p>
+            <div class="proyecto">
+                <img src="ruta/a/imagen_proyecto1.jpg" alt="Imagen del Proyecto 1">
+                <div class="proyecto-detalles">
+                    <h4>Proyecto 1</h4>
+                    <p>Descripción breve del Proyecto 1. Explica qué hace, las tecnologías usadas y el propósito del
+                        proyecto.</p>
+                    <a href="https://github.com/EduMMorenolp/proyecto1" target="_blank">Ver en GitHub</a>
+                    <a href="https://demo_proyecto1.com" target="_blank">Ver Demo</a>
+                </div>
+            </div>
+            <div class="proyecto">
+                <img src="ruta/a/imagen_proyecto2.jpg" alt="Imagen del Proyecto 2">
+                <div class="proyecto-detalles">
+                    <h4>Proyecto 2</h4>
+                    <p>Descripción breve del Proyecto 2. Explica qué hace, las tecnologías usadas y el propósito del
+                        proyecto.</p>
+                    <a href="https://github.com/EduMMorenolp/proyecto2" target="_blank">Ver en GitHub</a>
+                    <a href="https://demo_proyecto2.com" target="_blank">Ver Demo</a>
+                </div>
+            </div>
         </section>
         <section id="contacto">
-            <h3> Contacto </h3>
-            <p> Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptate debitis exercitationem ratione.
-                Molestias corrupti odit, tempora ad beatae tempore velit fugiat. Soluta, modi! Provident maiores
-                architecto aspernatur, magni quo laboriosam!</p>
-            <p> Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nisi blanditiis necessitatibus adipisci,
-                voluptatum laborum omnis nulla sint? Consequatur ea vel eum earum, suscipit nisi officiis ipsam, ex
-                tenetur doloribus enim?</p>
+            <h3>Contacto</h3>
+            <form action="enviar_mensaje.php" method="post">
+                <div class="form-group">
+                    <label for="nombre">Nombre:</label>
+                    <input type="text" id="nombre" name="nombre" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Correo Electrónico:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="mensaje">Mensaje:</label>
+                    <textarea id="mensaje" name="mensaje" rows="5" required></textarea>
+                </div>
+                <button type="submit">Enviar</button>
+            </form>
+            <div class="contacto-info">
+                <p>O también puedes contactarme a través de mis redes sociales:</p>
+                <div class="footer-socials">
+                    <a href="https://github.com/EduMMorenolp" target="_blank"><img src="./imag/iconos/MdiGithub.svg"
+                            alt="GitHub"></a>
+                    <a href="https://www.linkedin.com/in/eduardo-m-moreno-programador/" target="_blank"><img
+                            src="./imag/iconos/MdiLinkedin.svg" alt="LinkedIn"></a>
+                </div>
+            </div>
         </section>
     </main>
     <footer>
-        2024 By Eduardo M Moreno. Todos los derechos resevados...
+        <p> 2024 By Eduardo M Moreno.</p>
+        <p>&copy; Todos los derechos resevados</p>
     </footer>
 </body>
 
