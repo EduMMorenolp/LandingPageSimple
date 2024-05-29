@@ -1,16 +1,27 @@
 * {
   text-align: center;
-  font-size: 1em;
   margin: 0;
-  align-items: center;
-  justify-content: center;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
 }
 
 body {
-  background-color: #c7baf8;
+  background-color: #eeeafd;
+  color: #333;
+  line-height: 1.6;
 }
 
-/* HEADER */
+h3 {
+  font-size: 1.3em;
+  color: #4b0082;
+  margin: 20px 0;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  border-bottom: 2px solid #8053ea;
+  padding-bottom: 10px;
+  font-weight: bold;
+}
 
 header {
   position: sticky;
@@ -20,64 +31,69 @@ header {
   border-radius: 0 0 15px 15px;
   color: #eeeafd;
   display: flex;
-  padding: 5px;
+  padding: 10px;
+  align-items: center;
 }
 
 header h1 {
-  width: 100%;
+  margin: 0;
+  font-size: 1.5em;
 }
 
 header nav ul {
   display: flex;
-  margin: 2px;
   list-style-type: none;
 }
 
 header nav ul li a {
-  padding: 3px;
+  padding: 10px;
   text-decoration: none;
   color: #eeeafd;
+  transition: color 0.3s;
+}
+
+header nav ul li a:hover {
+  color: #333;
 }
 
 main {
-  padding: 7px;
-  background-color: #c7baf8;
+  padding: 20px;
+  background-color: #eeeafd;
 }
 
 section {
-  padding: 5px;
-  border-radius: 10px;
+  margin-bottom: 20px;
 }
-
-/** INICIO */
 
 #inicio {
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-around;
+  justify-items: center;
+  align-items: center;
+  flex-wrap: wrap;
 }
 
 .contenedor {
   position: relative;
-  width: 12em;
-  height: 12em;
-  align-items: center;
-  justify-content: center;
+  width: 150px;
+  height: 150px;
+  margin: 10px;
 }
 
 .contenedor img {
   position: absolute;
-  max-width: 80%;
+  width: 100%;
+  height: 100%;
   border-radius: 50%;
-  top: 13px;
-  left: 13px;
-  transform-style: preserve-3d;
-  transition: transform 0.4s ease;
+  top: 0;
+  left: 0;
+  transition: transform 0.4s, visibility 0.4s;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
 }
 
 .trasera {
   visibility: hidden;
-  transform: rotateY(160deg);
+  transform: rotateY(180deg);
 }
 
 .contenedor:hover .delantera {
@@ -90,25 +106,31 @@ section {
   visibility: visible;
 }
 
+#inicioRedes {
+  margin-top: 10px;
+}
+
 #inicioRedes img {
   display: flex;
-  width: 45px;
-  height: 45px;
+  width: 50px;
+  height: 50px;
+  margin: 0 10px;
+  transition: transform 0.3s;
 }
 
-/** HABILIDADES */
+#inicioRedes img:hover {
+  transform: scale(1.2);
+}
 
 #iconos img {
-  width: 100%;
-  align-items: center;
+  max-width: 100%;
+  margin: 10px 0;
 }
-
-/* FOOTER */
 
 footer {
   background-color: #8053ea;
   color: #eeeafd;
-  padding: 5px;
+  padding: 10px;
+  text-align: center;
   border-radius: 30px 30px 0 0;
-  margin: 0;
 }
