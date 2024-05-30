@@ -2,3 +2,5 @@
 Paleta de colores : https://uicolors.app/create
 
 iconos : https://yesicon.app/
+
+iconos : skillicons.dev
