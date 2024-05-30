@@ -36,7 +36,7 @@ document.addEventListener("DOMContentLoaded", function () {
           "descripcion": "Proyecto para la comunidad, con tutoriales de cada lenguaje para aprender a programar.",
           "imagen": "./imag/proyectos/aprendeprogramacion.png",
           "github": "https://github.com/EduMMorenolp/Aprende-De-Programacion",
-          "demo": "https://www.youtube.com/embed/a3uv39OAn4U"
+          "demo": "https://edummorenolp.github.io/Aprende-De-Programacion/"
       },
       {
           "nombre": "Proyecto Final Springboot",
