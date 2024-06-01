@@ -168,7 +168,6 @@ footer {
 
 .proyecto img {
   width: 100%;
-  max-width: 300px;
   height: auto;
   border-radius: 10px 0 0 10px;
 }
@@ -306,6 +305,97 @@ button:hover {
 #proyectos h3 a:hover {
   color: #4b0082;
   text-decoration: underline;
+}
+
+/* Flechas movimiento */ 
+
+.movez {
+  display: inline-block;
+  animation: moveRight 1s infinite alternate;
+}
+
+.moved {
+  display: inline-block;
+  animation: moveLeft 1s infinite alternate;
+}
+
+@keyframes moveRight {
+  0% {
+      transform: translateX(0);
+  }
+  100% {
+      transform: translateX(5px);
+  }
+}
+
+@keyframes moveLeft {
+  0% {
+      transform: translateX(0);
+  }
+  100% {
+      transform: translateX(-5px);
+  }
+}
+
+.skills {
+  max-width: 600px;
+  margin: 20px auto;
+}
+
+.skills h3 {
+  font-family: 'Arial', sans-serif;
+  color:  #4b0082;
+  margin-bottom: 10px;
+}
+
+.iconos {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  align-items: center;
+  justify-content: center;
+}
+
+.icon-container {
+  position: relative;
+  display: inline-block;
+}
+
+.tooltip {
+  visibility: hidden;
+  background-color: #555;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px;
+  position: absolute;
+  z-index: 1;
+  bottom: 125%;
+  left: 50%;
+  transform: translateX(-50%);
+  opacity: 0;
+  transition: opacity 0.3s;
+  white-space: nowrap;
+}
+
+.tooltip::after {
+  content: '';
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: #555 transparent transparent transparent;
+}
+
+.icon-container:hover .tooltip {
+  visibility: visible;
+  opacity: 1;
+}
+
+.icon-container img {
+  cursor: pointer;
 }
 
 /* Media Query para tablet */
