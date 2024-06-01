@@ -71,7 +71,7 @@ document.addEventListener("DOMContentLoaded", function () {
               <div class="proyecto-detalles">
                   <h4>${proyecto.nombre}</h4>
                   <p>${proyecto.descripcion}</p>
-                  <a href="${proyecto.github}" target="_blank">Ver en GitHub</a>
+                  <a href="${proyecto.github}" target="_blank">Ver Codigo</a>
                   <a href="${proyecto.demo}" target="_blank">Ver Demo</a>
               </div>
           </div>
