@@ -266,6 +266,21 @@ button:hover {
   margin-top: 10px;
 }
 
+.footer-mail {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.footer-mail img {
+  width: 35px;
+  height: 35px;
+  margin-right: 10px;
+  transition: transform 0.3s;
+}
+.footer-mail img:hover {
+  transform: scale(1.2);
+}
+
 .footer-socials a {
   margin: 0 10px;
   display: inline-block;
