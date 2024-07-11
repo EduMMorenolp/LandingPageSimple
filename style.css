@@ -211,7 +211,8 @@ footer {
 }
 
 .tecnologias {
-  margin: 10px;
+  margin: 0;
+  margin-bottom: 10px;
 }
 
 .tec {
@@ -228,6 +229,13 @@ footer {
 /* Estilos adicionales para hover */
 .tec:hover {
   background-color: #e0e0e0;
+}
+
+.linea-separadora {
+  width: 100%;
+  height: 1px;
+  background-color: #ccc; /* Color de la línea */
+  margin: 10px 0; /* Espacio alrededor de la línea */
 }
 
 /* Sección de Contacto */
@@ -448,7 +456,7 @@ button:hover {
   }
 
   .proyecto-detalles {
-    padding: 30px;
+    padding: 10px;
   }
 }
 
