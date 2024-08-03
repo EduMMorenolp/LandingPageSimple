@@ -69,9 +69,11 @@ document.addEventListener("DOMContentLoaded", function () {
   // Función para generar dinámicamente el HTML de los proyectos
   function generarProyectos() {
     var proyectosHTML = '';
-    proyectos.forEach(function (proyecto) {
+    proyectos.forEach(function (proyecto, index) {
+      var efectoClase = index % 2 === 0 ? 'desde-la-izquierda' : 'desde-la-derecha';
+
       proyectosHTML += `
-          <div class="proyecto">
+          <div class="proyecto ${efectoClase}">
               <img src="${proyecto.imagen}" alt="Imagen del ${proyecto.nombre}">
               <div class="proyecto-detalles">
                   <h4>${proyecto.nombre}</h4>
@@ -91,3 +93,44 @@ document.addEventListener("DOMContentLoaded", function () {
   // Insertar los proyectos generados en el HTML
   document.getElementById("proyecto").innerHTML = generarProyectos();
 })
+
+// Función para verificar si un elemento está visible en la ventana
+function elementoVisible(el) {
+  var rect = el.getBoundingClientRect();
+  return rect.top < window.innerHeight && rect.bottom >= 0;
+}
+
+// Función para manejar el evento de desplazamiento
+function checkVisibility() {
+  var proyectos = document.querySelectorAll('.proyecto');
+  proyectos.forEach(function (proyecto) {
+    if (elementoVisible(proyecto)) {
+      proyecto.classList.add('aparecer');
+    }
+  });
+}
+
+// Agrega el evento de desplazamiento
+window.addEventListener('scroll', checkVisibility);
+
+// Ejecuta la función una vez para ver si algún proyecto ya es visible
+checkVisibility();
+
+function verificarFinDePagina() {
+  var footer = document.getElementById('footer');
+  var alturaPagina = document.documentElement.scrollHeight;
+  var alturaVentana = window.innerHeight;
+  var desplazamiento = window.scrollY;
+
+  // Comprueba si el usuario ha llegado al final de la página
+  if (desplazamiento + alturaVentana >= alturaPagina - 10) { // -10 para algo de margen
+    footer.classList.add('slice-up');
+    footer.classList.remove('hidden');
+  }
+}
+
+// Ejecuta la función al hacer scroll
+window.addEventListener('scroll', verificarFinDePagina);
+
+// Ejecuta la función al cargar la página en caso de que ya esté en el final
+document.addEventListener('DOMContentLoaded', verificarFinDePagina);

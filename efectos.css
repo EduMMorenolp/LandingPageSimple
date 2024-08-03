@@ -1,0 +1,117 @@
+/* efectos.css */
+
+/* HEADER */
+
+.slice-top {
+  overflow: hidden;
+  clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+  animation: sliceIn 1s forwards;
+}
+
+@keyframes sliceIn {
+  to {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+  }
+}
+
+/* PROYECTOS */
+
+.proyecto {
+  opacity: 0;
+  transition: transform 0.5s ease-out, opacity 0.5s ease-out;
+}
+
+.desde-la-izquierda {
+  transform: translateX(-100%);
+}
+
+.desde-la-derecha {
+  transform: translateX(100%);
+}
+
+.proyecto.aparecer {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* FOOTER */
+
+.hidden {
+  display: none;
+}
+
+.slice-up {
+  overflow: hidden;
+  clip-path: polygon(0 100%, 100% 100%, 100% 100%, 0 100%);
+  animation: sliceUp 2s forwards;
+}
+
+@keyframes sliceUp {
+  to {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Estilo para los iconos */
+
+.icon-container {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 3s ease, transform 0.5s ease;
+}
+
+.icon-container:nth-child(1) {
+  animation: fadeInUp 1s forwards;
+  animation-delay: 0.1s;
+}
+
+.icon-container:nth-child(2) {
+  animation: fadeInUp 1s forwards;
+  animation-delay: 0.2s;
+}
+
+.icon-container:nth-child(3) {
+  animation: fadeInUp 1s forwards;
+  animation-delay: 0.3s;
+}
+
+.icon-container:nth-child(4) {
+  animation: fadeInUp 1s forwards;
+  animation-delay: 0.4s;
+}
+
+.icon-container:nth-child(5) {
+  animation: fadeInUp 1s forwards;
+  animation-delay: 0.5s;
+}
+
+.icon-container:nth-child(6) {
+  animation: fadeInUp 1s forwards;
+  animation-delay: 0.6s;
+}
+
+.icon-container:nth-child(7) {
+  animation: fadeInUp 1s forwards;
+  animation-delay: 0.7s;
+}
+
+.icon-container:nth-child(8) {
+  animation: fadeInUp 1s forwards;
+  animation-delay: 0.8s;
+}
+
+.icon-container:nth-child(9) {
+  animation: fadeInUp 1s forwards;
+  animation-delay: 0.8s;
+}
