@@ -14,6 +14,26 @@
   }
 }
 
+/* PROYECTOS */
+
+.proyecto {
+  opacity: 0;
+  transition: transform 0.5s ease-out, opacity 0.5s ease-out;
+}
+
+.desde-la-izquierda {
+  transform: translateX(-100%);
+}
+
+.desde-la-derecha {
+  transform: translateX(100%);
+}
+
+.proyecto.aparecer {
+  opacity: 1;
+  transform: translateX(0);
+}
+
 /* FOOTER */
 
 .hidden {

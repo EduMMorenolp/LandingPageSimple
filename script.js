@@ -69,9 +69,11 @@ document.addEventListener("DOMContentLoaded", function () {
   // Función para generar dinámicamente el HTML de los proyectos
   function generarProyectos() {
     var proyectosHTML = '';
-    proyectos.forEach(function (proyecto) {
+    proyectos.forEach(function (proyecto, index) {
+      var efectoClase = index % 2 === 0 ? 'desde-la-izquierda' : 'desde-la-derecha';
+
       proyectosHTML += `
-          <div class="proyecto">
+          <div class="proyecto ${efectoClase}">
               <img src="${proyecto.imagen}" alt="Imagen del ${proyecto.nombre}">
               <div class="proyecto-detalles">
                   <h4>${proyecto.nombre}</h4>
