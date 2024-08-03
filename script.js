@@ -32,6 +32,22 @@ document.addEventListener("DOMContentLoaded", function () {
   // Objeto que contiene la información de los proyectos
   var proyectos = [
     {
+      "nombre": "ProJet",
+      "descripcion": "Este proyecto es una aplicación web completa que incluye un backend desarrollado con Node.js, y un frontend construido con React. Proporciona funcionalidades para la gestión de tareas, usuarios, proyectos, y más.",
+      "imagen": "./imag/proyectos/Projet-min.jpg",
+      "github": "https://github.com/EduMMorenolp/s16-09-n-node-react-Copia",
+      "demo": " https://s16-09-n-node-react-1.onrender.com/",
+      "tec": ["React", "Node.js", "Express", "PostgreSQL", "TypeScript"]
+    },
+    {
+      "nombre": "PetShop",
+      "descripcion": "PetShop es un proyecto para una tienda virtual de productos para mascotas. En colaboración con un equipo de 4 personas, tomando roles y dividiendo las tareas.",
+      "imagen": "./imag/proyectos/petshop.png",
+      "github": "https://github.com/EduMMorenolp/PetShop",
+      "demo": "https://edummorenolp.github.io/PetShop/",
+      "tec": ["HTML", "CSS", "JavaScript", "Nodejs", "Express", "MySQL"]
+    },
+    {
       "nombre": "Aprender a Programar",
       "descripcion": "Proyecto para la comunidad, con tutoriales de cada lenguaje para aprender a programar.",
       "imagen": "./imag/proyectos/aprendeprogramacion.png",
@@ -55,14 +71,6 @@ document.addEventListener("DOMContentLoaded", function () {
       "github": "https://deepnote.com/workspace/eduardommoreno-34ae987d-0d5e-4172-936b-60005e69667f/project/c23664-Eduardo-Moreno-TPintegrador-57a710b8-5854-4f44-a9e8-4a17d1732d80/notebook/0.%20Consignas%20%2B%20Redes%20Sociales-a13245fd02f84ed48077777de1da7da5",
       "demo": "https://www.youtube.com/embed/kyzCkpCHaGI?si=smvaN9F9Wn75VZQq",
       "tec": ["Python", "SQLite", "Hojas de calculo", "Deepnote", "Looker", "Pandas", "Numpy", "Seaborn", "Matplotlib"]
-    },
-    {
-      "nombre": "PetShop",
-      "descripcion": "PetShop es un proyecto para una tienda virtual de productos para mascotas. En colaboración con un equipo de 4 personas, tomando roles y dividiendo las tareas.",
-      "imagen": "./imag/proyectos/petshop.png",
-      "github": "https://github.com/EduMMorenolp/PetShop",
-      "demo": "https://edummorenolp.github.io/PetShop/",
-      "tec": ["HTML", "CSS", "JavaScript", "Nodejs", "Express", "MySQL"]
     }
   ];
 
