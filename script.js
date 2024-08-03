@@ -69,11 +69,9 @@ document.addEventListener("DOMContentLoaded", function () {
   // Función para generar dinámicamente el HTML de los proyectos
   function generarProyectos() {
     var proyectosHTML = '';
-    proyectos.forEach(function (proyecto, index) {
-      var efectoClase = index % 2 === 0 ? 'desde-la-izquierda' : 'desde-la-derecha';
-
+    proyectos.forEach(function (proyecto) {
       proyectosHTML += `
-          <div class="proyecto ${efectoClase}">
+          <div class="proyecto">
               <img src="${proyecto.imagen}" alt="Imagen del ${proyecto.nombre}">
               <div class="proyecto-detalles">
                   <h4>${proyecto.nombre}</h4>
@@ -81,7 +79,7 @@ document.addEventListener("DOMContentLoaded", function () {
                   <a href="${proyecto.github}" target="_blank">Ver Codigo</a>
                   <a href="${proyecto.demo}" target="_blank">Ver Demo</a>
               </div>
-               <div class="linea-separadora"></div>
+              <div class="linea-separadora"></div>
               <div class="tecnologias">
                   ${proyecto.tec.map(tec => `<span class="tec">${tec}</span>`).join('')}
               </div>
