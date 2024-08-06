@@ -118,6 +118,9 @@
 
 /* DARK MODE */
 
+header {
+  justify-content: space-between;
+}
 
 .checkbox {
   opacity: 0;
@@ -145,7 +148,7 @@
   left: 2px;
   top: 2px;
   border-radius: 50%;
-  transition: transform 0.2s linear;
+  transition: transform 0.3s linear;
 }
 
 .checkbox:checked + .checkbox-label .ball {
@@ -155,14 +158,14 @@
 
 body.dark-mode {
   background-color: #4d258d;
-  color: #f5f5f5;
+  color: #eeeafd;
   transition: background-color 0.5s, color 0.5s;
 }
 
 body.dark-mode h1,
 body.dark-mode h2,
 body.dark-mode h3 {
-  color: #eee;
+  color: #eeeafd;
 }
 
 header.slice-top.dark-mode {
