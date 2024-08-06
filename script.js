@@ -142,3 +142,23 @@ window.addEventListener('scroll', verificarFinDePagina);
 
 // Ejecuta la función al cargar la página en caso de que ya esté en el final
 document.addEventListener('DOMContentLoaded', verificarFinDePagina);
+
+
+/* Dark Mode */
+
+const checkbox = document.getElementById("checkbox")
+const body = document.body;
+const header = document.querySelector("header.slice-top");
+const main = document.querySelector("main");
+const footer = document.getElementById("footer");
+const checkboxLabel = document.querySelector(".checkbox-label");
+
+checkbox.addEventListener("change", () => {
+  const isChecked = checkbox.checked;
+
+  body.classList.toggle("dark-mode", isChecked);
+  header.classList.toggle("dark-mode", isChecked);
+  main.classList.toggle("dark-mode", isChecked);
+  footer.classList.toggle("dark-mode", isChecked);
+  checkboxLabel.classList.toggle("dark-mode", isChecked);
+})
