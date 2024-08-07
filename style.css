@@ -171,6 +171,7 @@ footer {
 /* Sección de Proyectos */
 #proyectos {
   padding: 5px;
+  overflow: hidden;
 }
 
 .proyecto {

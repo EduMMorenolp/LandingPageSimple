@@ -32,24 +32,24 @@ document.addEventListener("DOMContentLoaded", function () {
   // Objeto que contiene la información de los proyectos
   var proyectos = [
     {
-      "nombre": "ProJet",
-      "descripcion": "Este proyecto es una aplicación web completa que incluye un backend desarrollado con Node.js, y un frontend construido con React. Proporciona funcionalidades para la gestión de tareas, usuarios, proyectos, y más.",
-      "imagen": "./imag/proyectos/Projet-min.jpg",
-      "github": "https://github.com/EduMMorenolp/s16-09-n-node-react-Copia",
-      "demo": " https://s16-09-n-node-react-1.onrender.com/",
-      "tec": ["React", "Node.js", "Express", "PostgreSQL", "TypeScript"]
-    },
-    {
       "nombre": "PetShop",
-      "descripcion": "PetShop es un proyecto para una tienda virtual de productos para mascotas. En colaboración con un equipo de 4 personas, tomando roles y dividiendo las tareas.",
+      "descripcion": "Este proyecto consiste en el desarrollo de una tienda virtual de productos para mascotas. Trabajé en colaboración con un equipo de 4 personas, donde asumimos roles específicos y dividimos tareas para maximizar la eficiencia. Mi contribución incluyó trabajo tanto en el backend como en el frontend, asegurando un flujo de trabajo integrado y una experiencia de usuario óptima.",
       "imagen": "./imag/proyectos/petshop.png",
       "github": "https://github.com/EduMMorenolp/PetShop",
       "demo": "https://edummorenolp.github.io/PetShop/",
       "tec": ["HTML", "CSS", "JavaScript", "Nodejs", "Express", "MySQL"]
     },
     {
+      "nombre": "ProJet",
+      "descripcion": "Este proyecto colaborativo es una aplicación web integral desarrollada por un equipo de 10 personas. Mi contribución principal fue en el backend, donde trabajé con Nodejs. La aplicación permite la gestión eficiente de tareas, usuarios, proyectos, y mucho más, con un frontend dinámico construido en React.",
+      "imagen": "./imag/proyectos/Projet-min.jpg",
+      "github": "https://github.com/EduMMorenolp/s16-09-n-node-react-Copia",
+      "demo": " https://s16-09-n-node-react-1.onrender.com/",
+      "tec": ["Node.js", "Express", "PostgreSQL", "TypeScript", "React"]
+    },
+    {
       "nombre": "Aprender a Programar",
-      "descripcion": "Proyecto para la comunidad, con tutoriales de cada lenguaje para aprender a programar.",
+      "descripcion": "Proyecto comunitario que ofrece tutoriales detallados de diversos lenguajes de programación, diseñado para ayudar a los usuarios a desarrollar sus habilidades de programación de manera efectiva.",
       "imagen": "./imag/proyectos/aprendeprogramacion.png",
       "github": "https://github.com/EduMMorenolp/Aprende-De-Programacion",
       "demo": "https://edummorenolp.github.io/Aprende-De-Programacion/",
@@ -58,7 +58,7 @@ document.addEventListener("DOMContentLoaded", function () {
     },
     {
       "nombre": "Proyecto Final Springboot",
-      "descripcion": "Proyecto final donde se implementó Springboot y Thymeleaf para su realización, en colaboración con un equipo de 10 personas, tomando roles y dividiendo las tareas.",
+      "descripcion": "Proyecto final desarrollado en colaboración con un equipo de 10 personas, donde se implementaron Spring Boot y Thymeleaf. Asumí principalmente el rol en el frontend, contribuyendo al diseño y la implementación de la interfaz de usuario, mientras que el equipo trabajó en conjunto dividiendo las tareas y los roles para asegurar el éxito del proyecto.",
       "imagen": "./imag/proyectos/propiedadesvanguardistas.png",
       "github": "https://github.com/EduMMorenolp/ProyectoFinal-Spring",
       "demo": "https://www.youtube.com/embed/Z70zCfUsE4s?si=1kybwL2th3agibVL",
@@ -130,8 +130,7 @@ function verificarFinDePagina() {
   var alturaVentana = window.innerHeight;
   var desplazamiento = window.scrollY;
 
-  // Comprueba si el usuario ha llegado al final de la página
-  if (desplazamiento + alturaVentana >= alturaPagina - 10) { // -10 para algo de margen
+  if (desplazamiento + alturaVentana >= alturaPagina - 10) {
     footer.classList.add('slice-up');
     footer.classList.remove('hidden');
   }
@@ -169,17 +168,17 @@ document.addEventListener("DOMContentLoaded", function () {
   const delantera = contenedor.querySelector(".delantera");
   const trasera = contenedor.querySelector(".trasera");
 
-    setInterval(() => {
-      delantera.style.transform = "rotateY(180deg)";
-      delantera.style.visibility = "hidden";
-      trasera.style.transform = "rotateY(0deg)";
-      trasera.style.visibility = "visible";
-      setTimeout(() => {
-        delantera.style.transform = "";
-        delantera.style.visibility = "";
-        trasera.style.transform = "";
-        trasera.style.visibility = "";
-      }, 1000); 
-    }, 6000);
-  
+  setInterval(() => {
+    delantera.style.transform = "rotateY(180deg)";
+    delantera.style.visibility = "hidden";
+    trasera.style.transform = "rotateY(0deg)";
+    trasera.style.visibility = "visible";
+    setTimeout(() => {
+      delantera.style.transform = "";
+      delantera.style.visibility = "";
+      trasera.style.transform = "";
+      trasera.style.visibility = "";
+    }, 1000);
+  }, 8000);
+
 });
