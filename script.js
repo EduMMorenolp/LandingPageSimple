@@ -162,3 +162,24 @@ checkbox.addEventListener("change", () => {
   footer.classList.toggle("dark-mode", isChecked);
   checkboxLabel.classList.toggle("dark-mode", isChecked);
 })
+
+// Giro de foto Automatico
+document.addEventListener("DOMContentLoaded", function () {
+  const contenedor = document.querySelector(".contenedor");
+  const delantera = contenedor.querySelector(".delantera");
+  const trasera = contenedor.querySelector(".trasera");
+
+    setInterval(() => {
+      delantera.style.transform = "rotateY(180deg)";
+      delantera.style.visibility = "hidden";
+      trasera.style.transform = "rotateY(0deg)";
+      trasera.style.visibility = "visible";
+      setTimeout(() => {
+        delantera.style.transform = "";
+        delantera.style.visibility = "";
+        trasera.style.transform = "";
+        trasera.style.visibility = "";
+      }, 1000); 
+    }, 6000);
+  
+});
