@@ -178,6 +178,10 @@ main.dark-mode {
   transition: background-color 0.5s, color 0.5s;
 }
 
+.dark-mode .contacto-info {
+  color: #333; 
+}
+
 footer.dark-mode {
   background-color: #340f6e;
   transition: background-color 0.5s, color 0.5s;
@@ -189,4 +193,16 @@ footer.dark-mode {
 
 .checkbox-label.dark-mode .ball {
   background-color: #fff;
+}
+
+@media (max-width: 430px) {
+  header {
+    display: block;
+  }
+
+  nav ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 }

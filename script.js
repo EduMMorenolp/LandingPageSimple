@@ -151,6 +151,7 @@ const header = document.querySelector("header.slice-top");
 const main = document.querySelector("main");
 const footer = document.getElementById("footer");
 const checkboxLabel = document.querySelector(".checkbox-label");
+const contacto = document.getElementById("contacto");
 
 checkbox.addEventListener("change", () => {
   const isChecked = checkbox.checked;
@@ -160,6 +161,9 @@ checkbox.addEventListener("change", () => {
   main.classList.toggle("dark-mode", isChecked);
   footer.classList.toggle("dark-mode", isChecked);
   checkboxLabel.classList.toggle("dark-mode", isChecked);
+  contacto.classList.toggle("dark-mode", isChecked);
+
+  console.log(contacto)
 })
 
 // Giro de foto Automatico
