@@ -21,6 +21,22 @@ Este proyecto no requiere instalación. Puedes acceder a la página web directam
 
 [Ver página web](https://edummorenolp.github.io/LandingPageSimple/)
 
+## Estructura del Proyecto
+
+/landingpagesimple
+├── css/
+│   ├── style.css
+│   └── efectos.css
+├── js/
+│   └── script.js
+├── img/
+│   ├── iconos/
+│   │   ├── MdiGithub.svg
+│   │   └── MdiLinkedin.svg
+│   ├── FotoIA.png
+│   └── FotoReal.jpg
+└── index.html
+
 ## Licencia
 
 Este proyecto está bajo la Licencia MIT. Consulta el archivo LICENSE para más detalles.
