@@ -179,7 +179,7 @@ main.dark-mode {
 }
 
 .dark-mode .contacto-info {
-  color: #333; 
+  color: #333;
 }
 
 footer.dark-mode {
@@ -195,9 +195,17 @@ footer.dark-mode {
   background-color: #fff;
 }
 
-@media (max-width: 430px) {
+@media (max-width: 420px) {
   header {
-    display: block;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  nav {
+    order: 2;
+    width: 100%; 
+    margin-bottom: 10px; 
   }
 
   nav ul {
@@ -205,4 +213,10 @@ footer.dark-mode {
     justify-content: center;
     align-items: center;
   }
+
+  .dark-mode {
+    order: 1; 
+    align-self: center; 
+    padding: 5px;
+}
 }
