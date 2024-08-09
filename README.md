@@ -24,9 +24,10 @@ Este proyecto no requiere instalación. Puedes acceder a la página web directam
 ## Estructura del Proyecto
 
 ### Leyenda de Iconos:
-📂 Carpeta/Directorio
-📄 Archivo
-🖼️ Imagen
+
+- 📂 Carpeta/Directorio
+- 📄 Archivo
+- 🖼️ Imagen
 
 ```bash
 /landingpagesimple
