@@ -23,19 +23,28 @@ Este proyecto no requiere instalación. Puedes acceder a la página web directam
 
 ## Estructura del Proyecto
 
+### Leyenda de Iconos:
+📂 Carpeta/Directorio
+📄 Archivo
+🖼️ Imagen
+
 /landingpagesimple
-├── css/
-│   ├── style.css
-│   └── efectos.css
-├── js/
-│   └── script.js
-├── img/
-│   ├── iconos/
-│   │   ├── MdiGithub.svg
-│   │   └── MdiLinkedin.svg
-│   ├── FotoIA.png
-│   └── FotoReal.jpg
-└── index.html
+├── 📂 css/
+│   ├── 📄 style.css
+│   └── 📄 efectos.css
+├── 📂 img/
+│   ├── 📁 certificados/
+│   ├── 📁 iconos/
+│   ├── 📁 proyectos/
+│   ├── 📁 Recursos/
+│   ├── 🖼️ FotoIA.png
+│   └── 🖼️ FotoReal.jpg
+├── 📂 js/
+│   └── 📄 script.js
+├── 📂 public/
+│   └── 📁 pdfs/
+└── 📄 index.html   
+└── 📄 README.md
 
 ## Licencia
 
