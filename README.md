@@ -28,6 +28,7 @@ Este proyecto no requiere instalación. Puedes acceder a la página web directam
 📄 Archivo
 🖼️ Imagen
 
+```bash
 /landingpagesimple
 ├── 📂 css/
 │   ├── 📄 style.css
@@ -45,6 +46,7 @@ Este proyecto no requiere instalación. Puedes acceder a la página web directam
 │   └── 📁 pdfs/
 └── 📄 index.html   
 └── 📄 README.md
+```
 
 ## Licencia
 
