@@ -39,7 +39,7 @@ const proyectos = [
   {
     "nombre": "PetShop",
     "descripcion": "Este proyecto consiste en el desarrollo de una tienda virtual de productos para mascotas. Trabajé en colaboración con un equipo de 4 personas, donde asumimos roles específicos y dividimos tareas para maximizar la eficiencia. Mi contribución incluyó trabajo tanto en el backend como en el frontend, asegurando un flujo de trabajo integrado y una experiencia de usuario óptima.",
-    "imagen": "./imag/proyectos/petshop.png",
+    "imagen": "./img/proyectos/petshop.png",
     "github": "https://github.com/EduMMorenolp/PetShop",
     "demo": "https://edummorenolp.github.io/PetShop/",
     "tec": ["HTML", "CSS", "JavaScript", "Nodejs", "Express", "MySQL"]
@@ -47,7 +47,7 @@ const proyectos = [
   {
     "nombre": "ProJet",
     "descripcion": "Este proyecto colaborativo es una aplicación web integral desarrollada por un equipo de 10 personas. Mi contribución principal fue en el backend, donde trabajé con Nodejs. La aplicación permite la gestión eficiente de tareas, usuarios, proyectos, y mucho más, con un frontend dinámico construido en React.",
-    "imagen": "./imag/proyectos/Projet-min.jpg",
+    "imagen": "./img/proyectos/Projet-min.jpg",
     "github": "https://github.com/EduMMorenolp/s16-09-n-node-react-Copia",
     "demo": " https://s16-09-n-node-react-1.onrender.com/",
     "tec": ["Node.js", "Express", "PostgreSQL", "TypeScript", "React"]
@@ -55,7 +55,7 @@ const proyectos = [
   {
     "nombre": "Aprender a Programar",
     "descripcion": "Proyecto comunitario que ofrece tutoriales detallados de diversos lenguajes de programación, diseñado para ayudar a los usuarios a desarrollar sus habilidades de programación de manera efectiva.",
-    "imagen": "./imag/proyectos/aprendeprogramacion.png",
+    "imagen": "./img/proyectos/aprendeprogramacion.png",
     "github": "https://github.com/EduMMorenolp/Aprende-De-Programacion",
     "demo": "https://edummorenolp.github.io/Aprende-De-Programacion/",
     "tec": ["HTML", "CSS", "JavaScript"]
@@ -63,7 +63,7 @@ const proyectos = [
   {
     "nombre": "Proyecto Final Springboot",
     "descripcion": "Proyecto final desarrollado en colaboración con un equipo de 10 personas, donde se implementaron Spring Boot y Thymeleaf. Asumí principalmente el rol en el frontend, contribuyendo al diseño y la implementación de la interfaz de usuario, mientras que el equipo trabajó en conjunto dividiendo las tareas y los roles para asegurar el éxito del proyecto.",
-    "imagen": "./imag/proyectos/propiedadesvanguardistas.png",
+    "imagen": "./img/proyectos/propiedadesvanguardistas.png",
     "github": "https://github.com/EduMMorenolp/ProyectoFinal-Spring",
     "demo": "https://www.youtube.com/embed/Z70zCfUsE4s?si=1kybwL2th3agibVL",
     "tec": ["Java", "Springboot", "HTML", "CSS", "JavaScript", "Thymeleaf"]
@@ -71,7 +71,7 @@ const proyectos = [
   {
     "nombre": "Proyecto Final Big Data",
     "descripcion": "Proyecto final donde se implementaron diferentes instrumentos de análisis de datos y big data.",
-    "imagen": "./imag/proyectos/bigdata.png",
+    "imagen": "./img/proyectos/bigdata.png",
     "github": "https://deepnote.com/workspace/eduardommoreno-34ae987d-0d5e-4172-936b-60005e69667f/project/c23664-Eduardo-Moreno-TPintegrador-57a710b8-5854-4f44-a9e8-4a17d1732d80/notebook/0.%20Consignas%20%2B%20Redes%20Sociales-a13245fd02f84ed48077777de1da7da5",
     "demo": "https://www.youtube.com/embed/kyzCkpCHaGI?si=smvaN9F9Wn75VZQq",
     "tec": ["Python", "SQLite", "Hojas de calculo", "Deepnote", "Looker", "Pandas", "Numpy", "Seaborn", "Matplotlib"]
