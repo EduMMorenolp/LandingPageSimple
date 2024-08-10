@@ -38,7 +38,7 @@ function setupNavbarLinks() {
 const proyectos = [
   {
     "nombre": "PetShop",
-    "descripcion": "Este proyecto consiste en el desarrollo de una tienda virtual de productos para mascotas. Trabajé en colaboración con un equipo de 4 personas, donde asumimos roles específicos y dividimos tareas para maximizar la eficiencia. Mi contribución incluyó trabajo tanto en el backend como en el frontend, asegurando un flujo de trabajo integrado y una experiencia de usuario óptima.",
+    "descripcion": "Este proyecto consiste en el desarrollo de una tienda virtual de productos para mascotas. Trabajé en colaboración con un equipo de 4 personas, donde asumimos roles específicos y dividimos tareas para maximizar la eficiencia. <strong>Mi contribución incluyó trabajo tanto en el backend como en el frontend</strong>, asegurando un flujo de trabajo integrado y una experiencia de usuario óptima.",
     "imagen": "./img/proyectos/petshop.png",
     "github": "https://github.com/EduMMorenolp/PetShop",
     "demo": "https://edummorenolp.github.io/PetShop/",
@@ -46,7 +46,7 @@ const proyectos = [
   },
   {
     "nombre": "ProJet",
-    "descripcion": "Este proyecto colaborativo es una aplicación web integral desarrollada por un equipo de 10 personas. Mi contribución principal fue en el backend, donde trabajé con Nodejs. La aplicación permite la gestión eficiente de tareas, usuarios, proyectos, y mucho más, con un frontend dinámico construido en React.",
+    "descripcion": "Este proyecto colaborativo es una aplicación web integral desarrollada por un equipo de 10 personas.<strong> Mi contribución principal fue en el backend</strong>, donde trabajé con Nodejs. La aplicación permite la gestión eficiente de tareas, usuarios, proyectos, y mucho más, con un frontend dinámico construido en React.",
     "imagen": "./img/proyectos/Projet-min.jpg",
     "github": "https://github.com/EduMMorenolp/s16-09-n-node-react-Copia",
     "demo": " https://s16-09-n-node-react-1.onrender.com/",
@@ -62,7 +62,7 @@ const proyectos = [
   },
   {
     "nombre": "Proyecto Final Springboot",
-    "descripcion": "Proyecto final desarrollado en colaboración con un equipo de 10 personas, donde se implementaron Spring Boot y Thymeleaf. Asumí principalmente el rol en el frontend, contribuyendo al diseño y la implementación de la interfaz de usuario, mientras que el equipo trabajó en conjunto dividiendo las tareas y los roles para asegurar el éxito del proyecto.",
+    "descripcion": "Proyecto final desarrollado en colaboración con un equipo de 10 personas, donde se implementaron Spring Boot y Thymeleaf.<strong> Asumí principalmente el rol en el frontend </strong>, contribuyendo al diseño y la implementación de la interfaz de usuario, mientras que el equipo trabajó en conjunto dividiendo las tareas y los roles para asegurar el éxito del proyecto.",
     "imagen": "./img/proyectos/propiedadesvanguardistas.png",
     "github": "https://github.com/EduMMorenolp/ProyectoFinal-Spring",
     "demo": "https://www.youtube.com/embed/Z70zCfUsE4s?si=1kybwL2th3agibVL",
