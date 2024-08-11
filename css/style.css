@@ -1,9 +1,10 @@
+/* Global Styles */
 * {
-  text-align: center;
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
   font-family: Arial, sans-serif;
+  text-align: center;
 }
 
 body {
@@ -12,44 +13,39 @@ body {
   line-height: 1.6;
 }
 
-h1 {
+/* Typography */
+h1,
+h3,
+h4 {
   color: #4b0082;
   text-transform: uppercase;
   border-bottom: 2px solid #8053ea;
-}
-
-h3 {
-  font-size: 1.3em;
-  color: #4b0082;
-  margin: 20px 0;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  border-bottom: 2px solid #8053ea;
-  padding-bottom: 10px;
   font-weight: bold;
+  margin: 20px 0;
+  letter-spacing: 1px;
 }
 
+h1 {
+  font-size: 1.7em;
+}
+
+h3,
 h4 {
   font-size: 1.3em;
-  color: #4b0082;
-  margin: 20px 0;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  border-bottom: 2px solid #8053ea;
   padding-bottom: 10px;
-  font-weight: bold;
 }
 
+/* Header Styles */
 header {
   position: sticky;
   top: 0;
   z-index: 100;
   background-color: #8053ea;
-  border-radius: 0 0 15px 15px;
   color: #eeeafd;
   display: flex;
-  padding: 8px;
   align-items: center;
+  padding: 8px;
+  border-radius: 0 0 15px 15px;
 }
 
 header h1 {
@@ -65,24 +61,26 @@ header nav ul {
 header nav ul li a {
   padding: 10px;
   text-decoration: none;
-  color: #eeeafd;
-  transition: color 0.3s;
+  color: inherit;
   font-weight: bold;
+  transition: color 0.3s;
 }
 
 header nav ul li a:hover {
   color: #333;
 }
 
+/* Main Styles */
 main {
   padding: 20px;
-  background-color: #eeeafd;
+  background-color: inherit;
 }
 
 section {
   margin-bottom: 20px;
 }
 
+/* Inicio Section */
 #inicio {
   display: flex;
   justify-content: space-evenly;
@@ -125,6 +123,7 @@ section {
   visibility: visible;
 }
 
+/* Redes Sociales */
 #inicioRedes {
   margin-top: 10px;
 }
@@ -141,16 +140,13 @@ section {
   transform: scale(1.2);
 }
 
-/* GitHub Icon */
-#inicioRedes .igit {
+#inicioRedes .igit,
+.ilin {
   width: 50px;
   height: 50px;
 }
 
-/* LinkedIn Icon */
 .ilin {
-  width: 50px;
-  height: 50px;
   filter: invert(30%) sepia(61%) saturate(2889%) hue-rotate(196deg)
     brightness(92%) contrast(85%);
 }
@@ -160,6 +156,7 @@ section {
   margin: 10px 0;
 }
 
+/* Footer Styles */
 footer {
   background-color: #8053ea;
   color: #eeeafd;
@@ -168,7 +165,40 @@ footer {
   border-radius: 30px 30px 0 0;
 }
 
-/* Sección de Proyectos */
+.footer-socials {
+  margin-top: 10px;
+}
+
+.footer-mail {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+}
+
+.footer-mail img {
+  width: 40px;
+  height: 40px;
+  margin-right: 10px;
+  transition: transform 0.3s;
+}
+
+.footer-mail img:hover,
+.footer-socials img:hover {
+  transform: scale(1.2);
+}
+
+.footer-cv {
+  margin: 0 auto;
+  padding: 10px;
+}
+
+.footer-cv a {
+  text-decoration: none;
+  color: #fff;
+}
+
+/* Proyectos Section */
 #proyectos {
   padding: 5px;
   overflow: hidden;
@@ -240,7 +270,6 @@ footer {
   text-decoration: none;
 }
 
-/* Estilos adicionales para hover */
 .tec:hover {
   background-color: #e0e0e0;
 }
@@ -248,11 +277,11 @@ footer {
 .linea-separadora {
   width: 100%;
   height: 1px;
-  background-color: #ccc; /* Color de la línea */
-  margin: 10px 0; /* Espacio alrededor de la línea */
+  background-color: #ccc;
+  margin: 10px 0;
 }
 
-/* Sección de Contacto */
+/* Contact Section */
 #contacto {
   padding: 3px;
   background-color: #eeeafd;
@@ -309,41 +338,7 @@ button:hover {
   text-align: center;
 }
 
-.footer-socials {
-  margin-top: 10px;
-}
-
-.footer-mail {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 10px;
-}
-.footer-mail img {
-  width: 40px;
-  height: 40px;
-  margin-right: 10px;
-  transition: transform 0.3s;
-}
-.footer-mail img:hover {
-  transform: scale(1.2);
-}
-
-.footer-socials img:hover {
-  transform: scale(1.2);
-}
-
-.footer-cv {
-  margin: 0 auto;
-  padding: 10px;
-}
-
-.footer-cv a {
-  text-decoration: none;
-  color: #fff;
-}
-
-/* Estilo para el enlace a GitHub */
+/* Link Styles */
 #proyectos h3 a {
   color: #8053ea;
   text-decoration: none;
@@ -355,8 +350,7 @@ button:hover {
   text-decoration: underline;
 }
 
-/* Flechas movimiento */
-
+/* Arrow Animations */
 .movez {
   display: inline-block;
   animation: moveRight 1s infinite alternate;
@@ -385,14 +379,14 @@ button:hover {
   }
 }
 
+/* Skills Section */
 .skills {
   max-width: 600px;
   margin: 20px auto;
 }
 
 .skills h3 {
-  font-family: "Arial", sans-serif;
-  color: #4b0082;
+  color: inherit;
   margin-bottom: 10px;
 }
 
@@ -423,18 +417,6 @@ button:hover {
   transform: translateX(-50%);
   opacity: 0;
   transition: opacity 0.3s;
-  white-space: nowrap;
-}
-
-.tooltip::after {
-  content: "";
-  position: absolute;
-  top: 100%;
-  left: 50%;
-  margin-left: -5px;
-  border-width: 5px;
-  border-style: solid;
-  border-color: #555 transparent transparent transparent;
 }
 
 .icon-container:hover .tooltip {
@@ -442,103 +424,21 @@ button:hover {
   opacity: 1;
 }
 
-.icon-container img {
-  cursor: pointer;
+.iconos img {
+  width: 50px;
+  height: 50px;
+  transition: transform 0.3s;
 }
 
-/* Media Query para tablet */
-@media (min-width: 768px) {
-  header nav ul li a {
-    padding: 15px;
-  }
-
-  main {
-    padding: 30px;
-  }
-
-  #inicio {
-    justify-content: center;
-  }
-
-  .contenedor {
-    width: 200px;
-    height: 200px;
-  }
-
-  .proyecto img {
-    max-width: 100%;
-  }
-
-  .proyecto-detalles {
-    padding: 10px;
-  }
+.iconos img:hover {
+  transform: scale(1.2);
 }
 
-/* Media Query para escritorio */
-@media (min-width: 1024px) {
-  header {
-    padding: 20px 50px;
-  }
-
-  header h1 {
-    font-size: 2em;
-  }
-
-  #inicioRedes img {
-    margin: 0 20px;
-  }
-
-  main {
-    padding: 50px;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-
-  main h1 {
-    order: -1;
-    text-align: center;
-    margin-bottom: 20px;
-  }
-
-  main > * {
-    margin: 10px;
-  }
-
-  #presentacion {
-    width: 600px;
-  }
-
-  #habilidades {
-    display: grid;
-    gap: 50px;
-    grid-template-columns: 1fr 1fr;
-  }
-
-  #contacto {
-    width: 500px;
-  }
-
-  section {
-    justify-content: center;
-    align-items: center;
-  }
-
-  #proyectos {
-    width: 90%;
-  }
-
-  #proyecto {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    margin: 0 auto;
-    padding: 0;
-  }
-
-  .proyecto {
-    width: 500px;
-    margin: 0 20px 20px 0;
-  }
+.mejores {
+  color: #333;
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 10px;
+  margin: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }

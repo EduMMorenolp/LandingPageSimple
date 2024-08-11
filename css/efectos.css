@@ -1,49 +1,10 @@
 /* efectos.css */
 
-/* HEADER */
-
-.slice-top {
-  overflow: hidden;
-  clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
-  animation: sliceIn 1s forwards;
-}
-
+/* Animations */
 @keyframes sliceIn {
   to {
     clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
   }
-}
-
-/* PROYECTOS */
-
-.proyecto {
-  opacity: 0;
-  transition: transform 0.5s ease-out, opacity 0.5s ease-out;
-}
-
-.desde-la-izquierda {
-  transform: translateX(-100%);
-}
-
-.desde-la-derecha {
-  transform: translateX(100%);
-}
-
-.proyecto.aparecer {
-  opacity: 1;
-  transform: translateX(0);
-}
-
-/* FOOTER */
-
-.hidden {
-  display: none;
-}
-
-.slice-up {
-  overflow: hidden;
-  clip-path: polygon(0 100%, 100% 100%, 100% 100%, 0 100%);
-  animation: sliceUp 2s forwards;
 }
 
 @keyframes sliceUp {
@@ -63,8 +24,61 @@
   }
 }
 
-/* Estilo para los iconos */
+/* Header Styles */
+header {
+  justify-content: space-between;
+}
 
+header.slice-top {
+  overflow: hidden;
+  clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+  animation: sliceIn 1s forwards;
+}
+
+header.slice-top.dark-mode {
+  background-color: #340f6e;
+  transition: background-color 0.5s, color 0.5s;
+}
+
+/* Proyecto Styles */
+.proyecto {
+  opacity: 0;
+  transition: transform 0.5s ease-out, opacity 0.5s ease-out;
+}
+
+.proyecto.aparecer {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.desde-la-izquierda {
+  transform: translateX(-100%);
+}
+
+.desde-la-derecha {
+  transform: translateX(100%);
+}
+
+/* Footer Styles */
+footer {
+  overflow: hidden;
+}
+
+footer.slice-up {
+  clip-path: polygon(0 100%, 100% 100%, 100% 100%, 0 100%);
+  animation: sliceUp 2s forwards;
+}
+
+footer.dark-mode {
+  background-color: #340f6e;
+  transition: background-color 0.5s, color 0.5s;
+}
+
+.hidden {
+  display: none;
+}
+
+/* Icon Styles */
 .icon-container {
   opacity: 0;
   transform: translateY(20px);
@@ -113,13 +127,29 @@
 
 .icon-container:nth-child(9) {
   animation: fadeInUp 1s forwards;
-  animation-delay: 0.8s;
+  animation-delay: 0.9s;
 }
 
-/* DARK MODE */
+/* Dark Mode */
+body.dark-mode {
+  background-color: #4d258d;
+  color: #eeeafd;
+  transition: background-color 0.5s, color 0.5s;
+}
 
-header {
-  justify-content: space-between;
+body.dark-mode h1,
+body.dark-mode h2,
+body.dark-mode h3 {
+  color: #eeeafd;
+}
+
+main.dark-mode {
+  background-color: #4d258d;
+  transition: background-color 0.5s, color 0.5s;
+}
+
+.dark-mode .contacto-info {
+  color: #333;
 }
 
 .checkbox {
@@ -156,37 +186,6 @@ header {
   transform: translateX(24px);
 }
 
-body.dark-mode {
-  background-color: #4d258d;
-  color: #eeeafd;
-  transition: background-color 0.5s, color 0.5s;
-}
-
-body.dark-mode h1,
-body.dark-mode h2,
-body.dark-mode h3 {
-  color: #eeeafd;
-}
-
-header.slice-top.dark-mode {
-  background-color: #340f6e;
-  transition: background-color 0.5s, color 0.5s;
-}
-
-main.dark-mode {
-  background-color: #4d258d;
-  transition: background-color 0.5s, color 0.5s;
-}
-
-.dark-mode .contacto-info {
-  color: #333;
-}
-
-footer.dark-mode {
-  background-color: #340f6e;
-  transition: background-color 0.5s, color 0.5s;
-}
-
 .checkbox-label.dark-mode {
   background-color: #e0e0e0;
 }
@@ -195,6 +194,7 @@ footer.dark-mode {
   background-color: #fff;
 }
 
+/* Responsive Styles */
 @media (max-width: 420px) {
   header {
     display: flex;
@@ -204,8 +204,8 @@ footer.dark-mode {
 
   nav {
     order: 2;
-    width: 100%; 
-    margin-bottom: 10px; 
+    width: 100%;
+    margin-bottom: 10px;
   }
 
   nav ul {
@@ -215,8 +215,8 @@ footer.dark-mode {
   }
 
   .dark-mode {
-    order: 1; 
-    align-self: center; 
+    order: 1;
+    align-self: center;
     padding: 5px;
-}
+  }
 }
