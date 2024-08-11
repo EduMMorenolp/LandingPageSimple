@@ -83,6 +83,15 @@ const proyectos = [
     "demo": "https://www.youtube.com/embed/kyzCkpCHaGI?si=smvaN9F9Wn75VZQq",
     "tec": ["Python", "SQLite", "Hojas de calculo", "Deepnote", "Looker", "Pandas", "Numpy", "Seaborn", "Matplotlib"],
     "categoria": ["dataanalist"]
+  },
+  {
+    "nombre": "UserFlow",
+    "descripcion": "UserFlow es una API diseñada para gestionar un CRUD de clientes, incorporando un sistema de autenticación basado en API keys. Los usuarios registrados pueden generar y utilizar una API key única para interactuar de manera segura con el backend.",
+    "imagen": "./img/proyectos/UserFlow2-min.jpg",
+    "github": "https://github.com/EduMMorenolp/UserFlow",
+    "demo": "https://userflow-7y2o.onrender.com",
+    "tec": ["Node.js", "Express", "MySQL", "Prisma", "Swagger"],
+    "categoria": ["backend"]
   }
 ];
 
@@ -119,7 +128,7 @@ function insertProjects(proyectosParaMostrar) {
   document.getElementById("proyecto").innerHTML = proyectosHTML;
 
   primeraCarga = false;
-  
+
   checkVisibility();
 }
 
