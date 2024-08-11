@@ -73,7 +73,7 @@ const proyectos = [
     "github": "https://github.com/EduMMorenolp/ProyectoFinal-Spring",
     "demo": "https://www.youtube.com/embed/Z70zCfUsE4s?si=1kybwL2th3agibVL",
     "tec": ["Java", "Springboot", "HTML", "CSS", "JavaScript", "Thymeleaf"],
-    "categoria": ["frontend", "backend"]
+    "categoria": ["frontend"]
   },
   {
     "nombre": "Proyecto Final Big Data",
