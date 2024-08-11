@@ -32,8 +32,12 @@ Este proyecto no requiere instalación. Puedes acceder a la página web directam
 ```bash
 /landingpagesimple
 ├── 📂 css/
-│   ├── 📄 style.css
-│   └── 📄 efectos.css
+│   ├── 📄 animations.css
+│   ├── 📄 darkmode.css
+│   ├── 📄 footer.css
+│   ├── 📄 global.css
+│   ├── 📄 header.css
+│   └── 📄 main.css
 ├── 📂 img/
 │   ├── 📁 certificados/
 │   ├── 📁 iconos/
