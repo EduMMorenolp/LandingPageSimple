@@ -45,7 +45,7 @@ const proyectos = [
     "imagen": "./img/proyectos/petshop.png",
     "github": "https://github.com/EduMMorenolp/PetShop",
     "demo": "https://edummorenolp.github.io/PetShop/",
-    "tec": ["HTML", "CSS", "JavaScript", "Nodejs", "Express", "MySQL"],
+    "tec": ["HTML", "CSS", "JavaScript", "Nodejs", "Express", "MySQL","🧑‍🤝‍🧑 Colaborativo"],
     "categoria": ["frontend", "backend"]
   },
   {
@@ -54,7 +54,7 @@ const proyectos = [
     "imagen": "./img/proyectos/Projet-min.jpg",
     "github": "https://github.com/EduMMorenolp/s16-09-n-node-react-Copia",
     "demo": " https://s16-09-n-node-react-1.onrender.com/",
-    "tec": ["Node.js", "Express", "PostgreSQL", "TypeScript", "React"],
+    "tec": ["Node.js", "Express", "PostgreSQL", "TypeScript", "React","🧑‍🤝‍🧑 Colaborativo"],
     "categoria": ["backend"]
   },
   {
@@ -72,7 +72,7 @@ const proyectos = [
     "imagen": "./img/proyectos/propiedadesvanguardistas.png",
     "github": "https://github.com/EduMMorenolp/ProyectoFinal-Spring",
     "demo": "https://www.youtube.com/embed/Z70zCfUsE4s?si=1kybwL2th3agibVL",
-    "tec": ["Java", "Springboot", "HTML", "CSS", "JavaScript", "Thymeleaf"],
+    "tec": ["Java", "Springboot", "HTML", "CSS", "JavaScript", "Thymeleaf","🧑‍🤝‍🧑 Colaborativo"],
     "categoria": ["frontend"]
   },
   {
