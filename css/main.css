@@ -171,6 +171,24 @@ section {
   margin: 10px 0;
 }
 
+
+.botones-filtrar {
+  padding-bottom: 10px; 
+}
+
+.boton-filtrar:hover {
+  transform: scale(1.05); 
+}
+
+.boton-filtrar:active {
+  transform: scale(1); 
+}
+
+.boton-filtrar.activo {
+  background-color: #36015c; 
+  transform: scale(1.05);
+}
+
 /* Contact Section */
 #contacto {
   padding: 3px;
@@ -330,6 +348,16 @@ button:hover {
   padding: 10px;
   margin: 10px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+@media (max-width: 420px) {
+  .botones-filtrar {
+    display: flex; 
+    flex-wrap: wrap; 
+    gap: 10px; 
+    align-items: center;
+    justify-content: space-around;
+  }
 }
 
 /* Media Query para tablet */

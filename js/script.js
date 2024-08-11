@@ -1,12 +1,15 @@
 // Log inicial
 console.log("Hola Mundo");
 
+let primeraCarga = true;
+
 // Esperar a que el DOM esté completamente cargado
 document.addEventListener("DOMContentLoaded", function () {
   setupNavbarLinks();
-  insertProjects();
+  insertProjects(proyectos);
   initializeDarkModeToggle();
   setupPhotoFlip();
+  setupFilterButtons();
 
   // Verificar la visibilidad inicial de elementos y el pie de página
   checkVisibility();
@@ -42,7 +45,8 @@ const proyectos = [
     "imagen": "./img/proyectos/petshop.png",
     "github": "https://github.com/EduMMorenolp/PetShop",
     "demo": "https://edummorenolp.github.io/PetShop/",
-    "tec": ["HTML", "CSS", "JavaScript", "Nodejs", "Express", "MySQL"]
+    "tec": ["HTML", "CSS", "JavaScript", "Nodejs", "Express", "MySQL"],
+    "categoria": ["frontend", "backend"]
   },
   {
     "nombre": "ProJet",
@@ -50,7 +54,8 @@ const proyectos = [
     "imagen": "./img/proyectos/Projet-min.jpg",
     "github": "https://github.com/EduMMorenolp/s16-09-n-node-react-Copia",
     "demo": " https://s16-09-n-node-react-1.onrender.com/",
-    "tec": ["Node.js", "Express", "PostgreSQL", "TypeScript", "React"]
+    "tec": ["Node.js", "Express", "PostgreSQL", "TypeScript", "React"],
+    "categoria": ["backend"]
   },
   {
     "nombre": "Aprender a Programar",
@@ -58,7 +63,8 @@ const proyectos = [
     "imagen": "./img/proyectos/aprendeprogramacion.png",
     "github": "https://github.com/EduMMorenolp/Aprende-De-Programacion",
     "demo": "https://edummorenolp.github.io/Aprende-De-Programacion/",
-    "tec": ["HTML", "CSS", "JavaScript"]
+    "tec": ["HTML", "CSS", "JavaScript"],
+    "categoria": ["frontend"]
   },
   {
     "nombre": "Proyecto Final Springboot",
@@ -66,7 +72,8 @@ const proyectos = [
     "imagen": "./img/proyectos/propiedadesvanguardistas.png",
     "github": "https://github.com/EduMMorenolp/ProyectoFinal-Spring",
     "demo": "https://www.youtube.com/embed/Z70zCfUsE4s?si=1kybwL2th3agibVL",
-    "tec": ["Java", "Springboot", "HTML", "CSS", "JavaScript", "Thymeleaf"]
+    "tec": ["Java", "Springboot", "HTML", "CSS", "JavaScript", "Thymeleaf"],
+    "categoria": ["frontend", "backend"]
   },
   {
     "nombre": "Proyecto Final Big Data",
@@ -74,14 +81,25 @@ const proyectos = [
     "imagen": "./img/proyectos/bigdata.png",
     "github": "https://deepnote.com/workspace/eduardommoreno-34ae987d-0d5e-4172-936b-60005e69667f/project/c23664-Eduardo-Moreno-TPintegrador-57a710b8-5854-4f44-a9e8-4a17d1732d80/notebook/0.%20Consignas%20%2B%20Redes%20Sociales-a13245fd02f84ed48077777de1da7da5",
     "demo": "https://www.youtube.com/embed/kyzCkpCHaGI?si=smvaN9F9Wn75VZQq",
-    "tec": ["Python", "SQLite", "Hojas de calculo", "Deepnote", "Looker", "Pandas", "Numpy", "Seaborn", "Matplotlib"]
+    "tec": ["Python", "SQLite", "Hojas de calculo", "Deepnote", "Looker", "Pandas", "Numpy", "Seaborn", "Matplotlib"],
+    "categoria": ["dataanalist"]
   }
 ];
 
+function filtrarProyectos(categoria) {
+  const proyectosFiltrados = proyectos.filter(proyecto => {
+    if (categoria === 'fullstack') {
+      return proyecto.categoria.includes('frontend') || proyecto.categoria.includes('backend');
+    }
+    return proyecto.categoria.includes(categoria) || categoria === '';
+  });
+  insertProjects(proyectosFiltrados);
+}
+
 // Inserta proyectos en el DOM
-function insertProjects() {
-  const proyectosHTML = proyectos.map((proyecto, index) => {
-    const efectoClase = index % 2 === 0 ? 'desde-la-izquierda' : 'desde-la-derecha';
+function insertProjects(proyectosParaMostrar) {
+  const proyectosHTML = proyectosParaMostrar.map((proyecto, index) => {
+    const efectoClase = primeraCarga ? (index % 2 === 0 ? 'desde-la-izquierda' : 'desde-la-derecha') : '';
     return `
       <div class="proyecto ${efectoClase}">
         <img src="${proyecto.imagen}" alt="Imagen del ${proyecto.nombre}">
@@ -99,6 +117,20 @@ function insertProjects() {
     `;
   }).join('');
   document.getElementById("proyecto").innerHTML = proyectosHTML;
+
+  primeraCarga = false;
+  
+  checkVisibility();
+}
+
+function setupFilterButtons() {
+  const botonesFiltrar = document.querySelectorAll(".boton-filtrar");
+  botonesFiltrar.forEach(boton => {
+    boton.addEventListener("click", function () {
+      botonesFiltrar.forEach(b => b.classList.remove("activo"));
+      boton.classList.add("activo");
+    });
+  });
 }
 
 // Comprueba si un elemento es visible en la ventana
