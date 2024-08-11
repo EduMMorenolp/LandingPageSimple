@@ -4,3 +4,17 @@ Paleta de colores : https://uicolors.app/create
 iconos : https://yesicon.app/
 
 iconos : skillicons.dev
+
+Paleta Colores :
+
+ Fuchsia Blue
+50 F6F4FE
+100 EEEAFD
+200 DFD9FB
+300 C7BAF8
+400 A992F3
+500 8053EA
+600 7E45E2
+700 6E33CE
+800 5C2AAD
+900 4D258D
