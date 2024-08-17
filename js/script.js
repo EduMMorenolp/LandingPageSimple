@@ -215,7 +215,7 @@ function setupPhotoFlip() {
 window.addEventListener('scroll', checkVisibility);
 window.addEventListener('scroll', checkPageEndVisibility);
 
-
+// Cambio de Iconos a Texto y Viceversa
 document.getElementById('toggleView').addEventListener('click', function() {
   const iconContainers = document.querySelectorAll('.icon-container');
   
