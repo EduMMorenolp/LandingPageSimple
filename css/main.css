@@ -327,6 +327,24 @@ button:hover {
   transition: opacity 0.3s;
 }
 
+/* Cambio Iconos a Nombre */
+
+.icon-container.list-view img {
+  display: none;
+}
+
+.icon-container.list-view .tooltip {
+  visibility: visible;
+  padding: 8px;
+  display: block;
+  font-size: 18px;
+  font-weight: bold;
+  background-color: #333;
+  opacity: 1;
+  position: relative;
+  transition: opacity 1s;
+}
+
 .icon-container:hover .tooltip {
   visibility: visible;
   opacity: 1;
