@@ -49,6 +49,15 @@ const proyectos = [
     "categoria": ["frontend", "backend"]
   },
   {
+    "nombre": "UserFlow",
+    "descripcion": "UserFlow es una API diseñada para gestionar un CRUD de clientes, incorporando un sistema de autenticación basado en API keys. Los usuarios registrados pueden generar y utilizar una API key única para interactuar de manera segura con el backend.",
+    "imagen": "./img/proyectos/UserFlow2-min.jpg",
+    "github": "https://github.com/EduMMorenolp/UserFlow",
+    "demo": "https://userflow-7y2o.onrender.com",
+    "tec": ["Node.js", "Express", "MySQL", "Prisma", "Swagger"],
+    "categoria": ["backend"]
+  },
+  {
     "nombre": "ProJet",
     "descripcion": "Este proyecto colaborativo es una aplicación web integral desarrollada por un equipo de 10 personas.<strong> Mi contribución principal fue en el backend</strong>, donde trabajé con Nodejs. La aplicación permite la gestión eficiente de tareas, usuarios, proyectos, y mucho más, con un frontend dinámico construido en React.",
     "imagen": "./img/proyectos/Projet-min.jpg",
@@ -83,15 +92,6 @@ const proyectos = [
     "demo": "https://www.youtube.com/embed/kyzCkpCHaGI?si=smvaN9F9Wn75VZQq",
     "tec": ["Python", "SQLite", "Hojas de calculo", "Deepnote", "Looker", "Pandas", "Numpy", "Seaborn", "Matplotlib"],
     "categoria": ["dataanalist"]
-  },
-  {
-    "nombre": "UserFlow",
-    "descripcion": "UserFlow es una API diseñada para gestionar un CRUD de clientes, incorporando un sistema de autenticación basado en API keys. Los usuarios registrados pueden generar y utilizar una API key única para interactuar de manera segura con el backend.",
-    "imagen": "./img/proyectos/UserFlow2-min.jpg",
-    "github": "https://github.com/EduMMorenolp/UserFlow",
-    "demo": "https://userflow-7y2o.onrender.com",
-    "tec": ["Node.js", "Express", "MySQL", "Prisma", "Swagger"],
-    "categoria": ["backend"]
   }
 ];
 
