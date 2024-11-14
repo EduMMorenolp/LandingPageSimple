@@ -69,7 +69,7 @@ async function filtrarProyectos(categoria) {
 // Inserta proyectos en el DOM
 async function cargarProyectos(idioma = 'es') {
   try {
-    const response = await fetch('https://edummorenolp.github.io/LandingPageSimple/js/idiomas.json');
+    const response = await fetch('https://github.com/EduMMorenolp/LandingPageSimple/blob/master/js/idiomas.json');
     const data = await response.json();
 
     const proyectos = data[idioma].proyecto;
