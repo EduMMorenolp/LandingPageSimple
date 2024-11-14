@@ -53,6 +53,9 @@ async function filtrarProyectos(categoria) {
     const response = await fetch('https://edummorenolp.github.io/LandingPageSimple/js/proyectos.json');
 
     const data = await response.json();
+
+    console.log(data)
+
     const proyectos = data[language].proyecto;
     const proyectosFiltrados = proyectos.filter(proyecto => {
       if (categoria === 'fullstack') {
