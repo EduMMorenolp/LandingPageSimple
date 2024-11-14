@@ -2,11 +2,22 @@
 console.log("Hola Mundo");
 
 let primeraCarga = true;
+let language = "es";
 
 // Esperar a que el DOM esté completamente cargado
 document.addEventListener("DOMContentLoaded", function () {
+  // Definir un valor inicial para el idioma
+
+  const toggleLanguage = document.querySelector("#toggle-checkbox");
+
+  toggleLanguage.addEventListener("change", () => {
+    language = toggleLanguage.checked ? "en" : "es";
+    loadLanguage(language);
+    cargarProyectos(language);
+  });
+
   setupNavbarLinks();
-  insertProjects(proyectos);
+  cargarProyectos(language);
   initializeDarkModeToggle();
   setupPhotoFlip();
   setupFilterButtons();
@@ -37,77 +48,39 @@ function setupNavbarLinks() {
   });
 }
 
-// Información de los proyectos
-const proyectos = [
-  {
-    "nombre": "PetShop",
-    "descripcion": "Este proyecto consiste en el desarrollo de una tienda virtual de productos para mascotas. Trabajé en colaboración con un equipo de 4 personas, donde asumimos roles específicos y dividimos tareas para maximizar la eficiencia. <strong>Mi contribución incluyó trabajo tanto en el backend como en el frontend</strong>, asegurando un flujo de trabajo integrado y una experiencia de usuario óptima.",
-    "imagen": "./img/proyectos/petshop.png",
-    "github": "https://github.com/EduMMorenolp/PetShop",
-    "demo": "https://edummorenolp.github.io/PetShop/",
-    "tec": ["HTML", "CSS", "JavaScript", "Nodejs", "Express", "MySQL", "🧑‍🤝‍🧑 Colaborativo"],
-    "categoria": ["frontend", "backend"]
-  },
-  {
-    "nombre": "UserFlow",
-    "descripcion": "UserFlow es una API diseñada para gestionar un CRUD de clientes, incorporando un sistema de autenticación basado en API keys. Los usuarios registrados pueden generar y utilizar una API key única para interactuar de manera segura con el backend.",
-    "imagen": "./img/proyectos/UserFlow2-min.jpg",
-    "github": "https://github.com/EduMMorenolp/UserFlow",
-    "demo": "https://userflow-7y2o.onrender.com",
-    "tec": ["Node.js", "Express", "MySQL", "Prisma", "Swagger"],
-    "categoria": ["backend"]
-  },
-  {
-    "nombre": "ProJet",
-    "descripcion": "Este proyecto colaborativo es una aplicación web integral desarrollada por un equipo de 10 personas.<strong> Mi contribución principal fue en el backend</strong>, donde trabajé con Nodejs. La aplicación permite la gestión eficiente de tareas, usuarios, proyectos, y mucho más, con un frontend dinámico construido en React.",
-    "imagen": "./img/proyectos/Projet-min.jpg",
-    "github": "https://github.com/EduMMorenolp/s16-09-n-node-react-Copia",
-    "demo": " https://s16-09-n-node-react-1.onrender.com/",
-    "tec": ["Node.js", "Express", "PostgreSQL", "TypeScript", "React", "🧑‍🤝‍🧑 Colaborativo"],
-    "categoria": ["backend"]
-  },
-  {
-    "nombre": "Aprender a Programar",
-    "descripcion": "Proyecto comunitario que ofrece tutoriales detallados de diversos lenguajes de programación, diseñado para ayudar a los usuarios a desarrollar sus habilidades de programación de manera efectiva.",
-    "imagen": "./img/proyectos/aprendeprogramacion.png",
-    "github": "https://github.com/EduMMorenolp/Aprende-De-Programacion",
-    "demo": "https://edummorenolp.github.io/Aprende-De-Programacion/",
-    "tec": ["HTML", "CSS", "JavaScript"],
-    "categoria": ["frontend"]
-  },
-  {
-    "nombre": "Proyecto Final Springboot",
-    "descripcion": "Proyecto final desarrollado en colaboración con un equipo de 10 personas, donde se implementaron Spring Boot y Thymeleaf.<strong> Asumí principalmente el rol en el frontend </strong>, contribuyendo al diseño y la implementación de la interfaz de usuario, mientras que el equipo trabajó en conjunto dividiendo las tareas y los roles para asegurar el éxito del proyecto.",
-    "imagen": "./img/proyectos/propiedadesvanguardistas.png",
-    "github": "https://github.com/EduMMorenolp/ProyectoFinal-Spring",
-    "demo": "https://www.youtube.com/embed/Z70zCfUsE4s?si=1kybwL2th3agibVL",
-    "tec": ["Java", "Springboot", "HTML", "CSS", "JavaScript", "Thymeleaf", "🧑‍🤝‍🧑 Colaborativo"],
-    "categoria": ["frontend"]
-  },
-  {
-    "nombre": "Proyecto Final Big Data",
-    "descripcion": "Proyecto final donde se implementaron diferentes instrumentos de análisis de datos y big data.",
-    "imagen": "./img/proyectos/bigdata.png",
-    "github": "https://deepnote.com/workspace/eduardommoreno-34ae987d-0d5e-4172-936b-60005e69667f/project/c23664-Eduardo-Moreno-TPintegrador-57a710b8-5854-4f44-a9e8-4a17d1732d80/notebook/0.%20Consignas%20%2B%20Redes%20Sociales-a13245fd02f84ed48077777de1da7da5",
-    "demo": "https://www.youtube.com/embed/kyzCkpCHaGI?si=smvaN9F9Wn75VZQq",
-    "tec": ["Python", "SQLite", "Hojas de calculo", "Deepnote", "Looker", "Pandas", "Numpy", "Seaborn", "Matplotlib"],
-    "categoria": ["dataanalist"]
+async function filtrarProyectos(categoria) {
+  try {
+    const response = await fetch('../js/proyectos.json');
+    const data = await response.json();
+    const proyectos = data[language].proyecto;
+    const proyectosFiltrados = proyectos.filter(proyecto => {
+      if (categoria === 'fullstack') {
+        return proyecto.categoria.includes('frontend') || proyecto.categoria.includes('backend');
+      }
+      return proyecto.categoria.includes(categoria) || categoria === '';
+    });
+    insertProjects(proyectosFiltrados, language);
+  } catch (error) {
+    console.error('Error al cargar el archivo JSON:', error);
   }
-];
-
-function filtrarProyectos(categoria) {
-  const proyectosFiltrados = proyectos.filter(proyecto => {
-    if (categoria === 'fullstack') {
-      return proyecto.categoria.includes('frontend') || proyecto.categoria.includes('backend');
-    }
-    return proyecto.categoria.includes(categoria) || categoria === '';
-  });
-  insertProjects(proyectosFiltrados);
 }
 
 // Inserta proyectos en el DOM
-function insertProjects(proyectosParaMostrar) {
-  const proyectosHTML = proyectosParaMostrar.map((proyecto, index) => {
+async function cargarProyectos(idioma = 'es') {
+  try {
+    const response = await fetch('../js/proyectos.json');
+    const data = await response.json();
+
+    const proyectos = data[idioma].proyecto;
+
+    insertProjects(proyectos);
+  } catch (error) {
+    console.error('Error al cargar el archivo JSON:', error);
+  }
+}
+
+function insertProjects(proyectos) {
+  const proyectosHTML = proyectos.map((proyecto, index) => {
     const efectoClase = primeraCarga ? (index % 2 === 0 ? 'desde-la-izquierda' : 'desde-la-derecha') : '';
     return `
       <div class="proyecto ${efectoClase}">
@@ -115,8 +88,8 @@ function insertProjects(proyectosParaMostrar) {
         <div class="proyecto-detalles">
           <h4>${proyecto.nombre}</h4>
           <p>${proyecto.descripcion}</p>
-          <a href="${proyecto.github}" target="_blank">Ver Codigo</a>
-          <a href="${proyecto.demo}" target="_blank">Ver Demo</a>
+          <a href="${proyecto.github}" target="_blank">${proyecto.verCodigo || 'Ver Código'}</a>
+          <a href="${proyecto.demo}" target="_blank">${proyecto.verDemo || 'Ver Demo'}</a>
         </div>
         <div class="linea-separadora"></div>
         <div class="tecnologias">
@@ -216,25 +189,50 @@ window.addEventListener('scroll', checkVisibility);
 window.addEventListener('scroll', checkPageEndVisibility);
 
 // Cambio de Iconos a Texto y Viceversa
-document.getElementById('toggleView').addEventListener('click', function() {
+document.getElementById('toggleView').addEventListener('click', function () {
   const iconContainers = document.querySelectorAll('.icon-container');
-  
+
   iconContainers.forEach(container => {
-      container.classList.toggle('list-view');
+    container.classList.toggle('list-view');
   });
 
   // Cambiar el texto del botón
   this.textContent = this.textContent.includes('Nombres') ? 'Mostrar Iconos' : 'Mostrar Nombres';
 });
 
-const toggleCheckbox = document.getElementById('toggle-checkbox');
+// Cambio de idiomas
+function loadLanguage(lang) {
+  fetch('../js/idiomas.json')
+    .then(response => response.json())
+    .then(data => {
+      document.querySelector(".inicio").textContent = data[lang].inicio;
+      document.querySelector(".habilidades").textContent = data[lang].habilidades;
+      document.querySelector(".proyectos").textContent = data[lang].proyectos;
+      document.querySelector(".contacto").textContent = data[lang].contacto;
+      document.querySelector(".desarrollador").textContent = data[lang].desarrolladorWeb;
+      document.querySelector(".presentacion-texto").innerHTML = data[lang].presentacion;
+      document.querySelector(".toggle-view").textContent = data[lang].toggleView;
 
-toggleCheckbox.addEventListener('change', () => {
-    if (toggleCheckbox.checked) {
-        // Cambiar a español
-        document.documentElement.setAttribute('lang', 'es');
-    } else {
-        // Cambiar a inglés
-        document.documentElement.setAttribute('lang', 'en');
-    }
-});
+      document.querySelector(".herramientas h3").textContent = data[lang].herramientasTitulo;
+      document.querySelector(".idiomas-titulo").textContent = data[lang].idiomasTitulo;
+      document.querySelector(".idiomas-espanol").innerHTML = data[lang].idiomasEspanol;
+      document.querySelector(".idiomas-ingles").innerHTML = data[lang].idiomasIngles;
+
+      document.querySelector("#proyectos h3").textContent = data[lang].proyectosTitulo;
+
+      document.querySelector(".boton-filtrar:nth-child(4)").textContent = data[lang].todos;
+      document.querySelector(".proyectos-github").textContent = data[lang].proyectosGithub;
+
+      document.querySelector("#contacto h4").textContent = data[lang].contactoTitulo;
+      document.querySelector("label[for='name']").textContent = data[lang].formLabelName;
+      document.querySelector("label[for='email']").textContent = data[lang].formLabelEmail;
+      document.querySelector("label[for='message']").textContent = data[lang].formLabelMessage;
+      document.querySelector("button[type='submit']").textContent = data[lang].contactoSubmit;
+
+      document.querySelector(".contacto-info p").textContent = data[lang].contactoDesc;
+
+      document.querySelector(".contacto-redes").textContent = data[lang].contactoRedes;
+
+      document.querySelectorAll("#footer p")[1].textContent = data[lang].footerRights;
+    });
+}

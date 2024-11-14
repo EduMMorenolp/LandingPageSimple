@@ -35,10 +35,10 @@
         </div>
         <nav>
             <ul>
-                <li><a href="#inicio">Inicio</a></li>
-                <li><a href="#habilidades">Habilidades</a></li>
-                <li><a href="#proyectos">Proyectos</a></li>
-                <li><a href="#contacto">Contacto</a></li>
+                <li><a class="inicio" href="#inicio">Inicio</a></li>
+                <li><a class="habilidades" href="#habilidades">Habilidades</a></li>
+                <li><a class="proyectos" href="#proyectos">Proyectos</a></li>
+                <li><a class="contacto" href="#contacto">Contacto</a></li>
             </ul>
         </nav>
         <div class="dark-mode dark-icon">
@@ -50,7 +50,7 @@
     </header>
     <main>
         <section>
-            <h1>Desarrollador Web</h1>
+            <h1 class="desarrollador">Desarrollador Web</h1>
         </section>
         <section id="inicio">
             <div class="contenedor">
@@ -65,15 +65,15 @@
             </div>
         </section>
         <section id="presentacion">
-            <p>¡Holis! <strong>Soy Eduardo Moreno</strong>, un apasionado programador con <strong>experiencia en
-                    desarrollo
-                    frontend, backend y data analyst</strong>. Mi
-                objetivo es crear soluciones que impulsen el éxito de los proyectos en los que participo.
+            <p class="presentacion-texto">
+                ¡Holis! <strong>Soy Eduardo Moreno</strong>, un apasionado programador con
+                <strong>experiencia en desarrollo frontend, backend y data analyst</strong>.
+                Mi objetivo es crear soluciones que impulsen el éxito de los proyectos en los que participo.
             </p>
         </section>
         <section id="habilidades">
             <div class="skills">
-                <button id="toggleView">Mostrar Nombres</button>
+                <button id="toggleView" class="toggle-view">Mostrar Nombres</button>
                 <div class="frontend">
                     <h3>Frontend</h3>
                     <div class="iconos">
@@ -153,7 +153,7 @@
                     </div>
                 </div>
                 <div class="herramientas">
-                    <h3>Herramientas</h3>
+                    <h3 class="herramientas-titulo">Herramientas</h3>
                     <div class="iconos">
                         <div class="icon-container">
                             <img src="https://skillicons.dev/icons?i=git" alt="Git">
@@ -195,67 +195,66 @@
                 </div>
             </div>
             <div class="idiomas">
-                <h3>Idiomas</h3>
-                <p><strong>Español:</strong> Nativo</p>
-                <p><strong>Inglés:</strong> B2</p>
+                <h3 class="idiomas-titulo">Idiomas</h3>
+                <p><span class="idiomas-espanol"><strong>Español:</strong> Nativo</span></p>
+                <p><span class="idiomas-ingles"><strong>Inglés:</strong> B2</span></p>
             </div>
         </section>
         <section id="proyectos">
-            <h3>Proyectos</h3>
+            <h3 class="proyectos-titulo">Proyectos</h3>
             <div class="botones-filtrar">
                 <button class="boton-filtrar" onclick="filtrarProyectos('frontend')">Frontend</button>
                 <button class="boton-filtrar" onclick="filtrarProyectos('backend')">Backend</button>
                 <button class="boton-filtrar" onclick="filtrarProyectos('dataanalist')">Data Analyst</button>
-                <button class="boton-filtrar" onclick="filtrarProyectos('')">Mostrar Todos</button>
+                <button class="boton-filtrar todos" onclick="filtrarProyectos('')">Mostrar Todos</button>
             </div>
             </div>
             <div id="proyecto">
                 <!-- Aquí irán los proyectos -->
             </div>
-            <h3>Para más proyectos, visita mi <a href="https://github.com/EduMMorenolp" target="_blank"> <strong
-                        class="movez"> >>> </strong> GitHub <strong class="moved">
+            <h3> <strong class="proyectos-github">Para más proyectos, visita mi </strong>  <a href="https://github.com/EduMMorenolp"
+                    target="_blank"> <strong class="movez"> >>> </strong> GitHub <strong class="moved">
                         <<< </strong></a></h3>
         </section>
         <section id="contacto">
-            <h4>Contacto</h4>
+            <h4 class="contacto-titulo">Contacto</h4>
             <form action="https://formsubmit.co/e.m.morenolp@gmail.com" method="POST">
                 <input type="text" name="_honey" style="display:none">
                 <input type="hidden" name="_next" value="https://edummorenolp.github.io/LandingPageSimple/">
                 <input type="hidden" name="_captcha" value="false">
                 <div class="form-group">
-                    <label for="name">Nombre:</label>
+                    <label for="name" class="form-label-name">Nombre:</label>
                     <input type="text" id="name" name="name" required>
                 </div>
                 <div class="form-group">
-                    <label for="email">Correo electrónico:</label>
+                    <label for="email" class="form-label-email">Correo electrónico:</label>
                     <input type="email" id="email" name="email" required>
                 </div>
                 <div class="form-group">
-                    <label for="message">Mensaje:</label>
+                    <label for="message" class="form-label-message">Mensaje:</label>
                     <textarea id="message" name="message" required></textarea>
                 </div>
-                <button type="submit">Enviar Correo</button>
+                <button type="submit" class="contacto-submit">Enviar Correo</button>
             </form>
             <div class="contacto-info">
-                <p> Puedes descargar mi CV </p>
+                <p class="contacto-desc">Puedes descargar mi CV</p>
                 <div class="footer-cv">
-                    <button><a href="./public/pdfs/CVEduardoMorenoDev2024.pdf" target="_blank"> Curriculum Vitae
-                        </a></button>
+                    <button><a href="./public/pdfs/CVEduardoMorenoDev2024.pdf" target="_blank">Curriculum
+                            Vitae</a></button>
                 </div>
-                <p>O también puedes contactarme a través de mis redes sociales:</p>
+                <p class="contacto-redes">O también puedes contactarme a través de mis redes sociales:</p>
                 <div class="footer-mail">
                     <a href="https://www.linkedin.com/in/eduardo-m-moreno-programador/" target="_blank"><img
                             src="./img/iconos/MdiLinkedin.svg" alt="LinkedIn" class="ilin"></a>
-                    <a href="mailto:e.m.morenolp@gmail.com" target="_blank">
-                        <img src="https://skillicons.dev/icons?i=gmail&perline=14" alt="Tools" />
-                    </a>
+                    <a href="mailto:e.m.morenolp@gmail.com" target="_blank"><img
+                            src="https://skillicons.dev/icons?i=gmail&perline=14" alt="Tools" /></a>
                 </div>
             </div>
         </section>
     </main>
     <footer id="footer" class="hidden">
-        <p>2024 By Eduardo M Moreno.</p>
-        <p>&copy; Todos los derechos reservados</p>
+        <p class="footer-copy">2024 By Eduardo M Moreno.</p>
+        <p class="footer-rights">&copy; Todos los derechos reservados</p>
         <div align="center" style="display: none;">
             <img src="https://profile-counter.glitch.me/EduMLanding/count.svg?" />
         </div>
