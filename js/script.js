@@ -54,8 +54,6 @@ async function filtrarProyectos(categoria) {
 
     const data = await response.json();
 
-    console.log(data)
-
     const proyectos = data[language].proyecto;
     const proyectosFiltrados = proyectos.filter(proyecto => {
       if (categoria === 'fullstack') {
@@ -74,6 +72,8 @@ async function cargarProyectos(idioma = 'es') {
   try {
     const response = await fetch('https://github.com/EduMMorenolp/LandingPageSimple/blob/master/js/idiomas.json');
     const data = await response.json();
+
+    console.log(data)
 
     const proyectos = data[idioma].proyecto;
 
