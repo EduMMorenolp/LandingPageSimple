@@ -1,0 +1,78 @@
+/* Container styling */
+.toggle-container {
+    position: relative;
+    width: 66px;
+    height: 33px;
+    border: 1.5px solid black;
+    border-radius: 15px;
+}
+
+/* Checkbox styling (hidden) */
+.toggle-checkbox {
+    display: none;
+}
+
+/* Label as the toggle button */
+.toggle-label {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+    border-radius: 15px;
+    cursor: pointer;
+    transition: background-color 1s ease;
+}
+
+/* Ball inside the toggle */
+.ball {
+    position: absolute;
+    top: 3px;
+    left: 3px;
+    width: 24px;
+    height: 24px;
+    background-color: #fff;
+    border-radius: 50%;
+    transition: transform 1s ease;
+}
+
+/* Flag icons */
+.icon {
+    position: absolute;
+    top: 3px;
+    width: 24px;
+    height: 24px;
+    background-size: cover;
+    transition: opacity 1s ease;
+}
+
+/* English flag icon */
+.icon-en {
+    left: 35px;
+    background-image: url('../img/iconos/english-flag.jpg'); /* Set path to English flag image */
+}
+
+/* Spanish flag icon */
+.icon-es {
+    left: 4px;
+    background-image: url('../img/iconos/spanish-flag.png'); /* Set path to Spanish flag image */
+    opacity: 0;
+}
+
+/* Toggle styles when checked */
+.toggle-checkbox:checked + .toggle-label {
+    background-color: #fff;
+}
+
+/* Move the ball to the right */
+.toggle-checkbox:checked + .toggle-label .ball {
+    transform: translateX(30px);
+}
+
+/* Show Spanish flag, hide English flag */
+.toggle-checkbox:checked + .toggle-label .icon-en {
+    opacity: 0;
+}
+.toggle-checkbox:checked + .toggle-label .icon-es {
+    opacity: 1;
+}

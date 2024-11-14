@@ -226,3 +226,15 @@ document.getElementById('toggleView').addEventListener('click', function() {
   // Cambiar el texto del botón
   this.textContent = this.textContent.includes('Nombres') ? 'Mostrar Iconos' : 'Mostrar Nombres';
 });
+
+const toggleCheckbox = document.getElementById('toggle-checkbox');
+
+toggleCheckbox.addEventListener('change', () => {
+    if (toggleCheckbox.checked) {
+        // Cambiar a español
+        document.documentElement.setAttribute('lang', 'es');
+    } else {
+        // Cambiar a inglés
+        document.documentElement.setAttribute('lang', 'en');
+    }
+});
