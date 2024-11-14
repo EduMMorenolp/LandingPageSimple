@@ -50,7 +50,8 @@ function setupNavbarLinks() {
 
 async function filtrarProyectos(categoria) {
   try {
-    const response = await fetch('./js/proyectos.json');
+    const response = await fetch('https://edummorenolp.github.io/LandingPageSimple/js/proyectos.json');
+
     const data = await response.json();
     const proyectos = data[language].proyecto;
     const proyectosFiltrados = proyectos.filter(proyecto => {
@@ -68,7 +69,7 @@ async function filtrarProyectos(categoria) {
 // Inserta proyectos en el DOM
 async function cargarProyectos(idioma = 'es') {
   try {
-    const response = await fetch('./js/proyectos.json');
+    const response = await fetch('https://edummorenolp.github.io/LandingPageSimple/js/idiomas.json');
     const data = await response.json();
 
     const proyectos = data[idioma].proyecto;
