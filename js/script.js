@@ -196,7 +196,12 @@ document.getElementById('toggleView').addEventListener('click', function () {
   });
 
   // Cambiar el texto del botón
-  this.textContent = this.textContent.includes('Nombres') ? 'Mostrar Iconos' : 'Mostrar Nombres';
+  if (language === "es") {
+    this.textContent = this.textContent.includes('Nombres') ? 'Mostrar Iconos' : 'Mostrar Nombres';
+  } else {
+    this.textContent = this.textContent.includes('Names') ? 'Show Icons' : 'Show Names';
+  }
+
 });
 
 // Cambio de idiomas
