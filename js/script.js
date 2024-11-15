@@ -87,8 +87,10 @@ function insertProjects(proyectos) {
         <div class="proyecto-detalles">
           <h4>${proyecto.nombre}</h4>
           <p>${proyecto.descripcion}</p>
+          <div class="botones">
           <a href="${proyecto.github}" target="_blank">${proyecto.verCodigo || 'Ver Código'}</a>
           <a href="${proyecto.demo}" target="_blank">${proyecto.verDemo || 'Ver Demo'}</a>
+          </div>
         </div>
         <div class="linea-separadora"></div>
         <div class="tecnologias">
@@ -207,38 +209,38 @@ document.getElementById('toggleView').addEventListener('click', function () {
 // Cambio de idiomas
 function loadLanguage(lang) {
 
-      data = traducciones
-  
-      document.querySelector(".inicio").textContent = data[lang].inicio;
-      document.querySelector(".habilidades").textContent = data[lang].habilidades;
-      document.querySelector(".proyectos").textContent = data[lang].proyectos;
-      document.querySelector(".contacto").textContent = data[lang].contacto;
-      document.querySelector(".desarrollador").textContent = data[lang].desarrolladorWeb;
-      document.querySelector(".presentacion-texto").innerHTML = data[lang].presentacion;
-      document.querySelector(".toggle-view").textContent = data[lang].toggleView;
+  data = traducciones
 
-      document.querySelector(".herramientas h3").textContent = data[lang].herramientasTitulo;
-      document.querySelector(".idiomas-titulo").textContent = data[lang].idiomasTitulo;
-      document.querySelector(".idiomas-espanol").innerHTML = data[lang].idiomasEspanol;
-      document.querySelector(".idiomas-ingles").innerHTML = data[lang].idiomasIngles;
+  document.querySelector(".inicio").textContent = data[lang].inicio;
+  document.querySelector(".habilidades").textContent = data[lang].habilidades;
+  document.querySelector(".proyectos").textContent = data[lang].proyectos;
+  document.querySelector(".contacto").textContent = data[lang].contacto;
+  document.querySelector(".desarrollador").textContent = data[lang].desarrolladorWeb;
+  document.querySelector(".presentacion-texto").innerHTML = data[lang].presentacion;
+  document.querySelector(".toggle-view").textContent = data[lang].toggleView;
 
-      document.querySelector("#proyectos h3").textContent = data[lang].proyectosTitulo;
+  document.querySelector(".herramientas h3").textContent = data[lang].herramientasTitulo;
+  document.querySelector(".idiomas-titulo").textContent = data[lang].idiomasTitulo;
+  document.querySelector(".idiomas-espanol").innerHTML = data[lang].idiomasEspanol;
+  document.querySelector(".idiomas-ingles").innerHTML = data[lang].idiomasIngles;
 
-      document.querySelector(".boton-filtrar:nth-child(4)").textContent = data[lang].todos;
-      document.querySelector(".proyectos-github").textContent = data[lang].proyectosGithub;
+  document.querySelector("#proyectos h3").textContent = data[lang].proyectosTitulo;
 
-      document.querySelector("#contacto h4").textContent = data[lang].contactoTitulo;
-      document.querySelector("label[for='name']").textContent = data[lang].formLabelName;
-      document.querySelector("label[for='email']").textContent = data[lang].formLabelEmail;
-      document.querySelector("label[for='message']").textContent = data[lang].formLabelMessage;
-      document.querySelector("button[type='submit']").textContent = data[lang].contactoSubmit;
+  document.querySelector(".boton-filtrar:nth-child(4)").textContent = data[lang].todos;
+  document.querySelector(".proyectos-github").textContent = data[lang].proyectosGithub;
 
-      document.querySelector(".contacto-info p").textContent = data[lang].contactoDesc;
+  document.querySelector("#contacto h4").textContent = data[lang].contactoTitulo;
+  document.querySelector("label[for='name']").textContent = data[lang].formLabelName;
+  document.querySelector("label[for='email']").textContent = data[lang].formLabelEmail;
+  document.querySelector("label[for='message']").textContent = data[lang].formLabelMessage;
+  document.querySelector("button[type='submit']").textContent = data[lang].contactoSubmit;
 
-      document.querySelector(".contacto-redes").textContent = data[lang].contactoRedes;
+  document.querySelector(".contacto-info p").textContent = data[lang].contactoDesc;
 
-      document.querySelectorAll("#footer p")[1].textContent = data[lang].footerRights;
-    };
+  document.querySelector(".contacto-redes").textContent = data[lang].contactoRedes;
+
+  document.querySelectorAll("#footer p")[1].textContent = data[lang].footerRights;
+};
 
 
 const traducciones = {
@@ -311,8 +313,8 @@ const proyectosJson = {
           "🧑‍🤝‍🧑 Colaborativo"
         ],
         "categoria": ["frontend", "backend"],
-        "verCodigo": "Ver Código", 
-        "verDemo": "Ver Demo" 
+        "verCodigo": "Ver Código",
+        "verDemo": "Ver Demo"
       },
       {
         "nombre": "UserFlow",
@@ -322,8 +324,8 @@ const proyectosJson = {
         "demo": "https://userflow-7y2o.onrender.com",
         "tec": ["Node.js", "Express", "MySQL", "Prisma", "Swagger"],
         "categoria": ["backend"],
-        "verCodigo": "Ver Código", 
-        "verDemo": "Ver Demo" 
+        "verCodigo": "Ver Código",
+        "verDemo": "Ver Demo"
       },
       {
         "nombre": "ProJet",
@@ -340,8 +342,8 @@ const proyectosJson = {
           "🧑‍🤝‍🧑 Colaborativo"
         ],
         "categoria": ["backend"],
-        "verCodigo": "Ver Código", 
-        "verDemo": "Ver Demo" 
+        "verCodigo": "Ver Código",
+        "verDemo": "Ver Demo"
       },
       {
         "nombre": "Aprender a Programar",
@@ -351,8 +353,8 @@ const proyectosJson = {
         "demo": "https://edummorenolp.github.io/Aprende-De-Programacion/",
         "tec": ["HTML", "CSS", "JavaScript"],
         "categoria": ["frontend"],
-        "verCodigo": "Ver Código", 
-        "verDemo": "Ver Demo" 
+        "verCodigo": "Ver Código",
+        "verDemo": "Ver Demo"
       },
       {
         "nombre": "Proyecto Final Springboot",
@@ -370,8 +372,8 @@ const proyectosJson = {
           "🧑‍🤝‍🧑 Colaborativo"
         ],
         "categoria": ["frontend"],
-        "verCodigo": "Ver Código", 
-        "verDemo": "Ver Demo" 
+        "verCodigo": "Ver Código",
+        "verDemo": "Ver Demo"
       },
       {
         "nombre": "Proyecto Final Big Data",
@@ -391,8 +393,8 @@ const proyectosJson = {
           "Matplotlib"
         ],
         "categoria": ["dataanalist"],
-        "verCodigo": "Ver Código", 
-        "verDemo": "Ver Demo" 
+        "verCodigo": "Ver Código",
+        "verDemo": "Ver Demo"
       }
     ]
   },
@@ -414,8 +416,8 @@ const proyectosJson = {
           "🧑‍🤝‍🧑 Collaborative"
         ],
         "categoria": ["frontend", "backend"],
-        "verCodigo": "View Code", 
-        "verDemo": "View Demo" 
+        "verCodigo": "View Code",
+        "verDemo": "View Demo"
       },
       {
         "nombre": "UserFlow",
@@ -425,7 +427,7 @@ const proyectosJson = {
         "demo": "https://userflow-7y2o.onrender.com",
         "tec": ["Node.js", "Express", "MySQL", "Prisma", "Swagger"],
         "categoria": ["backend"],
-        "verCodigo": "View Code", 
+        "verCodigo": "View Code",
         "verDemo": "View Demo"
       },
       {
@@ -443,7 +445,7 @@ const proyectosJson = {
           "🧑‍🤝‍🧑 Collaborative"
         ],
         "categoria": ["backend"],
-        "verCodigo": "View Code", 
+        "verCodigo": "View Code",
         "verDemo": "View Demo"
       },
       {
@@ -454,7 +456,7 @@ const proyectosJson = {
         "demo": "https://edummorenolp.github.io/Aprende-De-Programacion/",
         "tec": ["HTML", "CSS", "JavaScript"],
         "categoria": ["frontend"],
-        "verCodigo": "View Code", 
+        "verCodigo": "View Code",
         "verDemo": "View Demo"
       },
       {
@@ -473,7 +475,7 @@ const proyectosJson = {
           "🧑‍🤝‍🧑 Collaborative"
         ],
         "categoria": ["frontend"],
-        "verCodigo": "View Code", 
+        "verCodigo": "View Code",
         "verDemo": "View Demo"
       },
       {
@@ -494,7 +496,7 @@ const proyectosJson = {
           "Matplotlib"
         ],
         "categoria": ["dataanalist"],
-        "verCodigo": "View Code", 
+        "verCodigo": "View Code",
         "verDemo": "View Demo"
       }
     ]

@@ -172,21 +172,20 @@ section {
   margin: 10px 0;
 }
 
-
 .botones-filtrar {
-  padding-bottom: 10px; 
+  padding-bottom: 10px;
 }
 
 .boton-filtrar:hover {
-  transform: scale(1.05); 
+  transform: scale(1.05);
 }
 
 .boton-filtrar:active {
-  transform: scale(1); 
+  transform: scale(1);
 }
 
 .boton-filtrar.activo {
-  background-color: #36015c; 
+  background-color: #36015c;
   transform: scale(1.05);
 }
 
@@ -371,9 +370,9 @@ button:hover {
 
 @media (max-width: 420px) {
   .botones-filtrar {
-    display: flex; 
-    flex-wrap: wrap; 
-    gap: 10px; 
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
     align-items: center;
     justify-content: space-around;
   }
@@ -453,10 +452,6 @@ button:hover {
     align-items: center;
   }
 
-  #proyectos {
-    width: 90%;
-  }
-
   #proyecto {
     display: flex;
     flex-wrap: wrap;
@@ -469,6 +464,30 @@ button:hover {
     width: 500px;
     margin: 0 20px 20px 0;
   }
+
+  .proyecto-detalles {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+  }
+
+  .proyecto-detalles p {
+    flex-grow: 1;
+  }
+
+  .proyecto-detalles a {
+    margin-top: 10px; 
+  }
+
+  .botones {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .tecnologias {
+    height: 80px;
+  }
 }
-
-
