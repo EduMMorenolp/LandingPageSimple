@@ -395,6 +395,25 @@ const proyectosJson = {
         "categoria": ["dataanalist"],
         "verCodigo": "Ver Código",
         "verDemo": "Ver Demo"
+      },
+      {
+        "nombre": "Stockify",
+        "descripcion": "Proyecto desarrollado desde cero, donde implementé la autenticación segura con JWT y OAuth en un backend basado en Node.js, Express y Sequelize. <strong> Me enfoqué en la arquitectura del backend </strong>, asegurando un diseño escalable y eficiente. Además, colaboré con el equipo utilizando GitHub Projects para la gestión de tareas y flujos de trabajo.",
+        "imagen": "./img/proyectos/7.png",
+        "github": "https://s20-05-n-webapp-backend.onrender.com/api-docs/",
+        "demo": "https://stock-dep-xi.vercel.app/main",
+        "tec": [
+          "Node.js",
+          "Express",
+          "Sequelize",
+          "JWT",
+          "OAuth",
+          "GitHub Projects",
+          "🧑‍🤝‍🧑 Collaborative"
+        ],
+        "categoria": ["backend"],
+        "verCodigo": "Ver Código",
+        "verDemo": "Ver Demo"
       }
     ]
   },
@@ -496,6 +515,25 @@ const proyectosJson = {
           "Matplotlib"
         ],
         "categoria": ["dataanalist"],
+        "verCodigo": "View Code",
+        "verDemo": "View Demo"
+      },
+      {
+        "nombre": "Stockify",
+        "descripcion": "Project developed from scratch, where I implemented secure authentication with JWT and OAuth in a backend based on Node.js, Express, and Sequelize. <strong> I focused on backend architecture </strong>, ensuring a scalable and efficient design. Additionally, I collaborated with the team using GitHub Projects for task management and workflow organization.",
+        "imagen": "./img/proyectos/7.png",
+        "github": "https://s20-05-n-webapp-backend.onrender.com/api-docs/",
+        "demo": "https://stock-dep-xi.vercel.app/main",
+        "tec": [
+          "Node.js",
+          "Express",
+          "Sequelize",
+          "JWT",
+          "OAuth",
+          "GitHub Projects",
+          "🧑‍🤝‍🧑 Collaborative"
+        ],
+        "categoria": ["backend"],
         "verCodigo": "View Code",
         "verDemo": "View Demo"
       }

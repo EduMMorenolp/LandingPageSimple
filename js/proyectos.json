@@ -17,8 +17,8 @@
           "🧑‍🤝‍🧑 Colaborativo"
         ],
         "categoria": ["frontend", "backend"],
-        "verCodigo": "Ver Código", 
-        "verDemo": "Ver Demo" 
+        "verCodigo": "Ver Código",
+        "verDemo": "Ver Demo"
       },
       {
         "nombre": "UserFlow",
@@ -28,8 +28,8 @@
         "demo": "https://userflow-7y2o.onrender.com",
         "tec": ["Node.js", "Express", "MySQL", "Prisma", "Swagger"],
         "categoria": ["backend"],
-        "verCodigo": "Ver Código", 
-        "verDemo": "Ver Demo" 
+        "verCodigo": "Ver Código",
+        "verDemo": "Ver Demo"
       },
       {
         "nombre": "ProJet",
@@ -46,8 +46,8 @@
           "🧑‍🤝‍🧑 Colaborativo"
         ],
         "categoria": ["backend"],
-        "verCodigo": "Ver Código", 
-        "verDemo": "Ver Demo" 
+        "verCodigo": "Ver Código",
+        "verDemo": "Ver Demo"
       },
       {
         "nombre": "Aprender a Programar",
@@ -57,8 +57,8 @@
         "demo": "https://edummorenolp.github.io/Aprende-De-Programacion/",
         "tec": ["HTML", "CSS", "JavaScript"],
         "categoria": ["frontend"],
-        "verCodigo": "Ver Código", 
-        "verDemo": "Ver Demo" 
+        "verCodigo": "Ver Código",
+        "verDemo": "Ver Demo"
       },
       {
         "nombre": "Proyecto Final Springboot",
@@ -76,8 +76,8 @@
           "🧑‍🤝‍🧑 Colaborativo"
         ],
         "categoria": ["frontend"],
-        "verCodigo": "Ver Código", 
-        "verDemo": "Ver Demo" 
+        "verCodigo": "Ver Código",
+        "verDemo": "Ver Demo"
       },
       {
         "nombre": "Proyecto Final Big Data",
@@ -97,8 +97,27 @@
           "Matplotlib"
         ],
         "categoria": ["dataanalist"],
-        "verCodigo": "Ver Código", 
-        "verDemo": "Ver Demo" 
+        "verCodigo": "Ver Código",
+        "verDemo": "Ver Demo"
+      },
+      {
+        "nombre": "Stockify",
+        "descripcion": "Proyecto desarrollado desde cero, donde implementé la autenticación segura con JWT y OAuth en un backend basado en Node.js, Express y Sequelize. <strong> Me enfoqué en la arquitectura del backend </strong>, asegurando un diseño escalable y eficiente. Además, colaboré con el equipo utilizando GitHub Projects para la gestión de tareas y flujos de trabajo.",
+        "imagen": "./img/proyectos/7.png",
+        "github": "https://s20-05-n-webapp-backend.onrender.com/api-docs/",
+        "demo": "https://stock-dep-xi.vercel.app/main",
+        "tec": [
+          "Node.js",
+          "Express",
+          "Sequelize",
+          "JWT",
+          "OAuth",
+          "GitHub Projects",
+          "🧑‍🤝‍🧑 Collaborative"
+        ],
+        "categoria": ["backend"],
+        "verCodigo": "View Code",
+        "verDemo": "View Demo"
       }
     ]
   },
@@ -120,8 +139,8 @@
           "🧑‍🤝‍🧑 Collaborative"
         ],
         "categoria": ["frontend", "backend"],
-        "verCodigo": "View Code", 
-        "verDemo": "View Demo" 
+        "verCodigo": "View Code",
+        "verDemo": "View Demo"
       },
       {
         "nombre": "UserFlow",
@@ -131,7 +150,7 @@
         "demo": "https://userflow-7y2o.onrender.com",
         "tec": ["Node.js", "Express", "MySQL", "Prisma", "Swagger"],
         "categoria": ["backend"],
-        "verCodigo": "View Code", 
+        "verCodigo": "View Code",
         "verDemo": "View Demo"
       },
       {
@@ -149,7 +168,7 @@
           "🧑‍🤝‍🧑 Collaborative"
         ],
         "categoria": ["backend"],
-        "verCodigo": "View Code", 
+        "verCodigo": "View Code",
         "verDemo": "View Demo"
       },
       {
@@ -160,7 +179,7 @@
         "demo": "https://edummorenolp.github.io/Aprende-De-Programacion/",
         "tec": ["HTML", "CSS", "JavaScript"],
         "categoria": ["frontend"],
-        "verCodigo": "View Code", 
+        "verCodigo": "View Code",
         "verDemo": "View Demo"
       },
       {
@@ -179,7 +198,7 @@
           "🧑‍🤝‍🧑 Collaborative"
         ],
         "categoria": ["frontend"],
-        "verCodigo": "View Code", 
+        "verCodigo": "View Code",
         "verDemo": "View Demo"
       },
       {
@@ -200,7 +219,26 @@
           "Matplotlib"
         ],
         "categoria": ["dataanalist"],
-        "verCodigo": "View Code", 
+        "verCodigo": "View Code",
+        "verDemo": "View Demo"
+      },
+      {
+        "nombre": "Stockify",
+        "descripcion": "Project developed from scratch, where I implemented secure authentication with JWT and OAuth in a backend based on Node.js, Express, and Sequelize. <strong> I focused on backend architecture </strong>, ensuring a scalable and efficient design. Additionally, I collaborated with the team using GitHub Projects for task management and workflow organization.",
+        "imagen": "./img/proyectos/7.png",
+        "github": "https://s20-05-n-webapp-backend.onrender.com/api-docs/",
+        "demo": "https://stock-dep-xi.vercel.app/main",
+        "tec": [
+          "Node.js",
+          "Express",
+          "Sequelize",
+          "JWT",
+          "OAuth",
+          "GitHub Projects",
+          "🧑‍🤝‍🧑 Collaborative"
+        ],
+        "categoria": ["backend"],
+        "verCodigo": "View Code",
         "verDemo": "View Demo"
       }
     ]
