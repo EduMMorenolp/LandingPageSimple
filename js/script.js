@@ -298,25 +298,6 @@ const proyectosJson = {
   "es": {
     "proyecto": [
       {
-        "nombre": "Organization-DevXp",
-        "descripcion": "DevXp es una organización que fundé con el objetivo de fomentar la colaboración entre desarrolladores de distintas áreas. A través de esta plataforma, los miembros pueden aprender, trabajar en equipo y desarrollar proyectos innovadores. <strong> Me centré en crear un espacio donde la comunidad pueda crecer, compartir conocimientos y desarrollar soluciones tecnológicas de alto impacto. </strong>",
-        "imagen": "./img/proyectos/8.png",
-        "github": "https://github.com/Organization-DevXP",
-        "demo": "https://www.youtube.com/@OrganizationDevXP",
-        "tec": [
-          "Gestión de comunidades",
-          "Liderazgo en desarrollo",
-          "Coordinación de equipos",
-          "Metodologías ágiles",
-          "Networking y colaboración",
-          "GitHub Projects",
-          "🧑‍🤝‍🧑 Colaborativo"
-        ],
-        "categoria": ["frontend", "backend"],
-        "verCodigo": "Ver Código",
-        "verDemo": "Ver Demo"
-      },
-      {
         "nombre": "PetShop",
         "descripcion": "Este proyecto consiste en el desarrollo de una tienda virtual de productos para mascotas. Trabajé en colaboración con un equipo de 4 personas, donde asumimos roles específicos y dividimos tareas para maximizar la eficiencia. <strong>Mi contribución incluyó trabajo tanto en el backend como en el frontend</strong>, asegurando un flujo de trabajo integrado y una experiencia de usuario óptima.",
         "imagen": "./img/proyectos/2.png",
@@ -332,25 +313,6 @@ const proyectosJson = {
           "🧑‍🤝‍🧑 Colaborativo"
         ],
         "categoria": ["frontend", "backend"],
-        "verCodigo": "Ver Código",
-        "verDemo": "Ver Demo"
-      },
-      {
-        "nombre": "Stockify",
-        "descripcion": "Proyecto desarrollado desde cero, donde implementé la autenticación segura con JWT y OAuth en un backend basado en Node.js, Express y Sequelize. <strong> Me enfoqué en la arquitectura del backend </strong>, asegurando un diseño escalable y eficiente. Además, colaboré con el equipo utilizando GitHub Projects para la gestión de tareas y flujos de trabajo.",
-        "imagen": "./img/proyectos/7.png",
-        "github": "https://s20-05-n-webapp-backend.onrender.com/api-docs/",
-        "demo": "https://stock-dep-xi.vercel.app/main",
-        "tec": [
-          "Node.js",
-          "Express",
-          "Sequelize",
-          "JWT",
-          "OAuth",
-          "GitHub Projects",
-          "🧑‍🤝‍🧑 Collaborative"
-        ],
-        "categoria": ["backend"],
         "verCodigo": "Ver Código",
         "verDemo": "Ver Demo"
       },
@@ -380,6 +342,17 @@ const proyectosJson = {
           "🧑‍🤝‍🧑 Colaborativo"
         ],
         "categoria": ["backend"],
+        "verCodigo": "Ver Código",
+        "verDemo": "Ver Demo"
+      },
+      {
+        "nombre": "Aprender a Programar",
+        "descripcion": "Proyecto comunitario que ofrece tutoriales detallados de diversos lenguajes de programación, diseñado para ayudar a los usuarios a desarrollar sus habilidades de programación de manera efectiva.",
+        "imagen": "./img/proyectos/1.png",
+        "github": "https://github.com/EduMMorenolp/Aprende-De-Programacion",
+        "demo": "https://edummorenolp.github.io/Aprende-De-Programacion/",
+        "tec": ["HTML", "CSS", "JavaScript"],
+        "categoria": ["frontend"],
         "verCodigo": "Ver Código",
         "verDemo": "Ver Demo"
       },
@@ -422,30 +395,30 @@ const proyectosJson = {
         "categoria": ["dataanalist"],
         "verCodigo": "Ver Código",
         "verDemo": "Ver Demo"
+      },
+      {
+        "nombre": "Stockify",
+        "descripcion": "Proyecto desarrollado desde cero, donde implementé la autenticación segura con JWT y OAuth en un backend basado en Node.js, Express y Sequelize. <strong> Me enfoqué en la arquitectura del backend </strong>, asegurando un diseño escalable y eficiente. Además, colaboré con el equipo utilizando GitHub Projects para la gestión de tareas y flujos de trabajo.",
+        "imagen": "./img/proyectos/7.png",
+        "github": "https://s20-05-n-webapp-backend.onrender.com/api-docs/",
+        "demo": "https://stock-dep-xi.vercel.app/main",
+        "tec": [
+          "Node.js",
+          "Express",
+          "Sequelize",
+          "JWT",
+          "OAuth",
+          "GitHub Projects",
+          "🧑‍🤝‍🧑 Collaborative"
+        ],
+        "categoria": ["backend"],
+        "verCodigo": "Ver Código",
+        "verDemo": "Ver Demo"
       }
     ]
   },
   "en": {
     "proyecto": [
-      {
-        "name": "DevXp",
-        "description": "DevXp is an organization I founded with the goal of fostering collaboration among developers from various fields. Through this platform, members can learn, work as a team, and develop innovative projects. <strong> I focused on creating a space where the community can grow, share knowledge, and develop high-impact technological solutions. </strong>",
-        "image": "./img/proyectos/devxp.png",
-        "github": "https://github.com/OrganizacionDevXp",
-        "demo": "https://devxp.com",
-        "tech": [
-          "Community management",
-          "Development leadership",
-          "Team coordination",
-          "Agile methodologies",
-          "Strategic planning",
-          "Networking and collaboration",
-          "🚀 Innovation"
-        ],
-        "category": ["management", "collaborative"],
-        "viewCode": "View Code",
-        "viewDemo": "View Demo"
-      },      
       {
         "nombre": "PetShop",
         "descripcion": "This project involves the development of an online store for pet products. I worked in collaboration with a team of 4 people, where we took on specific roles and divided tasks to maximize efficiency. <strong>My contribution included both backend and frontend work</strong>, ensuring an integrated workflow and an optimal user experience.",
@@ -491,6 +464,17 @@ const proyectosJson = {
           "🧑‍🤝‍🧑 Collaborative"
         ],
         "categoria": ["backend"],
+        "verCodigo": "View Code",
+        "verDemo": "View Demo"
+      },
+      {
+        "nombre": "Aprender a Programar",
+        "descripcion": "A community project that offers detailed tutorials for various programming languages, designed to help users develop their programming skills effectively.",
+        "imagen": "./img/proyectos/1.png",
+        "github": "https://github.com/EduMMorenolp/Aprende-De-Programacion",
+        "demo": "https://edummorenolp.github.io/Aprende-De-Programacion/",
+        "tec": ["HTML", "CSS", "JavaScript"],
+        "categoria": ["frontend"],
         "verCodigo": "View Code",
         "verDemo": "View Demo"
       },
