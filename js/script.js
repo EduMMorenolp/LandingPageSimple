@@ -50,11 +50,11 @@ function setupNavbarLinks() {
 
 async function filtrarProyectos(categoria) {
   try {
-    // const response = await fetch('https://edummorenolp.github.io/LandingPageSimple/js/proyectos.json');
+    const response = await fetch('https://edummorenolp.github.io/LandingPageSimple/js/proyectos.json');
 
-    // const data = await response.json();
+    const data = await response.json();
 
-    const proyectos = proyectosJson[language].proyecto
+    const proyectos = data[language].proyecto;
     const proyectosFiltrados = proyectos.filter(proyecto => {
       if (categoria === 'fullstack') {
         return proyecto.categoria.includes('frontend') || proyecto.categoria.includes('backend');
