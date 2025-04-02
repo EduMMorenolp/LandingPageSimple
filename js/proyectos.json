@@ -2,6 +2,25 @@
   "es": {
     "proyecto": [
       {
+        "nombre": "Organization-DevXp",
+        "descripcion": "DevXp es una organización que fundé con el objetivo de fomentar la colaboración entre desarrolladores de distintas áreas. A través de esta plataforma, los miembros pueden aprender, trabajar en equipo y desarrollar proyectos innovadores. <strong> Me centré en crear un espacio donde la comunidad pueda crecer, compartir conocimientos y desarrollar soluciones tecnológicas de alto impacto. </strong>",
+        "imagen": "./img/proyectos/8.png",
+        "github": "https://github.com/Organization-DevXP",
+        "demo": "https://www.youtube.com/@OrganizationDevXP",
+        "tec": [
+          "Gestión de comunidades",
+          "Liderazgo en desarrollo",
+          "Coordinación de equipos",
+          "Metodologías ágiles",
+          "Networking y colaboración",
+          "GitHub Projects",
+          "🧑‍🤝‍🧑 Colaborativo"
+        ],
+        "categoria": ["frontend", "backend"],
+        "verCodigo": "Ver Código",
+        "verDemo": "Ver Demo"
+      },
+      {
         "nombre": "PetShop",
         "descripcion": "Este proyecto consiste en el desarrollo de una tienda virtual de productos para mascotas. Trabajé en colaboración con un equipo de 4 personas, donde asumimos roles específicos y dividimos tareas para maximizar la eficiencia. <strong>Mi contribución incluyó trabajo tanto en el backend como en el frontend</strong>, asegurando un flujo de trabajo integrado y una experiencia de usuario óptima.",
         "imagen": "./img/proyectos/2.png",
