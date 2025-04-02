@@ -428,6 +428,25 @@ const proyectosJson = {
   "en": {
     "proyecto": [
       {
+        "name": "DevXp",
+        "description": "DevXp is an organization I founded with the goal of fostering collaboration among developers from various fields. Through this platform, members can learn, work as a team, and develop innovative projects. <strong> I focused on creating a space where the community can grow, share knowledge, and develop high-impact technological solutions. </strong>",
+        "image": "./img/proyectos/devxp.png",
+        "github": "https://github.com/OrganizacionDevXp",
+        "demo": "https://devxp.com",
+        "tech": [
+          "Community management",
+          "Development leadership",
+          "Team coordination",
+          "Agile methodologies",
+          "Strategic planning",
+          "Networking and collaboration",
+          "🚀 Innovation"
+        ],
+        "category": ["management", "collaborative"],
+        "viewCode": "View Code",
+        "viewDemo": "View Demo"
+      },      
+      {
         "nombre": "PetShop",
         "descripcion": "This project involves the development of an online store for pet products. I worked in collaboration with a team of 4 people, where we took on specific roles and divided tasks to maximize efficiency. <strong>My contribution included both backend and frontend work</strong>, ensuring an integrated workflow and an optimal user experience.",
         "imagen": "./img/proyectos/2.png",
@@ -472,17 +491,6 @@ const proyectosJson = {
           "🧑‍🤝‍🧑 Collaborative"
         ],
         "categoria": ["backend"],
-        "verCodigo": "View Code",
-        "verDemo": "View Demo"
-      },
-      {
-        "nombre": "Aprender a Programar",
-        "descripcion": "A community project that offers detailed tutorials for various programming languages, designed to help users develop their programming skills effectively.",
-        "imagen": "./img/proyectos/1.png",
-        "github": "https://github.com/EduMMorenolp/Aprende-De-Programacion",
-        "demo": "https://edummorenolp.github.io/Aprende-De-Programacion/",
-        "tec": ["HTML", "CSS", "JavaScript"],
-        "categoria": ["frontend"],
         "verCodigo": "View Code",
         "verDemo": "View Demo"
       },
