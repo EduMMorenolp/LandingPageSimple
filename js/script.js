@@ -50,11 +50,11 @@ function setupNavbarLinks() {
 
 async function filtrarProyectos(categoria) {
   try {
-    const response = await fetch('https://edummorenolp.github.io/LandingPageSimple/js/proyectos.json');
+    // const response = await fetch('https://edummorenolp.github.io/LandingPageSimple/js/proyectos.json');
+    // const data = await response.json();
+    // const proyectos = data[language].proyecto;
 
-    const data = await response.json();
-
-    const proyectos = data[language].proyecto;
+    const proyectos = proyectosJson[language].proyecto
     const proyectosFiltrados = proyectos.filter(proyecto => {
       if (categoria === 'fullstack') {
         return proyecto.categoria.includes('frontend') || proyecto.categoria.includes('backend');
@@ -298,6 +298,25 @@ const proyectosJson = {
   "es": {
     "proyecto": [
       {
+        "nombre": "DevXp",
+        "descripcion": "DevXp es una organización que fundé con el objetivo de fomentar la colaboración entre desarrolladores de distintas áreas. A través de esta plataforma, los miembros pueden aprender, trabajar en equipo y desarrollar proyectos innovadores. <strong> Me centré en crear un espacio donde la comunidad pueda crecer, compartir conocimientos y desarrollar soluciones tecnológicas de alto impacto. </strong>",
+        "imagen": "./img/proyectos/8.png",
+        "github": "https://github.com/Organization-DevXP",
+        "demo": "https://github.com/orgs/Organization-DevXP/repositories",
+        "tec": [
+          "Gestión de comunidades",
+          "Liderazgo en desarrollo",
+          "Coordinación de equipos",
+          "Metodologías ágiles",
+          "Planificación estratégica",
+          "Networking y colaboración",
+          "🚀 Innovación"
+        ],
+        "categoria": ["gestión", "colaborativo"],
+        "verCodigo": "Ver Código",
+        "verDemo": "Ver Demo"
+      },
+      {
         "nombre": "PetShop",
         "descripcion": "Este proyecto consiste en el desarrollo de una tienda virtual de productos para mascotas. Trabajé en colaboración con un equipo de 4 personas, donde asumimos roles específicos y dividimos tareas para maximizar la eficiencia. <strong>Mi contribución incluyó trabajo tanto en el backend como en el frontend</strong>, asegurando un flujo de trabajo integrado y una experiencia de usuario óptima.",
         "imagen": "./img/proyectos/2.png",
@@ -419,6 +438,25 @@ const proyectosJson = {
   },
   "en": {
     "proyecto": [
+      {
+        "name": "DevXp",
+        "description": "DevXp is an organization I founded with the goal of fostering collaboration among developers from various fields. Through this platform, members can learn, work as a team, and develop innovative projects. <strong> I focused on creating a space where the community can grow, share knowledge, and develop high-impact technological solutions. </strong>",
+        "imagen": "./img/proyectos/8.png",
+        "github": "https://github.com/Organization-DevXP",
+        "demo": "https://github.com/orgs/Organization-DevXP/repositories",
+        "tech": [
+          "Community management",
+          "Development leadership",
+          "Team coordination",
+          "Agile methodologies",
+          "Strategic planning",
+          "Networking and collaboration",
+          "🚀 Innovation"
+        ],
+        "category": ["management", "collaborative"],
+        "viewCode": "View Code",
+        "viewDemo": "View Demo"
+      },
       {
         "nombre": "PetShop",
         "descripcion": "This project involves the development of an online store for pet products. I worked in collaboration with a team of 4 people, where we took on specific roles and divided tasks to maximize efficiency. <strong>My contribution included both backend and frontend work</strong>, ensuring an integrated workflow and an optimal user experience.",
