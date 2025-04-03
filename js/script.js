@@ -439,12 +439,12 @@ const proyectosJson = {
   "en": {
     "proyecto": [
       {
-        "name": "DevXp",
-        "description": "DevXp is an organization I founded with the goal of fostering collaboration among developers from various fields. Through this platform, members can learn, work as a team, and develop innovative projects. <strong> I focused on creating a space where the community can grow, share knowledge, and develop high-impact technological solutions. </strong>",
+        "nombre": "DevXp",
+        "descripcion": "DevXp is an organization I founded with the goal of fostering collaboration among developers from various fields. Through this platform, members can learn, work as a team, and develop innovative projects. <strong> I focused on creating a space where the community can grow, share knowledge, and develop high-impact technological solutions. </strong>",
         "imagen": "./img/proyectos/8.png",
         "github": "https://github.com/Organization-DevXP",
         "demo": "https://github.com/orgs/Organization-DevXP/repositories",
-        "tech": [
+        "tec": [
           "Community management",
           "Development leadership",
           "Team coordination",
@@ -453,9 +453,9 @@ const proyectosJson = {
           "Networking and collaboration",
           "🚀 Innovation"
         ],
-        "category": ["management", "collaborative"],
-        "viewCode": "View Code",
-        "viewDemo": "View Demo"
+        "categoria": ["management", "collaborative"],
+        "verCodigo": "View Code",
+        "verDemo": "View Demo"
       },
       {
         "nombre": "PetShop",
