@@ -301,8 +301,8 @@ const proyectosJson = {
         "nombre": "DevXp",
         "descripcion": "DevXp es una organización que fundé con el objetivo de fomentar la colaboración entre desarrolladores de distintas áreas. A través de esta plataforma, los miembros pueden aprender, trabajar en equipo y desarrollar proyectos innovadores. <strong> Me centré en crear un espacio donde la comunidad pueda crecer, compartir conocimientos y desarrollar soluciones tecnológicas de alto impacto. </strong>",
         "imagen": "./img/proyectos/8.png",
-        "github": "https://github.com/Organization-DevXP",
-        "demo": "https://github.com/orgs/Organization-DevXP/repositories",
+        "github": "https://github.com/orgs/Organization-DevXP/repositories",
+        "demo": "https://github.com/Organization-DevXP",
         "tec": [
           "Gestión de comunidades",
           "Liderazgo en desarrollo",
@@ -442,8 +442,8 @@ const proyectosJson = {
         "nombre": "DevXp",
         "descripcion": "DevXp is an organization I founded with the goal of fostering collaboration among developers from various fields. Through this platform, members can learn, work as a team, and develop innovative projects. <strong> I focused on creating a space where the community can grow, share knowledge, and develop high-impact technological solutions. </strong>",
         "imagen": "./img/proyectos/8.png",
-        "github": "https://github.com/Organization-DevXP",
-        "demo": "https://github.com/orgs/Organization-DevXP/repositories",
+        "github": "https://github.com/orgs/Organization-DevXP/repositories",
+        "demo": "https://github.com/Organization-DevXP",
         "tec": [
           "Community management",
           "Development leadership",
