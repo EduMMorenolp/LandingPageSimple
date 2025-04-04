@@ -307,10 +307,7 @@ const proyectosJson = {
           "Gestión de comunidades",
           "Liderazgo en desarrollo",
           "Coordinación de equipos",
-          "Metodologías ágiles",
-          "Planificación estratégica",
-          "Networking y colaboración",
-          "🚀 Innovación"
+          "🧑‍🤝‍🧑 Networking y colaboración"
         ],
         "categoria": ["gestión", "colaborativo"],
         "verCodigo": "Ver Código",
@@ -448,10 +445,7 @@ const proyectosJson = {
           "Community management",
           "Development leadership",
           "Team coordination",
-          "Agile methodologies",
-          "Strategic planning",
-          "Networking and collaboration",
-          "🚀 Innovation"
+          "🧑‍🤝‍🧑 Networking and collaboration"
         ],
         "categoria": ["management", "collaborative"],
         "verCodigo": "View Code",
