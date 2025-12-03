@@ -1,72 +1,196 @@
 /* ./css/header.css */
 
-/* Header Styles */
-header {
-  position: sticky;
-  top: 0;
-  z-index: 100;
-  background-color: #8053ea;
-  color: #eeeafd;
+/* Floating Navigation */
+header#navbar {
+  position: fixed;
+  top: 2rem;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  display: flex;
+  justify-content: center;
+  padding: 0 1rem;
+  transition: all 0.3s ease;
+}
+
+.nav-content {
+  background: rgba(15, 7, 32, 0.6);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 50px;
+  padding: 0.75rem 2rem;
   display: flex;
   align-items: center;
-  padding: 8px;
-  border-radius: 0 0 15px 15px;
-  justify-content: space-between;
+  gap: 2rem;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
 }
 
-header.slice-top {
-  overflow: hidden;
-  clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
-  animation: sliceIn 1s forwards;
-}
-
-header h1 {
-  margin: 0;
-  font-size: 1.5em;
+.logo {
+  font-family: var(--font-heading);
+  font-weight: 800;
+  font-size: 1.5rem;
+  color: var(--text-main);
+  letter-spacing: -0.05em;
 }
 
 header nav ul {
   display: flex;
-  list-style-type: none;
+  gap: 2rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
 header nav ul li a {
-  padding: 10px;
-  text-decoration: none;
-  color: inherit;
-  font-weight: bold;
-  transition: color 0.3s;
+  color: var(--text-muted);
+  font-weight: 500;
+  font-size: 0.95rem;
+  position: relative;
+  padding: 0.5rem 0;
 }
 
-header nav ul li a:hover {
-  color: #333;
+header nav ul li a::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: var(--primary);
+  transition: width 0.3s ease;
+  border-radius: 2px;
 }
 
-/* Responsive Styles */
-@media (max-width: 470px) {
-  header {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-  }
+header nav ul li a:hover,
+header nav ul li a.active {
+  color: var(--text-main);
+}
 
-  .toggle-container{
-    margin-left: 20px;
-  }
-  .dark-icon {
-    margin-top: 5px;
-    margin-right: 20px;
-  }
+header nav ul li a:hover::after,
+header nav ul li a.active::after {
+  width: 100%;
+}
 
-  nav {
-    order: 2;
+/* Header Actions (Buttons) */
+.nav-actions {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.icon-btn, .lang-btn {
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  cursor: pointer;
+  color: var(--text-main);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  transition: all 0.3s ease;
+}
+
+.icon-btn:hover, .lang-btn:hover {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: rgba(255, 255, 255, 0.3);
+  transform: translateY(-2px);
+}
+
+#menu-toggle {
+    display: none;
+}
+
+.nav-icon {
+  width: 20px;
+  height: 20px;
+  stroke: var(--text-main); /* Use CSS variable for color */
+  fill: none;
+}
+
+/* In light mode, we might need to invert back or handle colors. 
+   Global.css handles body.light-mode .nav-icon { filter: none; } 
+   Let's ensure that works. */
+
+.lang-text {
+  font-weight: 700;
+  font-size: 0.9rem;
+  font-family: var(--font-heading);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  header#navbar {
+    top: 0;
+    padding: 1rem;
+  }
+  
+  .nav-content {
+    padding: 0.75rem 1.5rem;
     width: 100%;
-    margin-bottom: 10px;
+    justify-content: center; /* Center Logo and Actions */
+    position: relative; /* For absolute positioning of menu button */
   }
 
-  nav ul {
+  /* Hamburger Menu Button */
+  #menu-toggle {
     display: flex;
-    justify-content: center;
-    align-items: center;
+    position: absolute;
+    left: 1.5rem;
+    top: 50%;
+    transform: translateY(-50%);
+    border: none;
+  }
+  
+  /* Mobile Menu (Dropdown) */
+  header nav {
+      display: none; /* Hidden by default */
+      position: absolute;
+      top: 100%;
+      left: 0;
+      width: 100%;
+      background: rgba(15, 7, 32, 0.98);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      padding: 1.5rem;
+      border-radius: 0 0 20px 20px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+      box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+      z-index: 999;
+      margin-top: 10px;
+      animation: slideDown 0.3s ease forwards;
+  }
+
+  header nav.active {
+      display: block;
+  }
+  
+  header nav ul {
+      flex-direction: column;
+      align-items: center;
+      gap: 1.5rem;
+  }
+  
+  header nav ul li a {
+      font-size: 1.1rem;
+      display: block;
+      width: 100%;
+      text-align: center;
+  }
+  
+  header#navbar .logo {
+      font-size: 1.2rem;
+      margin-right: 0.5rem;
+  }
+
+  .nav-actions {
+      gap: 0.5rem;
+  }
+  
+  @keyframes slideDown {
+      from { opacity: 0; transform: translateY(-10px); }
+      to { opacity: 1; transform: translateY(0); }
   }
 }

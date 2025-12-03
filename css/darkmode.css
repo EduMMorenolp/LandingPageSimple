@@ -2,34 +2,45 @@
 
 /* Dark Mode */
 body.dark-mode {
-  background-color: #4d258d;
-  color: #eeeafd;
-  transition: background-color 0.5s, color 0.5s;
+  background-color: var(--dark-bg);
+  color: var(--dark-text);
 }
 
 body.dark-mode h1,
 body.dark-mode h2,
-body.dark-mode h3 {
-  color: #eeeafd;
+body.dark-mode h3,
+body.dark-mode h4,
+body.dark-mode strong {
+  color: var(--dark-text);
+}
+
+body.dark-mode .proyecto {
+    background-color: #3d1e70; /* Slightly lighter than bg */
+    color: var(--dark-text);
+}
+
+body.dark-mode .proyecto-detalles h4 {
+    color: var(--dark-text);
+}
+
+body.dark-mode .proyecto-detalles p {
+    color: #ccc;
 }
 
 header.slice-top.dark-mode {
-  background-color: #340f6e;
-  transition: background-color 0.5s, color 0.5s;
+  background-color: rgba(52, 15, 110, 0.9); /* Glassmorphism base */
 }
 
 main.dark-mode {
-  background-color: #4d258d;
-  transition: background-color 0.5s, color 0.5s;
+  background-color: var(--dark-bg);
 }
 
 footer.dark-mode {
-  background-color: #340f6e;
-  transition: background-color 0.5s, color 0.5s;
+  background-color: var(--dark-header-bg);
 }
 
 .dark-mode .contacto-info {
-  color: #333;
+  color: var(--dark-text);
 }
 
 .checkbox {
