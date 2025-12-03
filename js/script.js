@@ -148,6 +148,9 @@ document.addEventListener('DOMContentLoaded', () => {
         // Footer
         const footerText = document.querySelector('footer p');
         if (footerText) footerText.innerHTML = t.footer;
+
+        // Reload projects with new language
+        loadProjects(lang);
     }
 
     // Scroll Animations using Intersection Observer
@@ -308,13 +311,135 @@ const projectsData = {
                 "verDemo": "Ver Demo"
             }
         ]
+    },
+    "en": {
+        "proyecto": [
+            {
+                "nombre": "PetShop",
+                "descripcion": "This project involves the development of an online store for pet products. I worked in collaboration with a team of 4 people, where we took on specific roles and divided tasks to maximize efficiency. <strong>My contribution included both backend and frontend work</strong>, ensuring an integrated workflow and an optimal user experience.",
+                "imagen": "./img/proyectos/2.png",
+                "github": "https://github.com/EduMMorenolp/PetShop",
+                "demo": "https://edummorenolp.github.io/PetShop/",
+                "tec": [
+                    "HTML",
+                    "CSS",
+                    "JavaScript",
+                    "Nodejs",
+                    "Express",
+                    "MySQL",
+                    "🧑‍🤝‍🧑 Collaborative"
+                ],
+                "categoria": ["frontend", "backend"],
+                "verCodigo": "View Code",
+                "verDemo": "View Demo"
+            },
+            {
+                "nombre": "UserFlow",
+                "descripcion": "UserFlow is an API designed to manage a client CRUD, incorporating an authentication system based on API keys. Registered users can generate and use a unique API key to securely interact with the backend.",
+                "imagen": "./img/proyectos/6.png",
+                "github": "https://github.com/EduMMorenolp/UserFlow",
+                "demo": "https://userflow-7y2o.onrender.com",
+                "tec": ["Node.js", "Express", "MySQL", "Prisma", "Swagger"],
+                "categoria": ["backend"],
+                "verCodigo": "View Code",
+                "verDemo": "View Demo"
+            },
+            {
+                "nombre": "ProJet",
+                "descripcion": "This collaborative project is a comprehensive web application developed by a team of 10 people.<strong> My main contribution was in the backend</strong>, where I worked with Nodejs. The application allows for efficient management of tasks, users, projects, and more, with a dynamic frontend built with React.",
+                "imagen": "./img/proyectos/5.png",
+                "github": "https://github.com/EduMMorenolp/s16-09-n-node-react-Copia",
+                "demo": "https://s16-09-n-node-react-1.onrender.com/",
+                "tec": [
+                    "Node.js",
+                    "Express",
+                    "PostgreSQL",
+                    "TypeScript",
+                    "React",
+                    "🧑‍🤝‍🧑 Collaborative"
+                ],
+                "categoria": ["backend"],
+                "verCodigo": "View Code",
+                "verDemo": "View Demo"
+            },
+            {
+                "nombre": "Aprender a Programar",
+                "descripcion": "A community project that offers detailed tutorials for various programming languages, designed to help users develop their programming skills effectively.",
+                "imagen": "./img/proyectos/1.png",
+                "github": "https://github.com/EduMMorenolp/Aprende-De-Programacion",
+                "demo": "https://edummorenolp.github.io/Aprende-De-Programacion/",
+                "tec": ["HTML", "CSS", "JavaScript"],
+                "categoria": ["frontend"],
+                "verCodigo": "View Code",
+                "verDemo": "View Demo"
+            },
+            {
+                "nombre": "Proyecto Final Springboot",
+                "descripcion": "Final project developed in collaboration with a team of 10 people, where Spring Boot and Thymeleaf were implemented.<strong> I primarily took the frontend role </strong>, contributing to the design and implementation of the user interface, while the team worked together, dividing tasks and roles to ensure the success of the project.",
+                "imagen": "./img/proyectos/3.png",
+                "github": "https://github.com/EduMMorenolp/ProyectoFinal-Spring",
+                "demo": "https://www.youtube.com/embed/Z70zCfUsE4s?si=1kybwL2th3agibVL",
+                "tec": [
+                    "Java",
+                    "Springboot",
+                    "HTML",
+                    "CSS",
+                    "JavaScript",
+                    "Thymeleaf",
+                    "🧑‍🤝‍🧑 Collaborative"
+                ],
+                "categoria": ["frontend"],
+                "verCodigo": "View Code",
+                "verDemo": "View Demo"
+            },
+            {
+                "nombre": "Proyecto Final Big Data",
+                "descripcion": "Final project where various data analysis and big data tools were implemented.",
+                "imagen": "./img/proyectos/4.png",
+                "github": "https://deepnote.com/workspace/eduardommoreno-34ae987d-0d5e-4172-936b-60005e69667f/project/c23664-Eduardo-Moreno-TPintegrador-57a710b8-5854-4f44-a9e8-4a17d1732d80/notebook/0.%20Consignas%20%2B%20Redes%20Sociales-a13245fd02f84ed48077777de1da7da5",
+                "demo": "https://www.youtube.com/embed/kyzCkpCHaGI?si=smvaN9F9Wn75VZQq",
+                "tec": [
+                    "Python",
+                    "SQLite",
+                    "Spreadsheets",
+                    "Deepnote",
+                    "Looker",
+                    "Pandas",
+                    "Numpy",
+                    "Seaborn",
+                    "Matplotlib"
+                ],
+                "categoria": ["dataanalist"],
+                "verCodigo": "View Code",
+                "verDemo": "View Demo"
+            },
+            {
+                "nombre": "Stockify",
+                "descripcion": "Project developed from scratch, where I implemented secure authentication with JWT and OAuth in a backend based on Node.js, Express, and Sequelize. <strong> I focused on backend architecture </strong>, ensuring a scalable and efficient design. Additionally, I collaborated with the team using GitHub Projects for task management and workflow organization.",
+                "imagen": "./img/proyectos/7.png",
+                "github": "https://s20-05-n-webapp-backend.onrender.com/api-docs/",
+                "demo": "https://stock-dep-xi.vercel.app/main",
+                "tec": [
+                    "Node.js",
+                    "Express",
+                    "Sequelize",
+                    "JWT",
+                    "OAuth",
+                    "GitHub Projects",
+                    "🧑‍🤝‍🧑 Collaborative"
+                ],
+                "categoria": ["backend"],
+                "verCodigo": "View Code",
+                "verDemo": "View Demo"
+            }
+        ]
     }
 };
 
-function loadProjects() {
+function loadProjects(lang = 'es') {
     try {
         const projectsContainer = document.getElementById('proyecto');
-        const projects = projectsData.es.proyecto; // Default to Spanish
+        const projects = projectsData[lang].proyecto;
 
         projectsContainer.innerHTML = projects.map(project => `
             <div class="proyecto fade-in-up">
@@ -326,8 +451,8 @@ function loadProjects() {
                         ${project.tec.map(tech => `<span class="tec">${tech}</span>`).join('')}
                     </div>
                     <div class="botones">
-                        <a href="${project.github}" target="_blank" class="btn-small">Código</a>
-                        <a href="${project.demo}" target="_blank" class="btn-small">Demo</a>
+                        <a href="${project.github}" target="_blank" class="btn-small">${project.verCodigo}</a>
+                        <a href="${project.demo}" target="_blank" class="btn-small">${project.verDemo}</a>
                     </div>
                 </div>
             </div>
