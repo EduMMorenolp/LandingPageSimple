@@ -572,3 +572,24 @@ main {
     padding: 1.5rem;
   }
 }
+
+/* Light Mode Overrides */
+body.light-mode .tech-item:not(.expert) {
+  background: rgba(0, 0, 0, 0.05);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  color: var(--text-main);
+}
+
+body.light-mode .tech-item:not(.expert):hover {
+  background: rgba(0, 0, 0, 0.1);
+}
+
+body.light-mode .btn-outline {
+  border-color: rgba(0, 0, 0, 0.2);
+  color: var(--text-main);
+}
+
+body.light-mode .btn-outline:hover {
+  background: rgba(0, 0, 0, 0.05);
+  border-color: var(--text-main);
+}

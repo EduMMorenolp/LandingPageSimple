@@ -49,6 +49,7 @@ document.addEventListener('DOMContentLoaded', () => {
             "btnProyectos": "Ver Proyectos",
             "btnContacto": "Contactar",
             "herramientasTitulo": "Herramientas",
+            "idiomasTitulo": "Idiomas",
             "habilidadesTitle": "Mis Habilidades",
             "proyectosTitle": "Proyectos Destacados",
             "contactoTitle": "¿Tienes un proyecto en mente?",
@@ -57,7 +58,8 @@ document.addEventListener('DOMContentLoaded', () => {
             "labelEmail": "Correo electrónico",
             "labelMensaje": "Mensaje",
             "btnEnviar": "Enviar Mensaje",
-            "footer": "&copy; 2024 Eduardo M Moreno. Creado con pasión y código."
+            "footer": "&copy; 2024 Eduardo M Moreno. Creado con pasión y código.",
+            "idiomasTitulo": "Idiomas"
         },
         "en": {
             "inicio": "Home",
@@ -70,6 +72,7 @@ document.addEventListener('DOMContentLoaded', () => {
             "btnProyectos": "View Projects",
             "btnContacto": "Contact Me",
             "herramientasTitulo": "Tools",
+            "idiomasTitulo": "Languages",
             "habilidadesTitle": "My Skills",
             "proyectosTitle": "Featured Projects",
             "contactoTitle": "Have a project in mind?",
@@ -78,7 +81,8 @@ document.addEventListener('DOMContentLoaded', () => {
             "labelEmail": "Email",
             "labelMensaje": "Message",
             "btnEnviar": "Send Message",
-            "footer": "&copy; 2024 Eduardo M Moreno. Created with passion and code."
+            "footer": "&copy; 2024 Eduardo M Moreno. Created with passion and code.",
+            "idiomasTitulo": "Languages"
         }
     };
 
@@ -148,6 +152,13 @@ document.addEventListener('DOMContentLoaded', () => {
         // Footer
         const footerText = document.querySelector('footer p');
         if (footerText) footerText.innerHTML = t.footer;
+
+        // Skills Titles
+        const toolsTitle = document.querySelector('.herramientasTitulo');
+        if (toolsTitle) toolsTitle.textContent = t.herramientasTitulo;
+
+        const langTitle = document.querySelector('.lang-card h3');
+        if (langTitle) langTitle.textContent = t.idiomasTitulo;
 
         // Reload projects with new language
         loadProjects(lang);
