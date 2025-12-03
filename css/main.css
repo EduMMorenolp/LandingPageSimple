@@ -537,6 +537,11 @@ main {
   width: 100%;
 }
 
+/* Carousel Navigation - Default Hidden */
+.carousel-nav {
+  display: none;
+}
+
 /* Responsive */
 @media (max-width: 992px) {
   .hero-grid {
@@ -564,12 +569,56 @@ main {
   }
 
   .projects-grid {
-    grid-template-columns: 1fr;
-    gap: 2rem;
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    gap: 1.5rem;
+    padding-bottom: 2rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none; /* Firefox */
+  }
+  
+  .projects-grid::-webkit-scrollbar {
+    display: none; /* Chrome/Safari */
+  }
+
+  .proyecto {
+    min-width: 85vw;
+    scroll-snap-align: center;
   }
 
   .proyecto-detalles {
     padding: 1.5rem;
+  }
+
+  /* Carousel Navigation Mobile Override */
+  .carousel-nav {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
+    padding-right: 1rem;
+  }
+
+  .nav-arrow {
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    color: var(--text-main);
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+
+  .nav-arrow:hover {
+    background: var(--primary);
+    border-color: var(--primary);
   }
 }
 
@@ -592,4 +641,16 @@ body.light-mode .btn-outline {
 body.light-mode .btn-outline:hover {
   background: rgba(0, 0, 0, 0.05);
   border-color: var(--text-main);
+}
+
+body.light-mode .nav-arrow {
+  background: rgba(0, 0, 0, 0.05);
+  border-color: rgba(0, 0, 0, 0.2);
+  color: var(--text-main);
+}
+
+body.light-mode .nav-arrow:hover {
+  background: var(--primary);
+  color: white;
+  border-color: var(--primary);
 }

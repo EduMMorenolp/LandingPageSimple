@@ -469,6 +469,19 @@ function loadProjects(lang = 'es') {
             </div>
         `).join('');
 
+        // Carousel Navigation Logic
+        const prevBtn = document.getElementById('prev-project');
+        const nextBtn = document.getElementById('next-project');
+
+        if (prevBtn && nextBtn) {
+            prevBtn.onclick = () => {
+                projectsContainer.scrollBy({ left: -projectsContainer.clientWidth * 0.8, behavior: 'smooth' });
+            };
+            nextBtn.onclick = () => {
+                projectsContainer.scrollBy({ left: projectsContainer.clientWidth * 0.8, behavior: 'smooth' });
+            };
+        }
+
     } catch (error) {
         console.error('Error loading projects:', error);
     }
