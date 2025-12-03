@@ -232,6 +232,11 @@ main {
   transform: scale(1.2);
 }
 
+.expert {
+  background-color: #cfc100;
+  color: #000;
+}
+
 /* Projects Section */
 .projects-grid {
   display: grid;
