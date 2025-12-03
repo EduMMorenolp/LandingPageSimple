@@ -99,10 +99,15 @@ header nav ul li a.active::after {
   transform: translateY(-2px);
 }
 
+#menu-toggle {
+    display: none;
+}
+
 .nav-icon {
   width: 20px;
   height: 20px;
-  filter: invert(1); /* Ensure white icons in dark mode if SVGs are black */
+  stroke: var(--text-main); /* Use CSS variable for color */
+  fill: none;
 }
 
 /* In light mode, we might need to invert back or handle colors. 
@@ -118,49 +123,74 @@ header nav ul li a.active::after {
 /* Responsive */
 @media (max-width: 768px) {
   header#navbar {
-    top: 1rem;
+    top: 0;
+    padding: 1rem;
   }
   
   .nav-content {
-    padding: 0.5rem 1.5rem;
+    padding: 0.75rem 1.5rem;
     width: 100%;
-    justify-content: space-between; /* Ensure Logo left, Buttons right */
+    justify-content: center; /* Center Logo and Actions */
+    position: relative; /* For absolute positioning of menu button */
+  }
+
+  /* Hamburger Menu Button */
+  #menu-toggle {
+    display: flex;
+    position: absolute;
+    left: 1.5rem;
+    top: 50%;
+    transform: translateY(-50%);
+    border: none;
   }
   
-  /* Mobile Menu (Bottom Navigation) */
+  /* Mobile Menu (Dropdown) */
   header nav {
-      display: block;
-      position: fixed;
-      bottom: 1.5rem;
-      left: 50%;
-      transform: translateX(-50%);
-      background: rgba(15, 7, 32, 0.95);
+      display: none; /* Hidden by default */
+      position: absolute;
+      top: 100%;
+      left: 0;
+      width: 100%;
+      background: rgba(15, 7, 32, 0.98);
       backdrop-filter: blur(16px);
       -webkit-backdrop-filter: blur(16px);
-      padding: 1rem 2rem;
-      border-radius: 50px;
-      border: 1px solid rgba(255, 255, 255, 0.1);
-      width: auto;
+      padding: 1.5rem;
+      border-radius: 0 0 20px 20px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
       box-shadow: 0 10px 30px rgba(0,0,0,0.3);
-      z-index: 1001;
+      z-index: 999;
+      margin-top: 10px;
+      animation: slideDown 0.3s ease forwards;
+  }
+
+  header nav.active {
+      display: block;
   }
   
   header nav ul {
-      gap: 2rem;
-      margin: 0;
-      padding: 0;
+      flex-direction: column;
+      align-items: center;
+      gap: 1.5rem;
   }
   
   header nav ul li a {
-      font-size: 0.9rem;
+      font-size: 1.1rem;
+      display: block;
+      width: 100%;
+      text-align: center;
   }
   
   header#navbar .logo {
-      display: block; /* Show logo on mobile */
       font-size: 1.2rem;
+      margin-right: 0.5rem;
   }
 
   .nav-actions {
       gap: 0.5rem;
+  }
+  
+  @keyframes slideDown {
+      from { opacity: 0; transform: translateY(-10px); }
+      to { opacity: 1; transform: translateY(0); }
   }
 }

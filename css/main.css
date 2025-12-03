@@ -303,7 +303,7 @@ main {
   margin-bottom: 1rem;
   color: var(--text-main);
   font-family: var(--font-heading);
-  background: linear-gradient(135deg, #ffffff 0%, var(--accent) 100%);
+  background: linear-gradient(2deg, #ffffff 0%, var(--accent) 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -363,6 +363,7 @@ main {
   text-decoration: none;
   position: relative;
   overflow: hidden;
+  border: 2px solid black;
 }
 
 .btn-small:first-child {
@@ -387,24 +388,26 @@ main {
 .btn-small:first-child:hover::before {
   width: 300px;
   height: 300px;
+  
 }
 
 .btn-small:first-child:hover {
   background: var(--primary-glow);
   box-shadow: 0 8px 20px rgba(109, 40, 217, 0.4);
   transform: translateY(-2px);
+  
 }
 
 .btn-small:last-child {
   background: transparent;
-  border: 1px solid rgba(255, 255, 255, 0.2);
+  border: 2px solid black;
   color: var(--text-main);
 }
 
 .btn-small:last-child:hover {
-  border-color: var(--text-main);
   background: rgba(255, 255, 255, 0.05);
   transform: translateY(-2px);
+  
 }
 
 .section-title {

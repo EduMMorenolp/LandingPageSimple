@@ -15,6 +15,23 @@ document.addEventListener('DOMContentLoaded', () => {
         moonIcon.classList.toggle('hidden');
     });
 
+    // Mobile Menu Toggle
+    const menuToggle = document.getElementById('menu-toggle');
+    const nav = document.querySelector('nav');
+
+    if (menuToggle && nav) {
+        menuToggle.addEventListener('click', () => {
+            nav.classList.toggle('active');
+        });
+
+        // Close menu when clicking a link
+        document.querySelectorAll('nav a').forEach(link => {
+            link.addEventListener('click', () => {
+                nav.classList.remove('active');
+            });
+        });
+    }
+
     // Language Toggle
     const langToggle = document.getElementById('lang-toggle');
     const langText = document.querySelector('.lang-text');
@@ -73,17 +90,33 @@ document.addEventListener('DOMContentLoaded', () => {
         const t = translations[lang];
 
         // Nav
-        document.querySelector('a[href="#inicio"]').textContent = t.inicio;
-        document.querySelector('a[href="#habilidades"]').textContent = t.habilidades;
-        document.querySelector('a[href="#proyectos"]').textContent = t.proyectos;
-        document.querySelector('a[href="#contacto"]').textContent = t.contacto;
+        const navInicio = document.querySelector('a[href="#inicio"]');
+        if (navInicio) navInicio.textContent = t.inicio;
+
+        const navHabilidades = document.querySelector('a[href="#habilidades"]');
+        if (navHabilidades) navHabilidades.textContent = t.habilidades;
+
+        const navProyectos = document.querySelector('a[href="#proyectos"]');
+        if (navProyectos) navProyectos.textContent = t.proyectos;
+
+        const navContacto = document.querySelector('a[href="#contacto"]');
+        if (navContacto) navContacto.textContent = t.contacto;
 
         // Hero
-        document.querySelector('.badge').textContent = t.badge;
-        document.querySelector('.hero-text h1').innerHTML = t.heroTitle;
-        document.querySelector('.hero-text p').innerHTML = t.heroDesc;
-        document.querySelector('a[href="#proyectos"].btn-primary').textContent = t.btnProyectos;
-        document.querySelector('a[href="#contacto"].btn-outline').textContent = t.btnContacto;
+        const badge = document.querySelector('.badge');
+        if (badge) badge.textContent = t.badge;
+
+        const heroTitle = document.querySelector('.hero-text h1');
+        if (heroTitle) heroTitle.innerHTML = t.heroTitle;
+
+        const heroDesc = document.querySelector('.hero-text p');
+        if (heroDesc) heroDesc.innerHTML = t.heroDesc;
+
+        const btnProyectos = document.querySelector('a[href="#proyectos"].btn-primary');
+        if (btnProyectos) btnProyectos.textContent = t.btnProyectos;
+
+        const btnContacto = document.querySelector('a[href="#contacto"].btn-outline');
+        if (btnContacto) btnContacto.textContent = t.btnContacto;
 
         // Sections
         document.querySelectorAll('.section-title').forEach(el => {
@@ -91,17 +124,28 @@ document.addEventListener('DOMContentLoaded', () => {
             if (el.textContent.includes('Proyectos') || el.textContent.includes('Projects')) el.textContent = t.proyectosTitle;
         });
 
-        document.querySelector('.contact-content h2').textContent = t.contactoTitle;
-        document.querySelector('.contact-content p').textContent = t.contactoDesc;
+        const contactTitle = document.querySelector('.contact-content h2');
+        if (contactTitle) contactTitle.textContent = t.contactoTitle;
+
+        const contactDesc = document.querySelector('.contact-content p');
+        if (contactDesc) contactDesc.textContent = t.contactoDesc;
 
         // Form
-        document.querySelector('label[for="name"]').textContent = t.labelNombre;
-        document.querySelector('label[for="email"]').textContent = t.labelEmail;
-        document.querySelector('label[for="message"]').textContent = t.labelMensaje;
-        document.querySelector('.btn-full').textContent = t.btnEnviar;
+        const labelName = document.querySelector('label[for="name"]');
+        if (labelName) labelName.textContent = t.labelNombre;
+
+        const labelEmail = document.querySelector('label[for="email"]');
+        if (labelEmail) labelEmail.textContent = t.labelEmail;
+
+        const labelMessage = document.querySelector('label[for="message"]');
+        if (labelMessage) labelMessage.textContent = t.labelMensaje;
+
+        const btnSend = document.querySelector('.btn-full');
+        if (btnSend) btnSend.textContent = t.btnEnviar;
 
         // Footer
-        document.querySelector('footer p').innerHTML = t.footer;
+        const footerText = document.querySelector('footer p');
+        if (footerText) footerText.innerHTML = t.footer;
     }
 
     // Scroll Animations using Intersection Observer
