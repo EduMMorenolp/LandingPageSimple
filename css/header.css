@@ -22,8 +22,9 @@ header#navbar {
   padding: 0.75rem 2rem;
   display: flex;
   align-items: center;
-  gap: 2rem;
+  justify-content: space-between;
   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+  min-width: 550px;
 }
 
 .logo {
@@ -130,8 +131,13 @@ header nav ul li a.active::after {
   .nav-content {
     padding: 0.75rem 1.5rem;
     width: 100%;
+    min-width: 300px;
     justify-content: center; /* Center Logo and Actions */
     position: relative; /* For absolute positioning of menu button */
+  }
+
+  .logo {
+    padding-right: 1rem;
   }
 
   /* Hamburger Menu Button */
