@@ -1,275 +1,469 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Portafolio de Eduardo M Moreno, Desarrollador Web Creativo.">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Portafolio de Eduardo M Moreno, Desarrollador Web Creativo."
+    />
 
     <!-- CSS -->
-    <link rel="stylesheet" href="./css/global.css">
-    <link rel="stylesheet" href="./css/header.css">
-    <link rel="stylesheet" href="./css/main.css">
-    <link rel="stylesheet" href="./css/footer.css">
-    <link rel="stylesheet" href="./css/animations.css">
+    <link rel="stylesheet" href="./css/global.css" />
+    <link rel="stylesheet" href="./css/header.css" />
+    <link rel="stylesheet" href="./css/main.css" />
+    <link rel="stylesheet" href="./css/footer.css" />
+    <link rel="stylesheet" href="./css/animations.css" />
 
     <title>Eduardo M Moreno | Creative Developer</title>
-</head>
+  </head>
 
-<body>
+  <body>
     <!-- Floating Navigation -->
     <header id="navbar">
-        <div class="nav-content">
-            <button id="menu-toggle" class="icon-btn menu-btn" aria-label="Menu">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                    <line x1="3" y1="12" x2="21" y2="12"></line>
-                    <line x1="3" y1="6" x2="21" y2="6"></line>
-                    <line x1="3" y1="18" x2="21" y2="18"></line>
-                </svg>
-            </button>
-            <a href="#" class="logo">EM</a>
-            <nav>
-                <ul>
-                    <li><a href="#habilidades">Habilidades</a></li>
-                    <li><a href="#proyectos">Proyectos</a></li>
-                    <li><a href="#contacto">Contacto</a></li>
-                </ul>
-            </nav>
-            <div class="nav-actions">
-                <button id="theme-toggle" class="icon-btn" aria-label="Cambiar tema">
-                    <svg class="nav-icon sun-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
-                        viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                        stroke-linejoin="round">
-                        <circle cx="12" cy="12" r="5"></circle>
-                        <line x1="12" y1="1" x2="12" y2="3"></line>
-                        <line x1="12" y1="21" x2="12" y2="23"></line>
-                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
-                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
-                        <line x1="1" y1="12" x2="3" y2="12"></line>
-                        <line x1="21" y1="12" x2="23" y2="12"></line>
-                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
-                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
-                    </svg>
-                    <svg class="nav-icon moon-icon hidden" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
-                        viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                        stroke-linejoin="round">
-                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
-                    </svg>
-                </button>
-                <button id="lang-toggle" class="lang-btn" aria-label="Cambiar idioma">
-                    <span class="lang-text">ES</span>
-                </button>
-            </div>
+      <div class="nav-content">
+        <button id="menu-toggle" class="icon-btn menu-btn" aria-label="Menu">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <line x1="3" y1="12" x2="21" y2="12"></line>
+            <line x1="3" y1="6" x2="21" y2="6"></line>
+            <line x1="3" y1="18" x2="21" y2="18"></line>
+          </svg>
+        </button>
+        <a href="#" class="logo">EM</a>
+        <nav>
+          <ul>
+            <li><a href="#habilidades">Habilidades</a></li>
+            <li><a href="#proyectos">Proyectos</a></li>
+            <li><a href="#contacto">Contacto</a></li>
+          </ul>
+        </nav>
+        <div class="nav-actions">
+          <button id="theme-toggle" class="icon-btn" aria-label="Cambiar tema">
+            <svg
+              class="nav-icon sun-icon"
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <circle cx="12" cy="12" r="5"></circle>
+              <line x1="12" y1="1" x2="12" y2="3"></line>
+              <line x1="12" y1="21" x2="12" y2="23"></line>
+              <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+              <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+              <line x1="1" y1="12" x2="3" y2="12"></line>
+              <line x1="21" y1="12" x2="23" y2="12"></line>
+              <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+              <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+            </svg>
+            <svg
+              class="nav-icon moon-icon hidden"
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+            </svg>
+          </button>
+          <button id="lang-toggle" class="lang-btn" aria-label="Cambiar idioma">
+            <span class="lang-text">ES</span>
+          </button>
         </div>
+      </div>
     </header>
 
     <main>
-        <!-- Hero Section -->
-        <section id="inicio" class="hero section-padding">
-            <div class="container hero-grid">
-                <div class="hero-text">
-                    <span class="badge">Desarrollador Web</span>
-                    <h1 class="fade-in-up">Creando experiencias <br> digitales <span class="text-gradient">únicas</span>
-                    </h1>
-                    <p class="fade-in-up delay-1">
-                        Hola, soy <strong>Eduardo Moreno</strong>. Transformo ideas en realidad a través de código
-                        limpio y diseño moderno.
-                    </p>
-                    <div class="hero-buttons fade-in-up delay-2">
-                        <a href="#proyectos" class="btn btn-primary">Ver Proyectos</a>
-                        <a href="#contacto" class="btn btn-outline">Contactar</a>
-                    </div>
-
-                    <div class="social-links fade-in-up delay-3">
-                        <a href="https://github.com/EduMMorenolp" target="_blank" aria-label="GitHub">
-                            <img src="./img/iconos/MdiGithub.svg" alt="GitHub" class="social-icon">
-                        </a>
-                        <a href="https://linkedin.com/in/eduardo-m-moreno-programador" target="_blank" aria-label="LinkedIn">
-                            <img src="./img/iconos/MdiLinkedin.svg" alt="LinkedIn" class="social-icon">
-                        </a>
-                    </div>
-                </div>
-
-                <!-- Profile Images with Flip Effect -->
-                <div class="image-wrapper fade-in-up">
-                    <div class="profile-container">
-                        <div class="profile-card">
-                            <div class="profile-back">
-                                <img src="./img/FotoReal.jpg" alt="Eduardo Moreno - Foto Real" class="profile-img">
-                            </div>
-                            <div class="profile-front">
-                                <img src="./img/EduMMorenoGhibli-2-510x510.png" alt="Eduardo Moreno - Foto IA"
-                                    class="profile-img">
-                            </div>
-                        </div>
-                    </div>
-                </div>
+      <!-- Hero Section -->
+      <section id="inicio" class="hero section-padding">
+        <div class="container hero-grid">
+          <div class="hero-text">
+            <span class="badge">Desarrollador Web</span>
+            <h1 class="fade-in-up">
+              Creando experiencias <br />
+              digitales <span class="text-gradient">únicas</span>
+            </h1>
+            <p class="fade-in-up delay-1">
+              Desarrollador Fullstack especializado en <strong>arquitecturas Backend escalables y análisis de datos</strong>. Enfocado en crear soluciones robustas con Node.js y Python que optimizan procesos de negocio.
+            </p>
+            <div class="hero-buttons fade-in-up delay-2">
+              <a href="#proyectos" class="btn btn-primary">Ver Proyectos</a>
+              <a href="#contacto" class="btn btn-outline">Contactar</a>
             </div>
-        </section>
 
-        <!-- Skills Section -->
-        <section id="habilidades" class="section-padding">
-            <div class="container">
-                <h2 class="section-title text-center">Mis Habilidades</h2>
-                <div class="bento-grid">
-                    <!-- Backend Card (Large) -->
-                    <div class="bento-card backend-card">
-                        <h3>Backend</h3>
-                        <div class="tech-stack">
-                            <div class="tech-item expert"><img src="https://skillicons.dev/icons?i=nodejs"
-                                    alt="Node"><span>Node.js</span></div>
-                            <div class="tech-item expert"><img src="https://skillicons.dev/icons?i=express"
-                                    alt="Express"><span>Express</span></div>
-                            <div class="tech-item expert"><img src="https://skillicons.dev/icons?i=ts"
-                                    alt="TypeScript"><span>TypeScript</span></div>
-                            <div class="tech-item"><img src="https://skillicons.dev/icons?i=java"
-                                    alt="Java"><span>Java</span>
-                            </div>
-                            <div class="tech-item"><img src="https://skillicons.dev/icons?i=spring"
-                                    alt="Spring"><span>Spring</span></div>
-                            <div class="tech-item"><img src="https://skillicons.dev/icons?i=postgres"
-                                    alt="PostgreSQL"><span>PostgreSQL</span></div>
-                            <div class="tech-item expert"><img src="https://skillicons.dev/icons?i=mysql"
-                                    alt="MySQL"><span>MySQL</span></div>
-                            <div class="tech-item"><img src="https://skillicons.dev/icons?i=cs" alt="C#"><span>C#</span>
-                            </div>
-                            <div class="tech-item"><img src="https://skillicons.dev/icons?i=mongodb"
-                                    alt="MongoDB"><span>MongoDB</span></div>
-                            <div class="tech-item"><img src="https://skillicons.dev/icons?i=python"
-                                    alt="Python"><span>Python</span></div>
-                            <div class="tech-item expert"><img src="https://skillicons.dev/icons?i=prisma"
-                                    alt="Prisma"><span>Prisma</span></div>
-                            <div class="tech-item"><img src="https://skillicons.dev/icons?i=sequelize"
-                                    alt="Sequelize"><span>Sequelize</span></div>
-                            <div class="tech-item"><img src="https://skillicons.dev/icons?i=sqlite"
-                                    alt="SQLite"><span>SQLite</span></div>
-                        </div>
-                    </div>
-
-                    <!-- Frontend Card (Medium) -->
-                    <div class="bento-card frontend-card">
-                        <h3>Frontend</h3>
-                        <div class="tech-stack">
-                            <div class="tech-item"><img src="https://skillicons.dev/icons?i=react"
-                                    alt="React"><span>React</span></div>
-                            <div class="tech-item expert"><img src="https://skillicons.dev/icons?i=js"
-                                    alt="JS"><span>JavaScript</span>
-                            </div>
-                            <div class="tech-item"><img src="https://skillicons.dev/icons?i=tailwind"
-                                    alt="Tailwind"><span>Tailwind</span></div>
-                            <div class="tech-item"><img src="https://skillicons.dev/icons?i=html"
-                                    alt="HTML"><span>HTML5</span>
-                            </div>
-                            <div class="tech-item"><img src="https://skillicons.dev/icons?i=css"
-                                    alt="CSS"><span>CSS3</span>
-                            </div>
-                            <div class="tech-item"><img src="https://skillicons.dev/icons?i=bootstrap"
-                                    alt="Bootstrap"><span>Bootstrap</span></div>
-                            <div class="tech-item expert"><img src="https://skillicons.dev/icons?i=vite"
-                                    alt="Vite"><span>Vite</span></div>
-                        </div>
-                    </div>
-
-                    <!-- Tools Card (Small) -->
-                    <div class="bento-card tools-card">
-                        <h3 class="herramientasTitulo">Herramientas</h3>
-                        <div class="tech-stack mini">
-                            <img src="https://skillicons.dev/icons?i=git" alt="Git">
-                            <img class="expert" src="https://skillicons.dev/icons?i=github" alt="GitHub">
-                            <img src="https://skillicons.dev/icons?i=gitlab" alt="GitLab">
-                            <img src="https://skillicons.dev/icons?i=postman" alt="Postman">
-                            <img class="expert" src="https://skillicons.dev/icons?i=discord" alt="Discord">
-                            <img src="https://skillicons.dev/icons?i=docker" alt="Docker">
-                            <img src="https://skillicons.dev/icons?i=figma" alt="Figma">
-                            <img src="https://skillicons.dev/icons?i=visualstudio" alt="Visual Studio">
-                            <img class="expert" src="https://skillicons.dev/icons?i=vscode" alt="VSCode">
-                            <img class="expert" src="https://skillicons.dev/icons?i=windows" alt="Windows">
-                            <img src="https://skillicons.dev/icons?i=linux" alt="Linux">
-                        </div>
-                    </div>
-
-                    <!-- Languages Card (Small) -->
-                    <div class="bento-card lang-card">
-                        <h3>Idiomas</h3>
-                        <p>🇪🇸 Español (Nativo)</p>
-                        <p>🇺🇸 Inglés (B2)</p>
-                    </div>
-                </div>
+            <div class="social-links fade-in-up delay-3">
+              <a
+                href="https://github.com/EduMMorenolp"
+                target="_blank"
+                aria-label="GitHub"
+              >
+                <img
+                  src="./img/iconos/MdiGithub.svg"
+                  alt="GitHub"
+                  class="social-icon"
+                />
+              </a>
+              <a
+                href="https://linkedin.com/in/eduardo-m-moreno-programador"
+                target="_blank"
+                aria-label="LinkedIn"
+              >
+                <img
+                  src="./img/iconos/MdiLinkedin.svg"
+                  alt="LinkedIn"
+                  class="social-icon"
+                />
+              </a>
             </div>
-        </section>
+          </div>
 
-        <!-- Projects Section -->
-        <section id="proyectos" class="section-padding">
-            <div class="container">
-                <h2 class="section-title text-center">Proyectos Destacados</h2>
-
-                <!-- Carousel Navigation (Mobile Only) -->
-                <div class="carousel-nav">
-                    <button id="prev-project" class="nav-arrow" aria-label="Anterior proyecto">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                            <polyline points="15 18 9 12 15 6"></polyline>
-                        </svg>
-                    </button>
-                    <button id="next-project" class="nav-arrow" aria-label="Siguiente proyecto">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                            <polyline points="9 18 15 12 9 6"></polyline>
-                        </svg>
-                    </button>
+          <!-- Profile Images with Flip Effect -->
+          <div class="image-wrapper fade-in-up">
+            <div class="profile-container">
+              <div class="profile-card">
+                <div class="profile-back">
+                  <img
+                    src="./img/FotoReal.jpg"
+                    alt="Eduardo Moreno - Foto Real"
+                    class="profile-img"
+                  />
                 </div>
-                <div class="projects-grid" id="proyecto">
-                    <!-- Projects will be injected here by JavaScript -->
+                <div class="profile-front">
+                  <img
+                    src="./img/EduMMorenoGhibli-2-510x510.png"
+                    alt="Eduardo Moreno - Foto IA"
+                    class="profile-img"
+                  />
                 </div>
+              </div>
             </div>
-        </section>
+          </div>
+        </div>
+      </section>
 
-        <!-- Contact Section -->
-        <section id="contacto" class="section-padding">
-            <div class="container contact-wrapper">
-                <div class="contact-content">
-                    <h2>¿Tienes un proyecto en mente?</h2>
-                    <p>Hablemos sobre cómo puedo ayudarte a hacerlo realidad.</p>
-                    <div class="contact-methods">
-                        <a href="mailto:e.m.morenolp@gmail.com" class="contact-item">
-                            <img src="https://skillicons.dev/icons?i=gmail" alt="Email"> e.m.morenolp@gmail.com
-                        </a>
+      <!-- Skills Section -->
+      <section id="habilidades" class="section-padding">
+        <div class="container">
+          <h2 class="section-title text-center">Mis Habilidades</h2>
+          <div class="bento-grid">
+            <!-- Backend Card (Large) -->
+            <div class="bento-card backend-card">
+              <h3>Backend</h3>
+              <div class="tech-stack">
+                <div class="tech-stack">
+                  <div class="tech-item expert">
+                    <img
+                      src="https://skillicons.dev/icons?i=nodejs"
+                      alt="Node"
+                    /><span>Node.js</span>
+                  </div>
+                  <div class="tech-item expert">
+                    <img
+                      src="https://skillicons.dev/icons?i=express"
+                      alt="Express"
+                    /><span>Express</span>
+                  </div>
+                  <div class="tech-item expert">
+                    <img
+                      src="https://skillicons.dev/icons?i=ts"
+                      alt="TypeScript"
+                    /><span>TypeScript</span>
+                  </div>
+                  <div class="tech-item">
+                    <img
+                      src="https://skillicons.dev/icons?i=python"
+                      alt="Python"
+                    /><span>Python</span>
+                  </div>
+                  <div class="tech-item">
+                    <img
+                      src="https://skillicons.dev/icons?i=java"
+                      alt="Java"
+                    /><span>Java</span>
+                  </div>
+                  <div class="tech-item">
+                    <img
+                      src="https://skillicons.dev/icons?i=spring"
+                      alt="Spring"
+                    /><span>Spring</span>
+                  </div>
+
+                  <div class="tech-item">
+                    <img
+                      src="https://skillicons.dev/icons?i=cs"
+                      alt="C#"
+                    /><span>C#</span>
+                  </div>
+                  <div class="tech-stack">
+                    <div class="tech-item expert">
+                      <img
+                        src="https://skillicons.dev/icons?i=mysql"
+                        alt="MySQL"
+                      /><span>MySQL</span>
                     </div>
+                    <div class="tech-item">
+                      <img
+                        src="https://skillicons.dev/icons?i=postgres"
+                        alt="PostgreSQL"
+                      /><span>PostgreSQL</span>
+                    </div>
+                  </div>
+                  <div class="tech-item">
+                    <img
+                      src="https://skillicons.dev/icons?i=mongodb"
+                      alt="MongoDB"
+                    /><span>MongoDB</span>
+                  </div>
+                  <div class="tech-item">
+                    <img
+                      src="https://skillicons.dev/icons?i=sqlite"
+                      alt="SQLite"
+                    /><span>SQLite</span>
+                  </div>
+                  <div class="tech-item expert">
+                    <img
+                      src="https://skillicons.dev/icons?i=prisma"
+                      alt="Prisma"
+                    /><span>Prisma</span>
+                  </div>
+                  <div class="tech-item">
+                    <img
+                      src="https://skillicons.dev/icons?i=sequelize"
+                      alt="Sequelize"
+                    /><span>Sequelize</span>
+                  </div>
                 </div>
-                <div class="contact-form-container">
-                    <form action="https://formsubmit.co/e.m.morenolp@gmail.com" method="POST" class="modern-form">
-                        <input type="hidden" name="_next" value="https://edummorenolp.github.io/LandingPageSimple/">
-                        <input type="hidden" name="_captcha" value="false">
-
-                        <div class="input-group">
-                            <input type="text" id="name" name="name" required placeholder=" ">
-                            <label for="name">Nombre</label>
-                        </div>
-                        <div class="input-group">
-                            <input type="email" id="email" name="email" required placeholder=" ">
-                            <label for="email">Correo electrónico</label>
-                        </div>
-                        <div class="input-group">
-                            <textarea id="message" name="message" required placeholder=" "></textarea>
-                            <label for="message">Mensaje</label>
-                        </div>
-                        <button type="submit" class="btn btn-primary btn-full">Enviar Mensaje</button>
-                    </form>
-                </div>
+              </div>
             </div>
-        </section>
+
+            <!-- Frontend Card (Medium) -->
+            <div class="bento-card frontend-card">
+              <h3>Frontend</h3>
+              <div class="tech-stack">
+                <div class="tech-item">
+                  <img
+                    src="https://skillicons.dev/icons?i=react"
+                    alt="React"
+                  /><span>React</span>
+                </div>
+                <div class="tech-item expert">
+                  <img src="https://skillicons.dev/icons?i=js" alt="JS" /><span
+                    >JavaScript</span
+                  >
+                </div>
+                <div class="tech-item">
+                  <img
+                    src="https://skillicons.dev/icons?i=tailwind"
+                    alt="Tailwind"
+                  /><span>Tailwind</span>
+                </div>
+                <div class="tech-item">
+                  <img
+                    src="https://skillicons.dev/icons?i=html"
+                    alt="HTML"
+                  /><span>HTML5</span>
+                </div>
+                <div class="tech-item">
+                  <img
+                    src="https://skillicons.dev/icons?i=css"
+                    alt="CSS"
+                  /><span>CSS3</span>
+                </div>
+                <div class="tech-item">
+                  <img
+                    src="https://skillicons.dev/icons?i=bootstrap"
+                    alt="Bootstrap"
+                  /><span>Bootstrap</span>
+                </div>
+                <div class="tech-item expert">
+                  <img
+                    src="https://skillicons.dev/icons?i=vite"
+                    alt="Vite"
+                  /><span>Vite</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Tools Card (Small) -->
+            <div class="bento-card tools-card">
+              <h3 class="herramientasTitulo">Herramientas</h3>
+              <div class="tech-stack mini">
+                <img src="https://skillicons.dev/icons?i=git" alt="Git" />
+                <img src="https://skillicons.dev/icons?i=github" alt="GitHub" />
+                <img src="https://skillicons.dev/icons?i=gitlab" alt="GitLab" />
+                <img
+                  src="https://skillicons.dev/icons?i=postman"
+                  alt="Postman"
+                />
+                <img
+                  src="https://skillicons.dev/icons?i=discord"
+                  alt="Discord"
+                />
+                <img src="https://skillicons.dev/icons?i=docker" alt="Docker" />
+                <img src="https://skillicons.dev/icons?i=figma" alt="Figma" />
+                <img
+                  src="https://skillicons.dev/icons?i=visualstudio"
+                  alt="Visual Studio"
+                />
+                <img src="https://skillicons.dev/icons?i=vscode" alt="VSCode" />
+                <img src="https://skillicons.dev/icons?i=linux" alt="Linux" />
+              </div>
+            </div>
+
+            <!-- Languages Card (Small) -->
+            <div class="bento-card lang-card">
+              <h3>Idiomas</h3>
+              <p>🇪🇸 Español (Nativo)</p>
+              <p>🇺🇸 Inglés (B2)</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Projects Section -->
+      <section id="proyectos" class="section-padding">
+        <div class="container">
+          <h2 class="section-title text-center">Proyectos Destacados</h2>
+
+          <!-- Carousel Navigation (Mobile Only) -->
+          <div class="carousel-nav">
+            <button
+              id="prev-project"
+              class="nav-arrow"
+              aria-label="Anterior proyecto"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <polyline points="15 18 9 12 15 6"></polyline>
+              </svg>
+            </button>
+            <button
+              id="next-project"
+              class="nav-arrow"
+              aria-label="Siguiente proyecto"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <polyline points="9 18 15 12 9 6"></polyline>
+              </svg>
+            </button>
+          </div>
+          <div class="projects-grid" id="proyecto">
+            <!-- Projects will be injected here by JavaScript -->
+          </div>
+        </div>
+      </section>
+
+      <!-- Contact Section -->
+      <section id="contacto" class="section-padding">
+        <div class="container contact-wrapper">
+          <div class="contact-content">
+            <h2>¿Tienes un proyecto en mente?</h2>
+            <p>Hablemos sobre cómo puedo ayudarte a hacerlo realidad.</p>
+            <div class="contact-methods">
+              <a href="mailto:e.m.morenolp@gmail.com" class="contact-item">
+                <img src="https://skillicons.dev/icons?i=gmail" alt="Email" />
+                e.m.morenolp@gmail.com
+              </a>
+            </div>
+          </div>
+          <div class="contact-form-container">
+            <form
+              action="https://formsubmit.co/e.m.morenolp@gmail.com"
+              method="POST"
+              class="modern-form"
+            >
+              <input
+                type="hidden"
+                name="_next"
+                value="https://edummorenolp.github.io/LandingPageSimple/"
+              />
+              <input type="hidden" name="_captcha" value="false" />
+
+              <div class="input-group">
+                <input
+                  type="text"
+                  id="name"
+                  name="name"
+                  required
+                  placeholder=" "
+                />
+                <label for="name">Nombre</label>
+              </div>
+              <div class="input-group">
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  required
+                  placeholder=" "
+                />
+                <label for="email">Correo electrónico</label>
+              </div>
+              <div class="input-group">
+                <textarea
+                  id="message"
+                  name="message"
+                  required
+                  placeholder=" "
+                ></textarea>
+                <label for="message">Mensaje</label>
+              </div>
+              <button type="submit" class="btn btn-primary btn-full">
+                Enviar Mensaje
+              </button>
+            </form>
+          </div>
+        </div>
+      </section>
     </main>
 
     <footer>
-        <div class="container">
-            <p>&copy; 2024 Eduardo M Moreno. Creado con pasión y código.</p>
-        </div>
+      <div class="container">
+        <p>&copy; 2024 Eduardo M Moreno. Creado con pasión y código.</p>
+      </div>
     </footer>
 
     <!-- JavaScript -->
     <script src="./js/script.js"></script>
     <script src="./js/form.js"></script>
-</body>
-
+  </body>
 </html>

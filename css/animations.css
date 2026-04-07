@@ -38,6 +38,7 @@
 
 /* Classes */
 .fade-in-up {
+  padding: 5px;
   opacity: 0;
   animation: fadeInUp 0.8s cubic-bezier(0.2, 0.8, 0.2, 1) forwards;
 }
