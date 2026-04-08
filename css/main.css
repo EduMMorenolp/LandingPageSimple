@@ -232,9 +232,19 @@ main {
   transform: scale(1.2);
 }
 
-.expert {
+.golden {
   color: #cfc100;
   border: 0.1rem solid #cfc100;
+}
+
+.silver {
+  color: #c0c0c0;
+  border: 0.1rem solid #c0c0c0;
+}
+
+.bronce {
+  color: #cd7f32;
+  border: 0.1rem solid #cd7f32;
 }
 
 /* Projects Section */
