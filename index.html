@@ -399,17 +399,19 @@
             <h2>¿Tienes un proyecto en mente?</h2>
             <p>Hablemos sobre cómo puedo ayudarte a hacerlo realidad.</p>
             <div class="contact-methods">
-              <a href="mailto:e.m.morenolp@gmail.com" class="contact-item">
+              <a href="#" class="contact-item email-link" data-email="ZS5tLm1vcmVub2xwQGdtYWlsLmNvbQ==">
                 <img src="https://skillicons.dev/icons?i=gmail" alt="Email" />
-                e.m.morenolp@gmail.com
+                <span class="email-text">Contacta conmigo</span>
               </a>
             </div>
           </div>
           <div class="contact-form-container">
             <form
-              action="https://formsubmit.co/e.m.morenolp@gmail.com"
+              action="#"
               method="POST"
               class="modern-form"
+              id="contact-form"
+              data-email="ZS5tLm1vcmVub2xwQGdtYWlsLmNvbQ=="
             >
               <input
                 type="hidden"
@@ -463,6 +465,52 @@
     </footer>
 
     <!-- JavaScript -->
+    <script>
+      (() => {
+        const emailLink = document.querySelector('.email-link');
+        const emailText = emailLink?.querySelector('.email-text');
+        
+        if (emailLink && emailText) {
+          const encodedEmail = emailLink.dataset.email;
+          const email = atob(encodedEmail);
+          let revealed = false;
+          
+          emailLink.addEventListener('click', (e) => {
+            e.preventDefault();
+            if (!revealed) {
+              // Primer click: mostrar el email
+              emailText.textContent = email;
+              revealed = true;
+            } else {
+              // Segundo click: abrir mailto
+              window.location.href = 'mailto:' + email;
+            }
+          });
+          
+          emailLink.addEventListener('mouseenter', () => {
+            if (!revealed) {
+              emailText.textContent = '👉 Click aquí';
+            }
+          });
+          
+          emailLink.addEventListener('mouseleave', () => {
+            if (!revealed) {
+              emailText.textContent = 'Contacta conmigo';
+            }
+          });
+        }
+        
+        // Formulario
+        const form = document.getElementById('contact-form');
+        if (form) {
+          const encodedEmail = form.dataset.email;
+          const email = atob(encodedEmail);
+          form.addEventListener('submit', () => {
+            form.action = 'https://formsubmit.co/' + email;
+          });
+        }
+      })();
+    </script>
     <script src="./js/script.js"></script>
     <script src="./js/form.js"></script>
   </body>
