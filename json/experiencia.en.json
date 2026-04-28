@@ -4,20 +4,34 @@
     "title": "Backend Developer",
     "company": "DelSud",
     "description": "I lead the development and maintenance of corporate CRM systems, optimizing the handling of large volumes of data and workflows. I designed and executed the full architecture of a Social Network, implementing complex interaction logic and real-time content management. Built and optimized REST APIs using Node.js and Express. Implemented advanced SQL queries for dynamic reporting and metrics analysis.",
-    "tech": ["Node.js","Express","SQL","CRM","REST APIs"]
+    "tech": ["Node.js", "Express", "SQL", "CRM", "REST APIs"]
   },
   {
     "period": "May 2024 - June 2024",
     "title": "Backend Developer",
     "company": "No Country (Work Simulation)",
     "description": "Configured backend services using Node.js and Prisma ORM under agile methodologies and realistic simulation environments. Collaborated in a multidisciplinary team implementing scalable and maintainable solutions.",
-    "tech": ["Node.js","Prisma","Agile","Databases"]
+    "tech": ["Node.js", "Prisma", "Agile", "Databases"]
   },
   {
-    "period": "Dec 2022 - Jun 2025",
+    "period": "Dec 2012 - Jun 2022",
+    "title": "Independent Professional",
+    "company": "Gastronomy Sector",
+    "description": "Gastronomy Sector (2012–2022): 10 years developing leadership, team management, discipline and handling critical timing.",
+    "tech": [
+      "Leadership"
+    ]
+  },
+  {
+    "period": "Dec 2007 - Jun 2010",
     "title": "Independent Professional",
     "company": "IT Services",
-    "description": "Gastronomy Sector (2012–2022): 10 years developing leadership, team management, discipline and handling critical timing. Systems and Networks (2007–2010): Hardware maintenance, network administration and technical support.",
-    "tech": ["Leadership","Systems","Networks","Technical Support","Hardware"]
+    "description": "Systems and Networks (2007–2010): Hardware maintenance, network administration and technical support.",
+    "tech": [
+      "Systems",
+      "Networks",
+      "Technical Support",
+      "Hardware"
+    ]
   }
 ]
