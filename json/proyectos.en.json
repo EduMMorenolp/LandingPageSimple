@@ -21,6 +21,50 @@
       "categoria": ["backend"],
       "verCodigo": "View Code",
       "verDemo": "View Demo"
+    },
+    {
+      "nombre": "ProJet",
+      "descripcion": "This collaborative project is a comprehensive web application developed by a team of 10 people.<strong> My main contribution was in the backend</strong>, where I worked with Nodejs. The application allows for efficient management of tasks, users, projects, and more, with a dynamic frontend built with React.",
+      "imagen": "./img/proyectos/5.png",
+      "github": "https://github.com/EduMMorenolp/s16-09-n-node-react-Copia",
+      "demo": "https://s16-09-n-node-react-1.onrender.com/",
+      "tec": ["Node.js", "Express", "PostgreSQL", "TypeScript", "React", "🧑‍🤝‍🧑 Collaborative"],
+      "categoria": ["backend"],
+      "verCodigo": "View Code",
+      "verDemo": "View Demo"
+    },
+    {
+      "nombre": "Proyecto Final Springboot",
+      "descripcion": "Final project developed in collaboration with a team of 10 people, where Spring Boot and Thymeleaf were implemented.<strong> I primarily took the frontend role </strong>, contributing to the design and implementation of the user interface, while the team worked together, dividing tasks and roles to ensure the success of the project.",
+      "imagen": "./img/proyectos/3.png",
+      "github": "https://github.com/EduMMorenolp/ProyectoFinal-Spring",
+      "demo": "https://www.youtube.com/embed/Z70zCfUsE4s?si=1kybwL2th3agibVL",
+      "tec": ["Java", "Springboot", "HTML", "CSS", "JavaScript", "Thymeleaf", "🧑‍🤝‍🧑 Collaborative"],
+      "categoria": ["frontend"],
+      "verCodigo": "View Code",
+      "verDemo": "View Demo"
+    },
+    {
+      "nombre": "Proyecto Final Big Data",
+      "descripcion": "Final project where various data analysis and big data tools were implemented.",
+      "imagen": "./img/proyectos/4.png",
+      "github": "https://deepnote.com/workspace/eduardommoreno-34ae987d-0d5e-4172-936b-60005e69667f/project/c23664-Eduardo-Moreno-TPintegrador-57a710b8-5854-4f44-a9e8-4a17d1732d80/notebook/0.%20Consignas%20%2B%20Redes%20Sociales-a13245fd02f84ed48077777de1da7da5",
+      "demo": "https://www.youtube.com/embed/kyzCkpCHaGI?si=smvaN9F9Wn75VZQq",
+      "tec": ["Python", "SQLite", "Spreadsheets", "Deepnote", "Looker", "Pandas", "Numpy", "Seaborn", "Matplotlib"],
+      "categoria": ["dataanalist"],
+      "verCodigo": "View Code",
+      "verDemo": "View Demo"
+    },
+    {
+      "nombre": "Stockify",
+      "descripcion": "Project developed from scratch, where I implemented secure authentication with JWT and OAuth in a backend based on Node.js, Express, and Sequelize. <strong> I focused on backend architecture </strong>, ensuring a scalable and efficient design. Additionally, I collaborated with the team using GitHub Projects for task management and workflow organization.",
+      "imagen": "./img/proyectos/7.png",
+      "github": "https://s20-05-n-webapp-backend.onrender.com/api-docs/",
+      "demo": "https://stock-dep-xi.vercel.app/main",
+      "tec": ["Node.js", "Express", "Sequelize", "JWT", "OAuth", "GitHub Projects", "🧑‍🤝‍🧑 Collaborative"],
+      "categoria": ["backend"],
+      "verCodigo": "View Code",
+      "verDemo": "View Demo"
     }
   ]
 }
