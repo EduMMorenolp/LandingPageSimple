@@ -1,0 +1,26 @@
+{
+  "proyecto": [
+    {
+      "nombre": "PetShop",
+      "descripcion": "This project involves the development of an online store for pet products. I worked in collaboration with a team of 4 people, where we took on specific roles and divided tasks to maximize efficiency. <strong>My contribution included both backend and frontend work</strong>, ensuring an integrated workflow and an optimal user experience.",
+      "imagen": "./img/proyectos/2.png",
+      "github": "https://github.com/EduMMorenolp/PetShop",
+      "demo": "https://edummorenolp.github.io/PetShop/",
+      "tec": ["HTML", "CSS", "JavaScript", "Nodejs", "Express", "MySQL", "🧑‍🤝‍🧑 Collaborative"],
+      "categoria": ["frontend", "backend"],
+      "verCodigo": "View Code",
+      "verDemo": "View Demo"
+    },
+    {
+      "nombre": "UserFlow",
+      "descripcion": "UserFlow is an API designed to manage a client CRUD, incorporating an authentication system based on API keys. Registered users can generate and use a unique API key to securely interact with the backend.",
+      "imagen": "./img/proyectos/6.png",
+      "github": "https://github.com/EduMMorenolp/UserFlow",
+      "demo": "https://userflow-7y2o.onrender.com",
+      "tec": ["Node.js", "Express", "MySQL", "Prisma", "Swagger"],
+      "categoria": ["backend"],
+      "verCodigo": "View Code",
+      "verDemo": "View Demo"
+    }
+  ]
+}

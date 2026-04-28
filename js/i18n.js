@@ -16,13 +16,14 @@
     if(isHTML) el.innerHTML = text; else el.textContent = text;
   }
 
-  async function init(){
-    const [nav, hero, experiencia, contacto, footer] = await Promise.all([
-      fetchJSON('./json/nav.json'),
-      fetchJSON('./json/hero.json'),
-      fetchJSON('./json/experiencia.json'),
-      fetchJSON('./json/contacto.json'),
-      fetchJSON('./json/footer.json')
+  async function loadForLang(lang = 'es'){
+    const [nav, hero, experiencia, contacto, footer, proyectos] = await Promise.all([
+      fetchJSON(`./json/nav.${lang}.json`),
+      fetchJSON(`./json/hero.${lang}.json`),
+      fetchJSON(`./json/experiencia.${lang}.json`),
+      fetchJSON(`./json/contacto.${lang}.json`),
+      fetchJSON(`./json/footer.${lang}.json`),
+      fetchJSON(`./json/proyectos.${lang}.json`)
     ]);
 
     // Nav
@@ -76,6 +77,31 @@
       setText('footer .container p', footer.copyright);
     }
 
+    // Proyectos
+    if(proyectos){
+      // proyectos is expected to be an object with "proyecto" array (we created per-lang simple files)
+      window.projectsData = proyectos;
+      const projectsContainer = document.getElementById('proyecto');
+      if(projectsContainer && Array.isArray(proyectos.proyecto)){
+        const list = proyectos.proyecto;
+        projectsContainer.innerHTML = list.map(project => `\n            <div class="proyecto fade-in-up">\n                <img src="${project.imagen}" alt="${project.nombre}" loading="lazy">\n                <div class="proyecto-detalles">\n                    <h4>${project.nombre}</h4>\n                    <p>${project.descripcion}</p>\n                    <div class="tecnologias">\n                        ${project.tec.map(tech => `<span class="tec">${tech}</span>`).join('')}\n                    </div>\n                    <div class="botones">\n                        <a href="${project.github}" target="_blank" class="btn-small">${project.verCodigo}</a>\n                        <a href="${project.demo}" target="_blank" class="btn-small">${project.verDemo}</a>\n                    </div>\n                </div>\n            </div>`).join('');
+      }
+    }
   }
-  if(document.readyState === 'loading') document.addEventListener('DOMContentLoaded', init); else init();
+
+  // public loader
+  window.i18nLoad = function(lang = 'es'){
+    loadForLang(lang).catch(e => console.error('i18n loadForLang failed', e));
+  };
+
+  // load initial language
+  const initialLang = document.documentElement.lang || 'es';
+  if(document.readyState === 'loading') document.addEventListener('DOMContentLoaded', () => window.i18nLoad(initialLang)); else window.i18nLoad(initialLang);
+
+  // listen to language change events
+  document.addEventListener('i18n:change', (e) => {
+    const lang = e?.detail?.lang || (document.documentElement.lang || 'es');
+    window.i18nLoad(lang);
+  });
+
 })();
