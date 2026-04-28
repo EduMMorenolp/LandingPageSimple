@@ -1,6 +1,10 @@
 {
   "heading": "¿Tienes un proyecto en mente?",
   "subheading": "Hablemos sobre cómo puedo ayudarte a hacerlo realidad.",
+  "nameLabel": "Nombre",
+  "emailLabel": "Correo electrónico",
+  "messageLabel": "Mensaje",
+  "sendButton": "Enviar Mensaje",
   "emailEncoded": "ZS5tLm1vcmVub2xwQGdtYWlsLmNvbQ==",
   "formNext": "https://edummorenolp.github.io/LandingPageSimple/"
 }

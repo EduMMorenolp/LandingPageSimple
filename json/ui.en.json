@@ -1,0 +1,17 @@
+{
+  "menuLabel": "Menu",
+  "themeLabel": "Change theme",
+  "langLabel": "Change language",
+  "logoText": "EM",
+  "socialGithubLabel": "GitHub",
+  "socialLinkedinLabel": "LinkedIn",
+  "profileRealAlt": "Eduardo Moreno - Real Photo",
+  "profileAiAlt": "Eduardo Moreno - AI Photo",
+  "skillsSectionTitle": "My Skills",
+  "experienceSectionTitle": "Work Experience",
+  "projectsSectionTitle": "Featured Projects",
+  "projectPrevLabel": "Previous project",
+  "projectNextLabel": "Next project",
+  "emailInitialText": "Contact me",
+  "emailHoverText": "👉 Click here"
+}

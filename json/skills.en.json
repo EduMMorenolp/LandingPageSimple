@@ -1,0 +1,62 @@
+{
+  "sectionTitle": "My Skills",
+  "cards": [
+    {
+      "kind": "tech",
+      "className": "backend-card",
+      "title": "Backend",
+      "items": [
+        { "label": "Node.js", "icon": "nodejs", "alt": "Node", "tier": "golden" },
+        { "label": "Express", "icon": "express", "alt": "Express", "tier": "golden" },
+        { "label": "TypeScript", "icon": "ts", "alt": "TypeScript", "tier": "golden" },
+        { "label": "Python", "icon": "python", "alt": "Python", "tier": "silver" },
+        { "label": "Java", "icon": "java", "alt": "Java", "tier": "silver" },
+        { "label": "Spring", "icon": "spring", "alt": "Spring", "tier": "bronce" },
+        { "label": "C#", "icon": "cs", "alt": "C#", "tier": "bronce" },
+        { "label": "MySQL", "icon": "mysql", "alt": "MySQL", "tier": "golden" },
+        { "label": "PostgreSQL", "icon": "postgres", "alt": "PostgreSQL", "tier": "silver" },
+        { "label": "MongoDB", "icon": "mongodb", "alt": "MongoDB", "tier": "bronce" },
+        { "label": "SQLite", "icon": "sqlite", "alt": "SQLite", "tier": "silver" },
+        { "label": "Prisma", "icon": "prisma", "alt": "Prisma", "tier": "golden" },
+        { "label": "Sequelize", "icon": "sequelize", "alt": "Sequelize", "tier": "silver" }
+      ]
+    },
+    {
+      "kind": "tech",
+      "className": "frontend-card",
+      "title": "Frontend",
+      "items": [
+        { "label": "React", "icon": "react", "alt": "React", "tier": "silver" },
+        { "label": "JavaScript", "icon": "js", "alt": "JS", "tier": "golden" },
+        { "label": "Vite", "icon": "vite", "alt": "Vite", "tier": "golden" },
+        { "label": "Tailwind", "icon": "tailwind", "alt": "Tailwind", "tier": "bronce" },
+        { "label": "HTML5", "icon": "html", "alt": "HTML", "tier": "golden" },
+        { "label": "CSS3", "icon": "css", "alt": "CSS", "tier": "silver" },
+        { "label": "Bootstrap", "icon": "bootstrap", "alt": "Bootstrap", "tier": "bronce" }
+      ]
+    },
+    {
+      "kind": "icons",
+      "className": "tools-card",
+      "title": "Tools",
+      "items": [
+        { "icon": "git", "alt": "Git" },
+        { "icon": "github", "alt": "GitHub" },
+        { "icon": "gitlab", "alt": "GitLab" },
+        { "icon": "postman", "alt": "Postman" },
+        { "icon": "discord", "alt": "Discord" },
+        { "icon": "docker", "alt": "Docker" },
+        { "icon": "figma", "alt": "Figma" },
+        { "icon": "visualstudio", "alt": "Visual Studio" },
+        { "icon": "vscode", "alt": "VSCode" },
+        { "icon": "linux", "alt": "Linux" }
+      ]
+    },
+    {
+      "kind": "languages",
+      "className": "lang-card",
+      "title": "Languages",
+      "items": ["🇪🇸 Spanish (Native)", "🇺🇸 English (B2)"]
+    }
+  ]
+}
