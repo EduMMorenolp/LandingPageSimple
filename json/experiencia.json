@@ -1,0 +1,23 @@
+[
+  {
+    "period": "Agosto 2025 - Actualidad",
+    "title": "Desarrollador Backend",
+    "company": "DelSud",
+    "description": "Lidero el desarrollo y mantenimiento de sistemas CRM corporativos, optimizando la gestión de grandes volúmenes de datos y flujos de trabajo. Diseñé y ejecuté la arquitectura completa de una Red Social, implementando lógica de interacciones complejas y gestión de contenidos en tiempo real. Construcción y optimización de APIs REST bajo el stack de Node.js y Express. Implementación de consultas avanzadas en SQL para la generación de reportes dinámicos.",
+    "tech": ["Node.js","Express","SQL","CRM","APIs REST"]
+  },
+  {
+    "period": "Mayo 2024 - Junio 2024",
+    "title": "Desarrollador Backend",
+    "company": "No Country (Simulación Laboral)",
+    "description": "Configuración de servicios backend con Node.js y Prisma ORM bajo metodologías ágiles y entornos de simulación real. Trabajo colaborativo en equipo multidisciplinario, implementando soluciones escalables y mantenibles.",
+    "tech": ["Node.js","Prisma","Metodología Ágil","Bases de Datos"]
+  },
+  {
+    "period": "Dic 2022 - Jun 2025",
+    "title": "Profesional Independiente",
+    "company": "Servicios Informáticos",
+    "description": "Sector Gastronómico (2012–2022): 10 años desarrollando competencias de liderazgo de equipos, disciplina y gestión de tiempos críticos. Sistemas y Redes (2007–2010): Mantenimiento de hardware, administración de redes y soporte técnico.",
+    "tech": ["Liderazgo","Sistemas","Redes","Soporte Técnico","Hardware"]
+  }
+]
