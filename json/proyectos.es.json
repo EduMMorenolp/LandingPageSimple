@@ -1,6 +1,16 @@
 {
   "proyecto": [
     {
+      "nombre": "HomeAssistan",
+      "descripcion": "Una plataforma centralizada que digitaliza y simplifica la convivencia. Permite gestionar tareas, finanzas, comunicación, salud y seguridad de un hogar desde un único punto de acceso, ofreciendo interfaces adaptables según el perfil técnico y cognitivo de cada usuario. <strong>Funciona 100% local</strong>, sin necesidad de internet ni acceso externo.",
+      "github": "https://github.com/EduMMorenolp/HomeAssistan",
+      "status": "en-desarrollo",
+      "tec": ["React", "Vite", "TypeScript", "Node.js", "Express", "PostgreSQL", "Docker", "Socket.IO"],
+      "categoria": ["frontend", "backend"],
+      "verCodigo": "Ver Código",
+      "verDemo": "Ver Demo"
+    },
+    {
       "nombre": "PetShop",
       "descripcion": "Este proyecto consiste en el desarrollo de una tienda virtual de productos para mascotas. Trabajé en colaboración con un equipo de 4 personas, donde asumimos roles específicos y dividimos tareas para maximizar la eficiencia. <strong>Mi contribución incluyó trabajo tanto en el backend como en el frontend</strong>, asegurando un flujo de trabajo integrado y una experiencia de usuario óptima.",
       "github": "https://github.com/EduMMorenolp/PetShop",
@@ -17,16 +27,6 @@
       "demo": "https://stock-dep-xi.vercel.app/main",
       "tec": ["Node.js", "Express", "Sequelize", "JWT", "OAuth", "GitHub Projects", "🧑‍🤝‍🧑 Colaborativo"],
       "categoria": ["backend"],
-      "verCodigo": "Ver Código",
-      "verDemo": "Ver Demo"
-    },
-    {
-      "nombre": "HomeAssistan",
-      "descripcion": "Una plataforma centralizada que digitaliza y simplifica la convivencia. Permite gestionar tareas, finanzas, comunicación, salud y seguridad de un hogar desde un único punto de acceso, ofreciendo interfaces adaptables según el perfil técnico y cognitivo de cada usuario. <strong>Funciona 100% local</strong>, sin necesidad de internet ni acceso externo.",
-      "github": "https://github.com/EduMMorenolp/HomeAssistan",
-      "status": "en-desarrollo",
-      "tec": ["React", "Vite", "TypeScript", "Node.js", "Express", "PostgreSQL", "Docker", "Socket.IO"],
-      "categoria": ["frontend", "backend"],
       "verCodigo": "Ver Código",
       "verDemo": "Ver Demo"
     },
