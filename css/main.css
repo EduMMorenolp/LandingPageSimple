@@ -256,10 +256,17 @@ main {
 
 /* Projects Section */
 .projects-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-  gap: 2.5rem;
+  display: flex;
+  overflow: hidden;
+  gap: 2rem;
   margin-top: 3rem;
+  position: relative;
+}
+
+.carousel-track {
+  display: flex;
+  gap: 2rem;
+  will-change: transform;
 }
 
 .proyecto {
@@ -268,10 +275,11 @@ main {
   border-radius: var(--radius-lg);
   overflow: hidden;
   backdrop-filter: blur(10px);
-  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: border-color 0.4s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.4s cubic-bezier(0.4, 0, 0.2, 1);
   position: relative;
   display: flex;
   flex-direction: column;
+  min-width: 0;
 }
 
 .proyecto::before {
@@ -577,9 +585,40 @@ main {
   width: 100%;
 }
 
-/* Carousel Navigation - Default Hidden */
-.carousel-nav {
-  display: none;
+/* Carousel Navigation */
+.carousel-wrapper {
+  position: relative;
+}
+
+.nav-arrow {
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: var(--text-main);
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10;
+}
+
+.nav-arrow-left {
+  left: -20px;
+}
+
+.nav-arrow-right {
+  right: -20px;
+}
+
+.nav-arrow:hover {
+  background: var(--primary);
+  border-color: var(--primary);
 }
 
 /* Responsive */
@@ -609,56 +648,16 @@ main {
   }
 
   .projects-grid {
-    display: flex;
-    overflow-x: auto;
-    scroll-snap-type: x mandatory;
     gap: 1.5rem;
-    padding-bottom: 2rem;
-    padding-left: 1rem;
-    padding-right: 1rem;
-    -webkit-overflow-scrolling: touch;
-    scrollbar-width: none; /* Firefox */
-  }
-  
-  .projects-grid::-webkit-scrollbar {
-    display: none; /* Chrome/Safari */
+    padding-bottom: 1rem;
   }
 
-  .proyecto {
-    min-width: 85vw;
-    scroll-snap-align: center;
+  .carousel-track {
+    gap: 1.5rem;
   }
 
   .proyecto-detalles {
     padding: 1.5rem;
-  }
-
-  /* Carousel Navigation Mobile Override */
-  .carousel-nav {
-    display: flex;
-    justify-content: center;
-    gap: 1rem;
-    margin-bottom: 1rem;
-    padding-right: 1rem;
-  }
-
-  .nav-arrow {
-    background: rgba(255, 255, 255, 0.1);
-    border: 1px solid rgba(255, 255, 255, 0.2);
-    color: var(--text-main);
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-    transition: all 0.3s ease;
-  }
-
-  .nav-arrow:hover {
-    background: var(--primary);
-    border-color: var(--primary);
   }
 }
 

@@ -175,49 +175,20 @@
         <div class="container">
           <h2 class="section-title text-center"></h2>
 
-          <!-- Carousel Navigation (Mobile Only) -->
-          <div class="carousel-nav">
-            <button
-              id="prev-project"
-              class="nav-arrow"
-              aria-label=""
-            >
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="24"
-                height="24"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              >
+          <div class="carousel-wrapper">
+            <button id="prev-project" class="nav-arrow nav-arrow-left" aria-label="">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                 <polyline points="15 18 9 12 15 6"></polyline>
               </svg>
             </button>
-            <button
-              id="next-project"
-              class="nav-arrow"
-              aria-label=""
-            >
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="24"
-                height="24"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              >
+            <div class="projects-grid" id="proyecto">
+              <!-- Projects will be injected here by JavaScript -->
+            </div>
+            <button id="next-project" class="nav-arrow nav-arrow-right" aria-label="">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                 <polyline points="9 18 15 12 9 6"></polyline>
               </svg>
             </button>
-          </div>
-          <div class="projects-grid" id="proyecto">
-            <!-- Projects will be injected here by JavaScript -->
           </div>
         </div>
       </section>

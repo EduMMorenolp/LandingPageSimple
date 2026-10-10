@@ -170,8 +170,8 @@
 
     setText('#proyectos .section-title', window.uiStrings?.projectsSectionTitle || 'Proyectos Destacados');
 
-    container.innerHTML = projects.proyecto.map(project => `
-      <div class="proyecto fade-in-up ${project.imagen ? '' : 'proyecto-no-img'}">
+    const slidesHTML = projects.proyecto.map(project => `
+      <div class="proyecto ${project.imagen ? '' : 'proyecto-no-img'}">
         ${project.imagen ? `<img src="${project.imagen}" alt="${project.nombre}" loading="lazy">` : ''}
         <div class="proyecto-detalles">
           <h4>${project.nombre}</h4>
@@ -187,6 +187,70 @@
           </div>
         </div>
       </div>`).join('');
+
+    container.innerHTML = `
+      <div class="carousel-track">
+        ${slidesHTML}
+        ${slidesHTML}
+      </div>`;
+
+    const track = container.querySelector('.carousel-track');
+    if (track) {
+      container._carouselTrack = track;
+      container._slideCount = projects.proyecto.length;
+      container._carouselOffset = 0;
+
+      const isMobile = () => window.innerWidth <= 992;
+      const speed = () => isMobile() ? 0 : 0.25;
+
+      const setSlideWidth = () => {
+        const gap = parseFloat(getComputedStyle(track).gap) || 0;
+        const visible = isMobile() ? 1 : 3;
+        const slideW = (container.offsetWidth - gap * (visible - 1)) / visible;
+        track.querySelectorAll('.proyecto').forEach(s => { s.style.flex = `0 0 ${slideW}px`; });
+        return slideW + gap;
+      };
+
+      let step = setSlideWidth();
+
+      const autoScroll = () => {
+        if (!container._carouselPaused && speed() > 0) {
+          container._carouselOffset -= speed();
+          track.style.transform = `translateX(${container._carouselOffset}px)`;
+          if (Math.abs(container._carouselOffset) >= step * container._slideCount) {
+            container._carouselOffset += step * container._slideCount;
+            track.style.transform = `translateX(${container._carouselOffset}px)`;
+          }
+        }
+        container._carouselRAF = requestAnimationFrame(autoScroll);
+      };
+      container._carouselRAF = requestAnimationFrame(autoScroll);
+
+      container.addEventListener('mouseenter', () => { container._carouselPaused = true; });
+      container.addEventListener('mouseleave', () => { container._carouselPaused = false; });
+
+      document.getElementById('prev-project')?.addEventListener('click', () => {
+        container._carouselOffset += step;
+        if (container._carouselOffset > 0) {
+          container._carouselOffset -= step * container._slideCount;
+        }
+        track.style.transform = `translateX(${container._carouselOffset}px)`;
+      });
+
+      document.getElementById('next-project')?.addEventListener('click', () => {
+        container._carouselOffset -= step;
+        if (Math.abs(container._carouselOffset) >= step * container._slideCount) {
+          container._carouselOffset += step * container._slideCount;
+        }
+        track.style.transform = `translateX(${container._carouselOffset}px)`;
+      });
+
+      window.addEventListener('resize', () => {
+        step = setSlideWidth();
+        container._carouselOffset = 0;
+        track.style.transform = 'translateX(0px)';
+      });
+    }
   }
 
   async function loadForLang(lang = 'es'){
