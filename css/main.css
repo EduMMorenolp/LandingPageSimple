@@ -235,11 +235,18 @@ main {
 .golden {
   color: #cfc100;
   border: 0.1rem solid #cfc100;
+  box-shadow: 0 0 16px rgba(207, 193, 0, 0.5), inset 0 0 10px rgba(207, 193, 0, 0.2);
+  animation: glow-golden 2s ease-in-out infinite alternate;
 }
 
 .silver {
   color: #c0c0c0;
   border: 0.1rem solid #c0c0c0;
+}
+
+@keyframes glow-golden {
+  from { box-shadow: 0 0 12px rgba(207, 193, 0, 0.4), inset 0 0 8px rgba(207, 193, 0, 0.15); }
+  to { box-shadow: 0 0 24px rgba(207, 193, 0, 0.7), inset 0 0 14px rgba(207, 193, 0, 0.25); }
 }
 
 .bronce {
@@ -660,6 +667,16 @@ body.light-mode .tech-item:not(.expert) {
   background: rgba(0, 0, 0, 0.05);
   border: 1px solid rgba(0, 0, 0, 0.1);
   color: var(--text-main);
+}
+
+body.light-mode .golden {
+  color: #a89a00;
+  border-color: #a89a00;
+}
+
+body.light-mode .silver {
+  color: #8a8a8a;
+  border-color: #8a8a8a;
 }
 
 body.light-mode .tech-item:not(.expert):hover {
