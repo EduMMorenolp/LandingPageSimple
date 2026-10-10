@@ -13,5 +13,7 @@
   "projectPrevLabel": "Previous project",
   "projectNextLabel": "Next project",
   "emailInitialText": "Contact me",
-  "emailHoverText": "👉 Click here"
+  "emailHoverText": "👉 Click here",
+  "statusEnDesarrollo": "In development",
+  "statusContinuaMejora": "Continuous improvement"
 }

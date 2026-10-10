@@ -304,6 +304,29 @@ main {
   transform: scale(1.05);
 }
 
+.proyecto-no-img {
+  padding-top: 2rem;
+}
+
+.status-badge {
+  display: inline-block;
+  margin-bottom: 0.75rem;
+  padding: 0.35rem 0.85rem;
+  background: rgba(234, 179, 8, 0.15);
+  border: 1px solid rgba(234, 179, 8, 0.4);
+  border-radius: 20px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: #eab308;
+  letter-spacing: 0.02em;
+}
+
+.status-continua {
+  background: rgba(59, 130, 246, 0.15);
+  border-color: rgba(59, 130, 246, 0.4);
+  color: #3b82f6;
+}
+
 .proyecto-detalles {
   padding: 2rem;
   position: relative;

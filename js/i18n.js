@@ -171,17 +171,19 @@
     setText('#proyectos .section-title', window.uiStrings?.projectsSectionTitle || 'Proyectos Destacados');
 
     container.innerHTML = projects.proyecto.map(project => `
-      <div class="proyecto fade-in-up">
-        <img src="${project.imagen}" alt="${project.nombre}" loading="lazy">
+      <div class="proyecto fade-in-up ${project.imagen ? '' : 'proyecto-no-img'}">
+        ${project.imagen ? `<img src="${project.imagen}" alt="${project.nombre}" loading="lazy">` : ''}
         <div class="proyecto-detalles">
           <h4>${project.nombre}</h4>
+          ${project.status === 'en-desarrollo' ? `<span class="status-badge">🚧 ${window.uiStrings?.statusEnDesarrollo || 'En desarrollo'}</span>` : ''}
+          ${project.status === 'continua-mejora' ? `<span class="status-badge status-continua">🔄 ${window.uiStrings?.statusContinuaMejora || 'Continua mejora'}</span>` : ''}
           <p>${project.descripcion}</p>
           <div class="tecnologias">
             ${(project.tec || []).map(tech => `<span class="tec">${tech}</span>`).join('')}
           </div>
           <div class="botones">
             <a href="${project.github}" target="_blank" class="btn-small">${project.verCodigo}</a>
-            <a href="${project.demo}" target="_blank" class="btn-small">${project.verDemo}</a>
+            ${project.demo ? `<a href="${project.demo}" target="_blank" class="btn-small">${project.verDemo}</a>` : ''}
           </div>
         </div>
       </div>`).join('');
