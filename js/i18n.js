@@ -175,8 +175,8 @@
         ${project.imagen ? `<img src="${project.imagen}" alt="${project.nombre}" loading="lazy">` : ''}
         <div class="proyecto-detalles">
           <h4>${project.nombre}</h4>
-          ${project.status === 'en-desarrollo' ? `<span class="status-badge">🚧 ${window.uiStrings?.statusEnDesarrollo || 'En desarrollo'}</span>` : ''}
-          ${project.status === 'continua-mejora' ? `<span class="status-badge status-continua">🔄 ${window.uiStrings?.statusContinuaMejora || 'Continua mejora'}</span>` : ''}
+          ${project.status === 'en-desarrollo' ? `<span class="status-badge">${window.uiStrings?.statusEnDesarrollo || 'En desarrollo'}</span>` : ''}
+          ${project.status === 'continua-mejora' ? `<span class="status-badge status-continua">${window.uiStrings?.statusContinuaMejora || 'Continua mejora'}</span>` : ''}
           <p>${project.descripcion}</p>
           <div class="tecnologias">
             ${(project.tec || []).map(tech => `<span class="tec">${tech}</span>`).join('')}
@@ -211,6 +211,8 @@
     applyContact(contacto);
     applyFooter(footer);
     renderProjects(proyectos);
+
+    document.dispatchEvent(new CustomEvent('i18n:rendered'));
   }
 
   window.i18nLoad = function(lang = 'es'){

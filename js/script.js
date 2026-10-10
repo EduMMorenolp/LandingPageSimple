@@ -110,6 +110,50 @@ document.addEventListener('DOMContentLoaded', () => {
         observer.observe(el);
     });
 
+    let lastScrollY = window.scrollY;
+    let experienceObserver = null;
+
+    function initExperienceObserver() {
+        if (experienceObserver) {
+            experienceObserver.disconnect();
+            experienceObserver = null;
+        }
+
+        const items = document.querySelectorAll('.experience-item');
+        if (!items.length) return;
+
+        experienceObserver = new IntersectionObserver((entries) => {
+            const currentScrollY = window.scrollY;
+            const scrollingDown = currentScrollY > lastScrollY;
+            lastScrollY = currentScrollY;
+
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.remove('hidden-up');
+                    entry.target.classList.add('visible');
+                } else {
+                    const rect = entry.boundingClientRect;
+                    if (!scrollingDown && rect.top > 0) {
+                        entry.target.classList.remove('visible');
+                        entry.target.classList.add('hidden-up');
+                    }
+                }
+            });
+        }, { threshold: 0.15 });
+
+        items.forEach((el, i) => {
+            if (i === 0) {
+                el.classList.remove('hidden-up');
+                el.classList.add('visible');
+                return;
+            }
+            experienceObserver.observe(el);
+        });
+    }
+
+    initExperienceObserver();
+    document.addEventListener('i18n:rendered', initExperienceObserver);
+
     const navbar = document.getElementById('navbar');
     window.addEventListener('scroll', () => {
         if (!navbar) return;

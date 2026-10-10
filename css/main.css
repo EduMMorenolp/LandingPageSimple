@@ -731,6 +731,19 @@ body.light-mode .nav-arrow:hover {
   gap: 2rem;
   margin-bottom: 3rem;
   position: relative;
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.experience-item.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.experience-item.hidden-up {
+  opacity: 0;
+  transform: translateY(-40px);
 }
 
 .experience-item:nth-child(even) {
