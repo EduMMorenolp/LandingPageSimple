@@ -407,8 +407,9 @@ main {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  padding: 0.7rem 1.5rem;
-  border-radius: 50px;
+  gap: 0.5rem;
+  padding: 0.65rem 1.25rem;
+  border-radius: 8px;
   font-weight: 600;
   font-size: 0.9rem;
   transition: all 0.3s ease;
@@ -416,16 +417,19 @@ main {
   text-decoration: none;
   position: relative;
   overflow: hidden;
-  border: 2px solid black;
+  border: none;
 }
 
-.btn-small:first-child {
-  background: var(--primary);
+.btn-small svg {
+  flex-shrink: 0;
+}
+
+.btn-code {
+  background: linear-gradient(135deg, var(--primary), var(--accent));
   color: white;
-  border: 1px solid var(--primary);
 }
 
-.btn-small:first-child::before {
+.btn-code::before {
   content: '';
   position: absolute;
   top: 50%;
@@ -438,29 +442,27 @@ main {
   transition: width 0.5s, height 0.5s;
 }
 
-.btn-small:first-child:hover::before {
+.btn-code:hover::before {
   width: 300px;
   height: 300px;
-  
 }
 
-.btn-small:first-child:hover {
-  background: var(--primary-glow);
+.btn-code:hover {
   box-shadow: 0 8px 20px rgba(109, 40, 217, 0.4);
   transform: translateY(-2px);
-  
 }
 
-.btn-small:last-child {
-  background: transparent;
-  border: 2px solid black;
+.btn-demo {
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.2);
   color: var(--text-main);
+  backdrop-filter: blur(4px);
 }
 
-.btn-small:last-child:hover {
-  background: rgba(255, 255, 255, 0.05);
+.btn-demo:hover {
+  background: rgba(255, 255, 255, 0.12);
+  border-color: rgba(255, 255, 255, 0.35);
   transform: translateY(-2px);
-  
 }
 
 .section-title {
@@ -676,6 +678,17 @@ body.light-mode .golden {
 body.light-mode .silver {
   color: #8a8a8a;
   border-color: #8a8a8a;
+}
+
+body.light-mode .btn-demo {
+  background: rgba(0, 0, 0, 0.05);
+  border-color: rgba(0, 0, 0, 0.15);
+  color: var(--text-main);
+}
+
+body.light-mode .btn-demo:hover {
+  background: rgba(0, 0, 0, 0.1);
+  border-color: rgba(0, 0, 0, 0.3);
 }
 
 body.light-mode .tech-item:not(.expert):hover {
